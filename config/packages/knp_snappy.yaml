@@ -1,0 +1,10 @@
+knp_snappy:
+    temporary_folder: "%env(temporary_folder)"
+    pdf:
+        enabled:    true
+        binary:     '%env(WKHTMLTOPDF_PATH)%'
+        options:    []
+    image:
+        enabled:    true
+        binary:     '%env(WKHTMLTOIMAGE_PATH)%'
+        options:    []

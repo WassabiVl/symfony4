@@ -1,0 +1,4 @@
+nelmio_alice:
+    locale: de-DE
+    functions_blacklist:
+        - 'current'

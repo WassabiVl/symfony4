@@ -1,0 +1,1615 @@
+parameters:
+  types:
+    - Customer
+    - Admin
+    - Producer
+    - Carrier
+  genders:
+    - Male
+    - Female
+    - Company
+  typesAdd:
+    - Delivery Address
+    - Bill Address
+  FOSROLES:
+    - [ROLE_CARRIER]
+    - [ROLE_CUSTOMER]
+    - [ROLE_PRODUCER]
+    - [ROLE_ADMIN]
+  Titles:
+    - Dr.
+    - Prof.
+    - Prof. Dr.
+    - Herr
+    - Frau
+  BuyingAmount:
+      - 2000
+      - 4000
+      - 6000
+      - 8000
+      - 10000
+      - 12000
+      - 14000
+      - 16000
+#############################################################################################
+AppBundle\Entity\Account:
+    ################################################################
+        ### Carrier Accounts                                        ###
+        ##############################################################
+        account1:
+            username:                     CarrierTest
+            email:                        carrier@radiopharma24.de
+            enabled:                      1
+            plainpassword:                123456789
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '25<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CARRIER]
+            altMail:                      251@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Carrier
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account2:
+            username:                     '<username()>'
+            email:                        3a@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '2<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CARRIER]
+            altMail:                      3b@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Carrier
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account3:
+            username:                     '<username()>'
+            email:                        3b@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '3<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CARRIER]
+            altMail:                      3b@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Carrier
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account4:
+            username:                     '<username()>'
+            email:                        3c@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '4<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CARRIER]
+            altMail:                      3b@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Carrier
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account5:
+            username:                     '<username()>'
+            email:                        3e@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '5<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CARRIER]
+            altMail:                      3b@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Carrier
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        ###############################################################
+        ### Producer Accounts                                      ###
+        #############################################################
+        account11:
+            username:                     producer
+            email:                        producer@radiopharma24.de
+            enabled:                      1
+            plainpassword:                123456789
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Bad Berka Plant
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_PRODUCER]
+            altMail:                      113@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Producer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account12:
+            username:                     '<username()>'
+            email:                        12@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Bad Oeynhausen Plant
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_PRODUCER]
+            altMail:                     112@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Producer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        ##############################################################
+        ### Admin Accounts                                        ###
+        #############################################################
+        account14:
+            username:                     '<username()>'
+            email:                        313a@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-100 days", "now")>'
+            companyName:                  '14<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      1a@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account15:
+            username:                     '<username()>'
+            email:                        313b@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-100 days", "now")>'
+            companyName:                  '15<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      1b@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account16:
+            username:                     '<username()>'
+            email:                        313c@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-100 days", "now")>'
+            companyName:                  '16<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      1c@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account17:
+            username:                     '<username()>'
+            email:                        313d@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-100 days", "now")>'
+            companyName:                  '17<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      1d@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account18:
+            username:                     '<username()>'
+            email:                        313e@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-100 days", "now")>'
+            companyName:                  '18<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      1de@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account19:
+            username:                     '<username()>'
+            email:                        313ef@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-100 days", "now")>'
+            companyName:                  '19<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      1de@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    '<boolean(20)>'
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     '<boolean(80)>'
+        account20:
+            username:                     AdminTest
+            email:                        admin@radiopharma24.de
+            enabled:                      1
+            plainpassword:                123456789
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '20<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_ADMIN]
+            altMail:                      220@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+      ##############################################################
+      ### Super Admin Account                                   ###
+      #############################################################
+        account21:
+            username:                     '<username()>'
+            email:                        superadmin@radiopharma24.de
+            enabled:                      1
+            plainpassword:                123456789
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '21<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_SUPER_ADMIN]
+            altMail:                      211@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account22:
+            username:                     '<username()>'
+            email:                        22@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  '22<company()>'
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_SUPER_ADMIN]
+            altMail:                      221@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Admin
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        ################################################################
+        ### Customer Accounts                                       ###
+        ##############################################################
+        account23:
+            username:                     Customer Test
+            email:                        customer@radiopharma24.de
+            enabled:                      1
+            plainpassword:                123456789
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      36<username()>
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account24:
+            username:                     '<username()>'
+            email:                        224@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      324@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account25:
+            username:                     '<username()>'
+            email:                        225@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Abteilung für Diagnostische Radiologie
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      225@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account26:
+            username:                     '<username()>'
+            email:                        226@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      225@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account27:
+            username:                     '<username()>'
+            email:                        227@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      226@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account28:
+            username:                     '<username()>'
+            email:                        228@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Nuklearmedizinische Klinik
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      228@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account29:
+            username:                     '<username()>'
+            email:                        229@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Überörtliche Gemeinschaft (GbR) für diagnostische und interventionelle Radiologie und Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      229@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account30:
+            username:                     '<username()>'
+            email:                        330@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Institut für Radiologie und Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      330@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account31:
+            username:                     '<username()>'
+            email:                        331@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  PET-CT Zentrum
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      331@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account32:
+            username:                     '<username()>'
+            email:                        332@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Dres. Brünning, Farahati, Hartmann
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                     332@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account33:
+            username:                     '<username()>'
+            email:                       333@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Institut
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      333c@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account34:
+            username:                     '<username()>'
+            email:                        334@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      334@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account35:
+            username:                     '<username()>'
+            email:                        335@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Fachbereich Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      335@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account36:
+            username:                     '<username()>'
+            email:                        336@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Im St.-Josefs-Hospital Dortmund-Hörde
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      336@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account37:
+            username:                     '<username()>'
+            email:                        337@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                     337@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account38:
+            username:                     '<username()>'
+            email:                        338@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Prof. Dr. Höck und Dr. med. Freundlieb
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      338@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account39:
+            username:                     '<username()>'
+            email:                        339@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Airport City
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      339@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account40:
+            username:                     '<username()>'
+            email:                        440@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  am Werner Forßmann Krankenhaus
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      440@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account41:
+            username:                     '<username()>'
+            email:                        441@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      441@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account42:
+            username:                     '<username()>'
+            email:                        442@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      442@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account43:
+            username:                     '<username()>'
+            email:                        443@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Klinik für Nuklearmedizin
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      443@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+        account44:
+            username:                     '<username()>'
+            email:                        444@radiopharma24.de
+            enabled:                      '<numberBetween(0, 1)>'
+            plainpassword:                '<password()>'
+            lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
+            companyName:                  Universitätsklinikum Schleswig-Holstein
+            firstName:                    '<firstName()>'
+            lastName:                     '<lastName()>'
+            roles:                        [ROLE_CUSTOMER]
+            altMail:                      443@radiopharma24.de
+            phone:                        '<phoneNumber()>'
+            fax:                          '<phoneNumber()>'
+            type:                         Customer
+            gender:                       "<randomElement(<{genders}>)>"
+            isDeleted:                    0
+            failedLogins:                 '<randomDigitNotNull()>'
+            lastLoginAttempt:             '<dateTimeBetween("-10 days", "now")>'
+            title:                        "<randomElement(<{Titles}>)>"
+            relatedAdmin:                 '@admin*'
+            isActive:                     1
+#########################################################################################
+AppBundle\Entity\Address:
+    ###############################################################
+    ### Carrier Address                                        ###
+    ##############################################################
+    address{1..5}:
+        relatedAccount:                '@account<current()>'
+        street:                        '<de_DE:streetAddress()>'
+        buildingNumber:                11
+        zip:                           '<de_DE:postcode()>'
+        city:                          '<de_DE:city()>'
+        state:                         '<de_DE:state()>'
+        country:                       DE
+        companyName:                   '<company()>'
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    ################################################################
+    ### Admin and Super Admin Address                           ###
+    ##############################################################
+    address{14..22}:
+        relatedAccount:                '@account<current()>'
+        street:                        '<de_DE:streetAddress()>'
+        buildingNumber:                11
+        zip:                           '<de_DE:postcode()>'
+        city:                          '<de_DE:city()>'
+        state:                         '<de_DE:state()>'
+        country:                       DE
+        companyName:                   '<company()>'
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    ##############################################################
+    #              Real Producer Address Start Here              #
+    ##############################################################
+    address11:
+        relatedAccount:                '@account11'
+        street:                        Robert-Koch-Allee
+        buildingNumber:                9
+        zip:                           99437
+        city:                          Bad Berka
+        state:                         Thuringia
+        country:                       DE
+        companyName:                   Bad Berka Plant
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address12:
+        relatedAccount:                '@account12'
+        street:                        Georgstraße
+        buildingNumber:                11
+        zip:                           32545
+        city:                          Bad Oeynhausen
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        companyName:                   Bad Oeynhausen Plant
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    ##############################################################
+    #              Real Customer Address Start Here              #
+    ##############################################################
+    address23:
+        relatedAccount:                '@account23'
+        street:                        Stenglinstr.
+        buildingNumber:                2
+        zip:                           86156
+        city:                          Augsburg
+        state:                         Bavaria
+        country:                       DE
+        companyName:                   Klinik für Nuklearmedizin
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address24:
+        relatedAccount:                '@account24'
+        street:                        Pauwelsstraße
+        buildingNumber:                30
+        zip:                           52074
+        city:                          Aachen
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        companyName:                   Universitätsklinikum Aachen
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address25:
+        relatedAccount:                '@account25'
+        street:                        Beneckestr.
+        buildingNumber:                2 - 8
+        zip:                           61231
+        city:                          Bad Nauheim
+        state:                         Hesse
+        country:                       DE
+        companyName:                   Abteilung für Diagnostische Radiologie
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address26:
+        relatedAccount:                '@account26'
+        street:                        Pieskower Straße 33
+        buildingNumber:                33
+        zip:                           15526
+        city:                          Bad Saarow
+        state:                         Brandenburg
+        country:                       DE
+        companyName:                   HELIOS Klinikum Bad Saarow
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address27:
+        relatedAccount:                '@account27'
+        street:                        Preuschwitzer Strasse
+        buildingNumber:                101
+        zip:                           95445
+        city:                          Bayreuth
+        state:                         Bavaria
+        country:                       DE
+        companyName:                   Klinikum Bayreuth
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address28:
+        relatedAccount:                '@account28'
+        street:                        Schwanebecker Chaussse
+        buildingNumber:                50
+        zip:                           13125
+        city:                          Berlin
+        state:                         Berlin
+        country:                       DE
+        companyName:                   Helios Klinikum Berlin-Buch
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address29:
+        relatedAccount:                '@account29'
+        street:                        Feilenstr.
+        buildingNumber:                1
+        zip:                           33602
+        city:                          Bielefeld
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        companyName:                   DIRANUK MVZ  Bielefeld-Zentrum
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address30:
+        relatedAccount:                '@account30'
+        street:                        Gudrunstr
+        buildingNumber:                56
+        zip:                           44791
+        city:                          Bochum
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        companyName:                   St. Josef-Hospital Bochum
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address31:
+        relatedAccount:                '@account31'
+        street:                        Kaiserstr. 19-21
+        buildingNumber:                19-21
+        zip:                           53113
+        city:                          Bonn
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        companyName:                   Gemeinschaftspraxis für Radiologie und Nuklearmedizin
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address32:
+        relatedAccount:                '@account32'
+        street:                        Neustraße
+        buildingNumber:                17a
+        zip:                           46236
+        city:                          Bottrop
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        companyName:                   borad Gemeinschaftspraxis für Radiologie
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address33:
+        relatedAccount:                '@account33'
+        companyName:                   Klinikum Braunschweig
+        street:                        Salzdahlumer Str.
+        buildingNumber:                90
+        zip:                           38126
+        city:                          Braunschweig
+        state:                         Lower Saxony
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address34:
+        relatedAccount:                '@account34'
+        companyName:                   Nuklearmedizinische Gemeinschaftspraxis Lemb, Haase, Czech
+        street:                        Schwachhauser Heerstr.
+        buildingNumber:                54
+        zip:                           28209
+        city:                          Bremen
+        state:                         Bremen
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address35:
+        relatedAccount:                '@account35'
+        companyName:                   Klinikum Chemnitz
+        street:                        Flemmingstraße
+        buildingNumber:                2
+        zip:                           09116
+        city:                          Chemnitz
+        state:                         Saxony
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address36:
+        relatedAccount:                '@account36'
+        companyName:                   MVZ des Städtischen Klinikums Dessau
+        street:                        Auenweg
+        buildingNumber:                38
+        zip:                           06807
+        city:                          Dessau
+        state:                         Saxony-Anhalt
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address37:
+        relatedAccount:                '@account37'
+        companyName:                   MVZ Prof. Uhlenbrock und Partner
+        street:                        Wilhelm-Schmidt-Str.
+        buildingNumber:                4
+        zip:                           44263
+        city:                          Dortmund
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address38:
+        relatedAccount:                '@account38'
+        companyName:                   Universitätsklinikum Dresden
+        street:                        Fetscherstr.
+        buildingNumber:                74
+        zip:                           01307
+        city:                          Dresden
+        state:                         Saxony
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address39:
+        relatedAccount:                '@account39'
+        companyName:                   Nuklearmedizinische Praxis
+        street:                        Ruhrorterstr.
+        buildingNumber:                195
+        zip:                           47119
+        city:                          Duisburg
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address40:
+        relatedAccount:                '@account40'
+        companyName:                   radprax Düsseldorf
+        street:                        Peter-Müller-Straße
+        buildingNumber:                20
+        zip:                           40468
+        city:                          Düsseldorf
+        state:                         North Rhine-Westphalia
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address41:
+        relatedAccount:                '@account41'
+        companyName:                   Praxis für Nuklearmdizin
+        street:                        Rudolf-Breitscheid-Str.
+        buildingNumber:                100
+        zip:                           16225
+        city:                          Eberswalde
+        state:                         Brandenburg
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address42:
+        relatedAccount:                '@account42'
+        companyName:                   HELIOS Klinikum Erfurt GmbH
+        street:                        Nordhäuser Straße
+        buildingNumber:                 74
+        zip:                           99089
+        city:                          Erfurt
+        state:                         Thuringia
+        country:                       DE
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                         "<randomElement(<{Titles}>)>"
+    address43:
+        relatedAccount:                '@account43'
+        street:                        Theodor-Stern-Kai
+        buildingNumber:                 7
+        zip:                           60590
+        city:                          Frankfurt
+        state:                         Hesse
+        country:                       DE
+        companyName:                   Universitätsklinikum Frankfurt
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    address44:
+        relatedAccount:                '@account44'
+        street:                        Arnold-Heller-Str.
+        buildingNumber:                9
+        zip:                           24105
+        city:                          Kiel
+        state:                         Schleswig-Holstein
+        country:                       DE
+        companyName:                   Klinik für Nuk.med Prof. Dr. Henze
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+    ##########################################################################################
+    # Random Addresses
+    ##########################################################################################
+    address{68..90}:
+        relatedAccount:                '@account*'
+        street:                        '<de_DE:streetAddress()>'
+        buildingNumber:                 1
+        zip:                           '<de_DE:postcode()>'
+        state:                         '<de_DE:state()>'
+        city:                          '<de_DE:city()>'
+        country:                       DE
+        companyName:                   '<company()>'
+        firstName:                     '<firstName()>'
+        lastName:                      '<lastName()>'
+        title:                        "<randomElement(<{Titles}>)>"
+##########################################################################################
+AppBundle\Entity\Admin:
+   admin1:
+       relatedAccount:     '@account16'
+       loadedCustomer:     '@customer23'
+   admin2:
+       relatedAccount:     '@account17'
+       loadedCustomer:     '@customer24'
+   admin3:
+       relatedAccount:     '@account18'
+       loadedCustomer:     '@customer25'
+   admin4:
+       relatedAccount:     '@account19'
+       loadedCustomer:     '@customer26'
+   admin5:
+       relatedAccount:     '@account20'
+       loadedCustomer:     '@customer27'
+#########################################################################################
+AppBundle\Entity\Batch:
+    batch_11:
+        relatedProducer:   '@producer11'
+        relatedProduct:    '@product_11'
+        dailyStartTime:    '<DateTime("3:30 am")>'
+        dailyEndTime:      '<DateTime("3:30 am")>'
+        batchAmount:       250
+        batchCost:         12.0
+    batch_12:
+        relatedProducer:   '@producer11'
+        relatedProduct:    '@product_12'
+        dailyStartTime:    '<dateTimeThisMonth()>'
+        dailyEndTime:      '<dateTimeBetween($dailyStartTime, "+1 day")>'
+        batchAmount:       150
+        batchCost:         16.6
+    batch_13:
+        relatedProducer:   '@producer12'
+        relatedProduct:    '@product_13'
+        dailyStartTime:    '<dateTimeThisMonth()>'
+        dailyEndTime:      '<dateTimeBetween($dailyStartTime, "+1 day")>'
+        batchAmount:       150
+        batchCost:         16.6
+#########################################################################################
+AppBundle\Entity\BatchLockTime:
+    batchlocktime0:
+        startTime:    '<dateTimeThisMonth()>'
+        endTime:      '<dateTimeBetween($startTime)>'
+        relatedBatch: '@batch_11'
+    batchlocktime{1..3}:
+        startTime:    '<dateTimeThisMonth()>'
+        endTime:      '<dateTimeBetween($startTime)>'
+        relatedBatch: '@batch_*'
+#########################################################################################
+AppBundle\Entity\Carrier:
+    carrier_{1..5}:
+        costPerKm:      1
+        relatedAccount: '@account<current()>'
+        primaryAddress: '@address<current()>'
+
+#########################################################################################
+# No Longer Needed as it is calculated during the Algorithm Run
+#AppBundle\Entity\CarrierCost:
+#    carrierCost{1..6}:
+#      cost:             '<randomFloat(2)>'
+#      distance:         '<numberBetween(0,100)>'
+#      estimatedTime:    '<dateTime()>'
+#      relatedCarrier:   '@carrier_*'
+#      relatedCustomer:  '@customer*'
+#      relatedProducer:  '@producer*'
+#########################################################################################
+AppBundle\Entity\Customer:
+    customer23:
+        institution:             Zentralklinikum Augsburg
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account23'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document50'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address23'
+        billAddress:             '@address23'
+    customer24:
+        institution:             Universitätsklinikum Aachen
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account24'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document51'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address24'
+        billAddress:             '@address24'
+    customer25:
+        institution:             Kerckhoff Klinik GmbH
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account25'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document52'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address25'
+        billAddress:             '@address25'
+    customer26:
+        institution:             HELIOS Klinikum Bad Saarow
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account26'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document53'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address26'
+        billAddress:             '@address26'
+    customer27:
+        institution:             Klinikum Bayreuth
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account27'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document54'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address27'
+        billAddress:             '@address27'
+    customer28:
+        institution:             Helios Klinikum Berlin-Buch
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account28'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document55'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address28'
+        billAddress:             '@address28'
+    customer29:
+        institution:             DIRANUK MVZ  Bielefeld-Zentrum
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account29'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document56'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address29'
+        billAddress:             '@address29'
+    customer30:
+        institution:             St. Josef-Hospital Bochum
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account30'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document57'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address30'
+        billAddress:             '@address30'
+    customer31:
+        institution:             Gemeinschaftspraxis für Radiologie und Nuklearmedizin
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account31'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document58'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address31'
+        billAddress:             '@address31'
+    customer32:
+        institution:             borad Gemeinschaftspraxis für Radiologie
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account32'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document59'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address32'
+        billAddress:             '@address32'
+    customer33:
+        institution:             Klinikum Braunschweig
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account33'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document60'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address33'
+        billAddress:             '@address33'
+    customer34:
+        institution:             Nuklearmedizinische Gemeinschaftspraxis Lemb, Haase, Czech
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account34'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document61'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address34'
+        billAddress:             '@address34'
+    customer35:
+        institution:             Klinikum Chemnitz
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account35'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document62'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address35'
+        billAddress:             '@address35'
+    customer36:
+        institution:             MVZ des Städtischen Klinikums Dessau
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account36'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document63'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address36'
+        billAddress:             '@address36'
+    customer37:
+        institution:             MVZ Prof. Uhlenbrock und Partner
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account37'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document64'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address37'
+        billAddress:             '@address37'
+    customer38:
+        institution:             Universitätsklinikum Dresden
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account38'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document65'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address38'
+        billAddress:             '@address38'
+    customer39:
+        institution:             Nuklearmedizinische Praxis
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account39'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document66'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address39'
+        billAddress:             '@address39'
+    customer40:
+        institution:             radprax Düsseldorf
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account40'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document67'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address40'
+        billAddress:             '@address40'
+    customer41:
+        institution:             Praxis für Nuklearmdizin
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account41'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document68'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address41'
+        billAddress:             '@address41'
+    customer42:
+        institution:             HELIOS Klinikum Erfurt GmbH
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account42'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document69'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address42'
+        billAddress:             '@address42'
+    customer43:
+        institution:             Universitätsklinikum Frankfurt
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account43'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document70'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address43'
+        billAddress:             '@address43'
+    customer44:
+        institution:             Universitätsklinikum Schleswig-Holstein
+        customerNumber:          '<swiftBicNumber()>'
+        relatedAccount:          '@account44'
+        debitNumber:             '<iban(de)>'
+        toPayDate:               '<DateTime("2018-10-10")>'
+        isUgValid:               '<boolean(80)>'
+        relatedUg:               '@document71'
+        discountGroup:           '@discountGroup*'
+        shippingAddress:         '@address44'
+        billAddress:             '@address44'
+#########################################################################################
+AppBundle\Entity\DiscountGroup:
+    discountGroup{1..9}:
+        name:       '<name()>'
+        timeStart:  '<dateTimeThisMonth()>'
+        timeEnd:    '<dateTimeBetween($timeStart, "+1 year")>'
+        dateSeries: '<dateTime()>'
+        isActive:   '<boolean(80)>'
+#########################################################################################
+AppBundle\Entity\Document:
+    document{50..71}:
+        previousVersion:
+        docType: UG
+        name: eos
+    document{123..144}:
+        previousVersion:
+        docType: ADR
+        name: eos
+    document{223..244}:
+       previousVersion:
+       docType: OrderConfirmation
+       name: eos
+    document{23..44}:
+        previousVersion:
+        docType: Bill
+        name: eos
+#########################################################################################
+AppBundle\Entity\Order:
+    order_{23..44}:
+        flag:                    '<text()>'
+        comment:                 '<realText(100, 2)>'
+        isOptimized:             '<boolean(80)>'
+        relatedCustomer:         '@customer<current()>'
+        grantedDiscount:         '<randomFloat(2,0,1)>'
+        isFixed:                 0
+        targetTime:              '<dateTimeThisMonth("tomorrow")>'
+        bill:                    '@document<current()>'
+        orderConformation:       '@document2<current()>'
+        dateOrdered:             '<dateTimeThisMonth("now")>'
+        customerShippingAddress: '@address<current()>'
+        customerBillingAddress:  '@address<current()>'
+#########################################################################################
+AppBundle\Entity\OrderedProductCategory:
+    orderedProductCategory{23..44}:
+        relatedOrder:           '@order_<current()>'
+        relatedProductCategory: '@productCategory1'
+        relatedBulkDiscount:    '<randomFloat(2,0,1)>'
+        relatedBuyPrice:        '<randomFloat(2,0,1)>'
+        orderedAmount:          "<randomElement(<{BuyingAmount}>)>"
+        deliveredAmount:        '<numberBetween(1000, 10000)>'
+        ADRDocument:            '@document1<current()>'
+#########################################################################################
+#AppBundle\Entity\OrderedProducts:
+#    orderedProducts{23..27}:
+#        amount:                  '<numberBetween(0, 10000)>'
+#        trackingLink:            '<url()>'
+#        relatedProduct:          '@product_*'
+#        orderedProductCategory:  '@orderedProductCategory<current()>'
+#        producerAddress:         '@address11'
+#########################################################################################
+AppBundle\Entity\Producer:
+    producer{11..12}:
+      number:         '<uuid()>'
+      headTitle:      "<randomElement(<{Titles}>)>"
+      headFirstName:  '<firstName()>'
+      headLastName:   '<lastName()>'
+      relatedCarrier: '@carrier_*'
+      relatedAccount: '@account<current()>'
+      pickUpAddress:  '@address<current()>'
+#########################################################################################
+AppBundle\Entity\Product:
+    product_{11..13}:
+      name:             '<name()>'
+      buyPrice:         12
+      productCategory:  '@productCategory1'
+      halflife:         109.74
+#########################################################################################
+AppBundle\Entity\ProductCategory:
+    productCategory1:
+      name:                    '<word()>'
+      sellPrice:               350
+#########################################################################################
+AppBundle\Entity\ProductSellSizes:
+    productSellSizes1:
+        amount:                 2
+        discountInPercent:      0
+        relatedProductCategory: '@productCategory1'
+    productSellSizes2:
+        amount:                 4
+        discountInPercent:      28.57
+        relatedProductCategory: '@productCategory1'
+    productSellSizes3:
+        amount:                 6
+        discountInPercent:      38.10
+        relatedProductCategory: '@productCategory1'
+    productSellSizes4:
+        amount:                 8
+        discountInPercent:      42.86
+        relatedProductCategory: '@productCategory1'
+    productSellSizes5:
+        amount:                 10
+        discountInPercent:      45.71
+        relatedProductCategory: '@productCategory1'
+    productSellSizes6:
+        amount:                 12
+        discountInPercent:      50.00
+        relatedProductCategory: '@productCategory1'
+    productSellSizes7:
+        amount:                 14
+        discountInPercent:      53.06
+        relatedProductCategory: '@productCategory1'
+    productSellSizes8:
+        amount:                 16
+        discountInPercent:      55.36
+        relatedProductCategory: '@productCategory1'

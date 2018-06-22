@@ -1,0 +1,18 @@
+fos_user:
+    service:
+        mailer: fos_user.mailer.twig_swift
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Entity\Account
+    from_email:
+        address: '%mailer_name%'
+        sender_name: "Lombego Systems GmbH"
+    registration:
+        form:
+            type: AppBundle\Form\FrontEnd\RegistrationFormType
+        confirmation:
+            enabled: true
+            template: FOSUserBundle/views/Registration/email.html.twig
+            from_email:
+                address: '%mailer_name%'
+                sender_name: RadioPharma24 Admin
