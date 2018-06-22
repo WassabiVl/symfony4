@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace app\Entity;
 
 use Orbitale\Bundle\CmsBundle\Entity\Category as BaseCategory;
 use Doctrine\ORM\Mapping as ORM;
@@ -22,7 +22,7 @@ class Category extends BaseCategory
     /**
      * @return int
      */
-    public function getId()
+    public function getId():int
     {
         return $this->id;
     }

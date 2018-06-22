@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+{% endblock %}
+{% block body %}
+    <div id="wrapper">
+        <div class="fragment homepage-header" style="background-image:url({{ asset('images/header-bild.jpg') }});">
+            <div class="page-wrapper">
+                <div class="row">
+                    <div class="column column-80 header-main-content-box">
+                        <div class="column column-s-100 column-55">
+                            <div class="header-left-content">
+                                <h4 class="negative">{% trans %}Willkommen{% endtrans %}</h4>
+                                <div class="logo-header-main-content-box">
+                                    <img src="{{ asset('images/R24-white-logo.png') }}" alt="Radiopharma24">
+                                </div>
+                                <p>
+                                    {% trans %}Pariatur et animi nihil ut sit{% endtrans %}.
+                                    {% trans %}Accusantium eos voluptates ut voluptate quaerat{% endtrans %}.
+                                    {% trans %}Dolor ratione sit fugit culpa quo aspernatur est laboriosam{% endtrans %}.
+                                    {% trans %}Quibusdam dolores sit doloremque{% endtrans %}.
+                                    {% trans %} Non qui et officia ipsam{% endtrans %}.
+                                    {% trans %}Commodi est quos dicta necessitatibus{% endtrans %}.
+                                    {% trans %}Placeat corrupti quaerat rerum architecto{% endtrans %}.
+                                    {% trans %}Iure aspernatur itaque molestias eum{% endtrans %}.
+                                    {% trans %}Saepe explicabo quod vitae ut{% endtrans %}.
+                                    {% trans %}Quia sed consequatur dolorem eos{% endtrans %}.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column right column-s-100 column-40">
+                            {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <div class="sign-up-card">
+                                <span class="bolder-span block">{% trans %}Registrieren Sie sich{% endtrans %}</span>
+                                <span>{% trans %}(in 3 einfachen Schritten){% endtrans %}</span>
+                                <div class="steps-group">
+                                    <div class="step">
+                                        <span class="step-number bolder-span">1</span>
+                                        <span>{% trans %}Kontaktdaten hinterlegen{% endtrans %}</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number bolder-span">2</span>
+                                        <span>{% trans %}Lieferadresse angeben{% endtrans %}</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number bolder-span">3</span>
+                                        <span>{% trans %}UG Dokument hochladen{% endtrans %}</span>
+                                    </div>
+                                </div>
+                                <a href="{{ path('fos_user_registration_register') }}" class="bottom button floating broad {% if app.request.attributes.get('_route') == 'fos_user_registration_register' %}active{% endif %}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+                            {% else %}
+                                <div class="sign-up-card signed-in-user-promo_pic" style="background-image:url({{ asset('images/signed-in-user_scientist.jpg') }});">
+                                </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if pages is not null %}
+        {% for page in pages %}
+            <div class="fragment radiopharma-pages" id="page_{{ page.id }}">
+                {{ page.content|raw }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    {{  parent() }}
+    <script>
+        setTimeout(function(){
+            $("div[id^='page']").each(function(i,e){
+                var thing= $(this);
+                var string = $(this).html().match(/[^\[img\]].+?(?=\[)/gm);
+                if (string !== null) {
+                    string.forEach(function(element) {
+                        if (element.match(/^\.\./gm)) {
+                            var img = $('<img id="dynamic_"' + i + '>');
+                            img.attr('src', element);
+                            img.appendTo(e);
+                            thing.html(thing.html().split('[img]'+element+'[/img]').join(''));
+                        }
+                    });
+                }
+            });
+        }, 500);
+    </script>
+{% endblock %}

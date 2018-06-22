@@ -27,10 +27,10 @@ parameters:
       - 4000
       - 6000
       - 8000
-      - 10000
-      - 12000
-      - 14000
-      - 16000
+#      - 10000
+#      - 12000
+#      - 14000
+#      - 16000
 #############################################################################################
 AppBundle\Entity\Account:
     ################################################################
@@ -150,7 +150,7 @@ AppBundle\Entity\Account:
             enabled:                      1
             plainpassword:                123456789
             lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
-            companyName:                  Bad Berka Plant
+            companyName:                  Bad Berka - Central Hospital
             firstName:                    '<firstName()>'
             lastName:                     '<lastName()>'
             roles:                        [ROLE_PRODUCER]
@@ -171,11 +171,11 @@ AppBundle\Entity\Account:
             enabled:                      '<numberBetween(0, 1)>'
             plainpassword:                '<password()>'
             lastlogin:                    '<dateTimeBetween("-10 days", "now")>'
-            companyName:                  Bad Oeynhausen Plant
+            companyName:                  Bad Oeynhausen - Inst. F. radiology
             firstName:                    '<firstName()>'
             lastName:                     '<lastName()>'
             roles:                        [ROLE_PRODUCER]
-            altMail:                     112@radiopharma24.de
+            altMail:                      112@radiopharma24.de
             phone:                        '<phoneNumber()>'
             fax:                          '<phoneNumber()>'
             type:                         Producer
@@ -394,7 +394,7 @@ AppBundle\Entity\Account:
             firstName:                    '<firstName()>'
             lastName:                     '<lastName()>'
             roles:                        [ROLE_CUSTOMER]
-            altMail:                      36<username()>
+            altMail:                      '36fgdg@radiopharma24.de'
             phone:                        '<phoneNumber()>'
             fax:                          '<phoneNumber()>'
             type:                         Customer
@@ -1211,22 +1211,22 @@ AppBundle\Entity\Batch:
         relatedProduct:    '@product_11'
         dailyStartTime:    '<DateTime("3:30 am")>'
         dailyEndTime:      '<DateTime("3:30 am")>'
-        batchAmount:       250
-        batchCost:         12.0
+        batchAmount:       250000
+        batchCost:         0.012
     batch_12:
         relatedProducer:   '@producer11'
         relatedProduct:    '@product_12'
         dailyStartTime:    '<dateTimeThisMonth()>'
         dailyEndTime:      '<dateTimeBetween($dailyStartTime, "+1 day")>'
-        batchAmount:       150
-        batchCost:         16.6
+        batchAmount:       150000
+        batchCost:         0.0166
     batch_13:
         relatedProducer:   '@producer12'
         relatedProduct:    '@product_13'
         dailyStartTime:    '<dateTimeThisMonth()>'
         dailyEndTime:      '<dateTimeBetween($dailyStartTime, "+1 day")>'
-        batchAmount:       150
-        batchCost:         16.6
+        batchAmount:       150000
+        batchCost:         0.0166
 #########################################################################################
 AppBundle\Entity\BatchLockTime:
     batchlocktime0:
@@ -1501,11 +1501,11 @@ AppBundle\Entity\Customer:
 #########################################################################################
 AppBundle\Entity\DiscountGroup:
     discountGroup{1..9}:
-        name:       '<name()>'
-        timeStart:  '<dateTimeThisMonth()>'
-        timeEnd:    '<dateTimeBetween($timeStart, "+1 year")>'
-        dateSeries: '<dateTime()>'
+        name:          '<name()>'
+        dateTimeStart:  '<dateTimeThisMonth()>'
+        dateTimeEnd:    '<dateTimeBetween($dateTimeStart, "+1 year")>'
         isActive:   '<boolean(80)>'
+        discountInPercent: 2
 #########################################################################################
 AppBundle\Entity\Document:
     document{50..71}:
@@ -1529,10 +1529,11 @@ AppBundle\Entity\Order:
     order_{23..44}:
         flag:                    '<text()>'
         comment:                 '<realText(100, 2)>'
-        isOptimized:             '<boolean(80)>'
+        isOptimized:             0
         relatedCustomer:         '@customer<current()>'
-        grantedDiscount:         '<randomFloat(2,0,1)>'
+        grantedDiscount:         0.01
         isFixed:                 0
+        isRejected:              0
         targetTime:              '<dateTimeThisMonth("tomorrow")>'
         bill:                    '@document<current()>'
         orderConformation:       '@document2<current()>'
@@ -1564,52 +1565,129 @@ AppBundle\Entity\Producer:
       headTitle:      "<randomElement(<{Titles}>)>"
       headFirstName:  '<firstName()>'
       headLastName:   '<lastName()>'
-      relatedCarrier: '@carrier_*'
+      relatedCarrier: '@carrier_1'
       relatedAccount: '@account<current()>'
       pickUpAddress:  '@address<current()>'
 #########################################################################################
 AppBundle\Entity\Product:
     product_{11..13}:
       name:             '<name()>'
-      buyPrice:         12
+      buyPrice:         0.012
       productCategory:  '@productCategory1'
       halflife:         109.74
 #########################################################################################
 AppBundle\Entity\ProductCategory:
     productCategory1:
-      name:                    '<word()>'
-      sellPrice:               350
+      name:                    FDG
+      sellPrice:               0.35
 #########################################################################################
 AppBundle\Entity\ProductSellSizes:
     productSellSizes1:
-        amount:                 2
+        amount:                 2000
         discountInPercent:      0
         relatedProductCategory: '@productCategory1'
     productSellSizes2:
-        amount:                 4
+        amount:                 4000
         discountInPercent:      28.57
         relatedProductCategory: '@productCategory1'
     productSellSizes3:
-        amount:                 6
+        amount:                 6000
         discountInPercent:      38.10
         relatedProductCategory: '@productCategory1'
     productSellSizes4:
-        amount:                 8
+        amount:                 8000
         discountInPercent:      42.86
         relatedProductCategory: '@productCategory1'
     productSellSizes5:
-        amount:                 10
+        amount:                 10000
         discountInPercent:      45.71
         relatedProductCategory: '@productCategory1'
     productSellSizes6:
-        amount:                 12
+        amount:                 12000
         discountInPercent:      50.00
         relatedProductCategory: '@productCategory1'
     productSellSizes7:
-        amount:                 14
+        amount:                 14000
         discountInPercent:      53.06
         relatedProductCategory: '@productCategory1'
     productSellSizes8:
-        amount:                 16
+        amount:                 16000
         discountInPercent:      55.36
         relatedProductCategory: '@productCategory1'
+
+#######################################################################################################
+AppBundle\Entity\Category:
+    category1:
+        name: Footer
+        slug: Footer
+        description: All Footer Content
+        enabled: true
+    category2:
+        name: Start
+        slug: Start
+        description: All Start Page Content
+        enabled: true
+#########################################################################################################
+AppBundle\Entity\Page:
+  #########################
+  # Footer Pages
+  ########################
+    page1:
+        title: Impressum
+        slug: Impressum
+        content: This is what you'll see for the Impressum page
+        metaDescription: Impressum
+        metaTitle: Impressum
+        enabled: true
+        category: '@category1'
+    page2:
+        title: AGB
+        slug: AGB
+        content: This is what you'll see for the AGB page
+        metaDescription: AGB
+        metaTitle: AGB
+        enabled: true
+        category: '@category1'
+    page3:
+        title:  Datenschutz-Bestimmungen
+        slug:  Datenschutz-Bestimmungen
+        content: This is what you'll see for the  Datenschutz-Bestimmungen page
+        metaDescription:  Datenschutz-Bestimmungen
+        metaTitle:  Datenschutz-Bestimmungen
+        enabled: true
+        category: '@category1'
+    page4:
+        title:  Über uns
+        slug:  uberuns
+        content: This is what you'll see for the Über uns page
+        metaDescription:  Über uns
+        metaTitle:  Uberuns
+        enabled: true
+        category: '@category1'
+    page5:
+        title:  Kontakt
+        slug:  Kontakt
+        content: This is what you'll see for the Kontakt uns page
+        metaDescription:  Kontakt
+        metaTitle:  Kontakt
+        enabled: true
+        category: '@category1'
+    #########################
+    # Start Pages
+    ########################
+    page6:
+        title: Hello
+        slug:  Hello
+        content: This is what you'll see for the Hello  uns page
+        metaDescription:  Hello
+        metaTitle:  Hello
+        enabled: true
+        category: '@category2'
+    page7:
+        title: Test
+        slug:  Test
+        content: This is what you'll see for the testing uns page
+        metaDescription:  Test
+        metaTitle:  test
+        enabled: true
+        category: '@category2'

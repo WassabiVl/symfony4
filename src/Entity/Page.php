@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace app\Entity;
 
 use Orbitale\Bundle\CmsBundle\Entity\Page as BasePage;
 use Doctrine\ORM\Mapping as ORM;
@@ -22,7 +22,7 @@ class Page extends BasePage
     /**
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
