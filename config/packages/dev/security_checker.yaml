@@ -1,0 +1,7 @@
+services:
+    SensioLabs\Security\SecurityChecker:
+        public: true
+    SensioLabs\Security\Command\SecurityCheckerCommand:
+        arguments: ['@SensioLabs\Security\SecurityChecker']
+        tags:
+            - { name: console.command }
