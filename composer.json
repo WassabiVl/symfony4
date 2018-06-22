@@ -27,6 +27,7 @@
         "symfony/lts": "^4@dev",
         "symfony/requirements-checker": "^1.1",
         "symfony/swiftmailer-bundle": "^3.2",
+        "symfony/twig-bundle": "^4.1",
         "symfony/yaml": "^4.1",
         "vich/uploader-bundle": "^1.8",
         "wemersonjanuario/wkhtmltopdf-windows": "0.12.2.3"
