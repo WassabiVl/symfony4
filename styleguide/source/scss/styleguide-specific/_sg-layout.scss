@@ -1,0 +1,62 @@
+//
+// Layout
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+$page-font-size:                                        rem-calc(16) !default;
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("sg-layout") {
+  .sg-main {
+    width: $page-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: $page-font-size;
+    background: #fff !important;;
+  }
+  .gray-wrapper-sg{
+    background-color: $gray;
+  }
+
+  #molecules-hamburger-icon{
+      .nav-icon{
+        position: relative;
+        top:0 !important;
+      }
+  }
+
+  #organisms-primary-nav .nav-list{
+    position: relative;
+    transform: translateX(0%) !important;
+  }
+  .pl-headline, .sg-subtype{
+    text-align: left !important;
+    >h1,>h2,>h3,>h4,>h5,>h6{
+      text-align: left !important;
+    }
+  }
+}
+

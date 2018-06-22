@@ -1,0 +1,151 @@
+//
+// SG: Scaffold
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("sg-scaffold") {
+  // Headings
+  //---------------------------------------------
+
+  .sg-heading-1 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .pl-headline{
+    font-family: Arial;
+    font-style: normal;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .sg-subtype > h2{
+    color: #333;
+    font-family: Arial;
+    font-style: normal;
+    text-decoration: none;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+    &:after{
+      display: none;
+    }
+  }
+
+  .sg-pattern-example > header{
+    display: none;
+  }
+
+
+
+  // Fonts
+  //---------------------------------------------
+
+  .sg-font {
+    font-size: 1.5rem;
+  }
+
+  .sg-font-primary {
+    font-family: $font-family-primary;
+  }
+
+  .sg-font-primary-bold {
+    font-weight: 700;
+  }
+
+  .sg-font-primary-light {
+    font-weight: 300;
+  }
+
+  .sg-font-primary-light-italic {
+    @extend .sg-font-primary-light;
+    font-style: italic;
+  }
+
+
+
+  // Animations
+  //---------------------------------------------
+
+  .sg-animate-opacity {
+    @include single-transition(all);
+    padding: 1rem;
+    &:hover{
+      opacity: 0;
+    }
+  }
+
+  .sg-animate-move {
+    @include single-transition(all, 800ms);
+    padding-left: 1rem;
+
+
+    &:hover {
+      padding-left: 3rem;
+    }
+  }
+
+
+
+  // Inline
+  //---------------------------------------------
+
+  #atoms-inline-elements {
+    p {
+      margin: $pad 0 0 !important;
+    }
+  }
+
+
+
+  // Icons
+  //---------------------------------------------
+
+  #atoms-icons {
+
+  }
+
+  // let patternlab be white in bg
+  #patternlab-body, #patternlab-html{
+    background: #FFF !IMPORTANT;
+  }
+}
+
+
+.sg-pattern-example .weather{
+  background: $color-tertiary;
+  height: 3rem;
+  padding:2rem;
+  color:#fff;
+  .weather-icon{
+    font-size: 1.5rem;
+    position: relative;
+  }
+}

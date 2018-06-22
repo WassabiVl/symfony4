@@ -1,0 +1,56 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("share") {
+
+  .share-meta{
+    text-align: center;
+
+    .share-headline{
+      font-size: .9rem;
+      padding-bottom: .25rem;
+      margin-top: 2rem;
+    }
+
+    .fa-facebook,.fa-twitter,.fa-pinterest{
+      cursor: pointer;
+    }
+    .fa-facebook{
+      color: #3b5998;
+    }
+    .fa-twitter{
+      color: #00aced;
+    }
+    .fa-pinterest{
+      color: #C92228;
+    }
+  }
+
+
+}

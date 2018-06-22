@@ -1,0 +1,43 @@
+{% block content %}
+    {% set bgColor = '$color-primary-contrast' %}
+    {#{% set bgColor = 'secondary-color' %}#}
+    {#{% if bgColor is defined %}#}
+        {#<div class="fragment {{ bgColor }}">#}
+    {#{% else %}#}
+        {#<div class="fragment {{ random(fragmentSetup.colorRange) }}">#}
+    {#{% endif %}#}
+
+    <footer class="footer">
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="column formulare-side-text column-30">
+                    <p class="negative">{{ text }}</p>
+                </div>
+                <div class="column column-70">
+                    <div class="column no-side-padding column-100 center">
+                        <h2 class="h-no-underline">Formulare</h2>
+                        <div class="form-input-box">
+                            <div class="input-box-title">
+                                <span>Name:</span>
+                            </div>
+                            <input id="Name" placeholder="Name">
+                        </div>
+                        <div class="form-input-box">
+                            <div class="input-box-title">
+                                <span>E-Mail:</span>
+                            </div>
+                            <input id="Email" placeholder="Email">
+                         </div>
+                         <div class="form-input-box">
+                            <div class="input-box-title">
+                                <span>Anliegen:</span>
+                            </div>
+                            <textarea id="Textarea" placeholder="Schreiben Sie uns"></textarea>
+                         </div>
+                        <a class="button negative" href="#">ABSENDEN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

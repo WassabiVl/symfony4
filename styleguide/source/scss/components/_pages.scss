@@ -1,0 +1,67 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("pages") {
+  .handshake {
+    padding-top: 3rem;
+    p{
+      text-align: center;
+    }
+    svg {
+      padding-top: 3rem;
+      margin: 0 auto;
+      opacity: 0.9;
+      width: 100%;
+      height: 19rem;
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+  .homepage-scrollable-content {
+    padding-bottom: 6rem;
+  }
+
+  .alert.alert-error {
+    padding-top: 7rem;
+    color: $color-primary;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .fragment.cms-content-page:first-of-type{
+    padding-top: 2rem !important;
+  }
+
+  .cms-content-page {
+    .page-wrapper section{
+      box-shadow: none !important;
+    }
+  }
+}

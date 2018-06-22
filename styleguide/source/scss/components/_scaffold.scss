@@ -1,0 +1,335 @@
+//
+// Scaffold
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("scaffold") {
+  // Base Scaffolding
+  //-------------------------------------------
+
+  html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  html,
+  body {
+    font-family: $font-family-base;
+    font-size: $rem-base;
+    height: 100%; // needed for offcanvas
+    margin: 0;
+    background: $base-bg;
+    color: $font-default-color;
+    word-break: break-word;
+    width:100%;
+ }
+
+  body{
+    padding: 3rem 0 0 0 ;
+  }
+
+
+
+
+
+  // Address `[hidden]` styling not present
+  // in IE 8/9/10.
+  // Hide the `template` element in IE 8/9/11,
+  // Safari, and Firefox < 22.
+  //-------------------------------------------
+
+  [hidden],
+  template {
+    display: none;
+  }
+
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  main,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+
+  header{
+    position: relative;
+  }
+
+  // Remove Fieldset Border
+
+  fieldset{
+    border:0;
+  }
+
+  // 1. Correct `inline-block` display not
+  //    defined in IE 8/9.
+  // 2. Normalize vertical alignment of
+  //    `progress` in Chrome, Firefox, and Opera.
+  //-------------------------------------------
+
+  audio,
+  canvas,
+  progress,
+  video {
+    display: inline-block; // 1
+    vertical-align: baseline; // 2
+    max-width: 100%;
+  }
+
+  abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+  a{
+    background: transparent; // Remove the gray background color from active links in IE 10.
+    text-decoration: none;
+    font-style: normal;
+    color: $color-primary;
+    &:visited{
+      //color: #a7b3bd;
+    }
+    &.current{
+      border-bottom: 1px solid mix($color-primary, $white, 50);
+      font-weight: 600;
+    }
+  }
+  .content, p, p.highlighted-text{
+    a {
+      color: $link-color;
+      transition: color 0.3s ease-in-out;
+      &:not(.no-underline):not(.button){
+        border-bottom: 2px solid $font-default-link-color;
+      }
+      &:hover,
+      &:focus {
+        color: $link-color-hover;
+        cursor: $cursor-pointer-value;
+      }
+
+      &:active,
+      &:hover {
+        outline: 0; // Improve readability when focused and also mouse hovered in all browsers.
+      }
+    }
+  }
+
+  p.highlighted-text{
+    color: $color-primary;
+    font-size: rem-calc(23px);
+    &.negative, &.negative a {
+     color: $font-negative-color;
+     :hover{
+       color:$link-color;
+     }
+    }
+    &.negative a:not(.no-underline):not(.button){
+      border-bottom: 2px solid $font-negative-color;
+    }
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  // Grid Defaults to get images and embeds to work properly
+  img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+  }
+
+  hr {
+    box-sizing: content-box;
+    border: 0;
+    height: 1px;
+    background: $divider-color;
+    margin: $pad 0;
+  }
+
+  iframe{
+    max-width:100%;
+  }
+
+
+
+  // Correct overflow not hidden in IE 9/10/11.
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+
+
+
+  // Paragraphs
+  //-------------------------------------
+
+  p {
+    margin: auto ;
+    &+p, &+ul{
+      margin: $pad auto ;
+    }
+
+    // Chrome Fix to solve side-effects on text while transition
+    transform: translateZ(0px);
+  }
+
+
+  // Lists
+  //-------------------------------------
+
+  ul{
+    margin:auto;
+    &+p, &+ul{
+      margin: $pad auto ;
+    }
+  }
+
+
+  // Blockquote
+  //-------------------------------------
+
+  blockquote {
+    position: relative;
+    display:inline-block;
+    background: $gray-light;
+    padding: 1rem 1rem 1rem 3rem;
+    margin-top: $pad;
+    &:before{
+      left:$pad;
+      font-size: 1.25rem;
+      position: absolute;
+      content:"\f10e";
+      color: $gray-dark;
+      font-family: "Font Awesome 5 Light";
+      width: 2rem;
+    }
+    &:after{
+      position: absolute;
+      content: " ";
+      top:0 ;
+      left: 0;
+      height:100%;
+      width: .25rem;
+      background: $color-tertiary;
+
+    }
+
+
+  }
+
+    // Grey Text
+  .gray{
+    color: $gray-dark !important;
+  }
+
+
+  .noscroll{
+    position: fixed;
+    overflow:hidden !important;
+  }
+
+
+    // Flash-Errors
+
+  .flash-message{
+    position: fixed;
+    top:30%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    margin-left: -250px;
+    border: 1px solid $gray-medium;
+    box-shadow: $box-shadow-decent-default;
+    background:#fff;
+    transition: opacity 900ms ease-in-out;
+    @media #{$small-only}{
+      width: 95%;
+      left:2.5%;
+      margin-left:0;
+    }
+  }
+
+  .hide-mobile{
+    @media #{$large-down}{
+      display:none !important;
+    }
+  }
+  .show-only-mobile{
+    @media #{$large-up}{
+      display:none !important;
+    }
+  }
+
+}

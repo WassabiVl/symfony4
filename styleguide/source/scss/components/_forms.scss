@@ -1,0 +1,672 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("forms") {
+
+  input{
+    padding-left:0.7rem !important;
+    height:40px;
+    border-radius: 0;
+    width:100%;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    &[type=text], &[type=password], &[type=url], &[type=email], &[type=search], &[type=number]{
+      width:100%;
+    }
+    //&[type=submit]{
+    //  margin-top:$pad*2;
+    //}
+    padding: $pad/2 $pad/4;
+    border: 1px solid rgb(169, 169, 169);
+    &::-webkit-input-placeholder{
+      color: $font-default-placeholder;
+    }
+    &:-moz-placeholder{
+      color: $font-default-placeholder;
+    }
+    &::-moz-placeholder{
+      color: $font-default-placeholder;
+    }
+    &:-ms-input-placeholder{
+      color: $font-default-placeholder;
+    }
+
+    &+p{
+      margin-top: $pad;
+    }
+  }
+  textarea{
+    border: 1px solid mix($border-default-color, $white, 50);
+    resize: vertical;
+  }
+  button{
+    border:none;
+  }
+
+  textarea, select{
+    width: 100%;
+    padding: $pad/2 $pad/4;
+  }
+
+  select{
+    height: 40px;
+  }
+
+  label, span.label{
+    color: $font-default-color;
+    display:block;
+    margin-top: $pad;
+    margin-bottom: $pad/4;
+  }
+
+  form{
+    max-width:100%;
+    margin: auto;
+    ul{
+      display:block !important;
+    }
+    li{
+      &:before{
+        content: "";
+        display:none;
+      }
+    }
+  }
+
+  input[type=checkbox],input[type=radio]{
+    position: fixed;
+    left: -999px;
+    top: -999px;
+    &+label{
+      line-height: 1.5rem;
+      display:inline-block;
+      position: relative;
+      margin-right:1rem;
+      margin-top: .5rem;
+      cursor: pointer;
+      &:before{
+        position: relative;
+        content: " ";
+        padding: .7rem;
+        vertical-align: bottom;
+        display: inline-block;
+        background: #fff;
+        border: 1px solid $gray-dark;
+        margin-right: .5rem;
+      }
+      &:after {
+        position: absolute;
+        font-size: 1rem;
+        font-family: "Font Awesome 5 Solid";
+        color: $color-secondary;
+        left: 5px;
+        top: 5px;
+        line-height: 1rem;
+        content: "\f00c";
+        opacity: 0;
+      }
+    }
+    &:checked {
+      &+label{
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  input[type=radio]{
+    &+label{
+      &:before{
+        border-radius: 50%;
+        border-color: $custom-black;
+      }
+      &:after{
+        content: "\f111";
+        left: 7px;
+        top: 6px;
+        font-size: 0.7rem;
+        font-family: "Font Awesome 5 Solid";
+      }
+    }
+    //&:checked {
+    //  &+label{
+    //    &:after {
+    //      left: 7px;
+    //      top: 6px;
+    //    }
+    //  }
+    //}
+  }
+
+
+
+  // TYPO3 Debug Fix
+
+  .extbase-debugger-tree input {
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  .typo3-message .message-body{
+    font-size: 1rem;
+  }
+
+  /* MAILCHIMP */
+  #mc-embedded-subscribe-form li{
+    width:49% !important;
+    display: inline-block !important;
+  }
+
+  .mc-field-group{
+    padding-bottom: .5rem !important;
+  }
+
+  .input-box-title{
+    color: $color-secondary;
+    font-size: 0.9rem;
+    background-color: #a7b3bd;
+    height:1.4rem;
+    line-height:1.4rem;
+    text-align: left;
+    padding-left: 0.7rem;
+  }
+
+  .input-box-title + input{
+    margin-top:0;
+  }
+
+  .form-input-box + a.button{
+    margin-top:0.5rem;
+  }
+
+  h6 + form {
+    margin-top: 1rem;
+  }
+
+  .formulare-side-text {
+    padding-top: 5.5rem;
+    padding-right: 1rem;
+  }
+
+  fieldset {
+    padding-left: 0;
+  }
+
+  textarea#Textarea {
+    height: 5rem;
+  }
+
+  .form-input-box + .form-input-box.under-select-field{
+    margin-top: $pad/2;
+  }
+
+  #emailAddress.powermail_input{
+    width: rem-calc(285px);
+  }
+
+  #userPassword{
+    margin: 0 rem-calc(10px);
+    width: rem-calc(157px);
+  }
+
+
+  .sign-in{
+    a.button{
+      vertical-align: bottom;
+    }
+    a.forgot-password{
+      color:$font-negative-color;
+    }
+  }
+
+  .login-box {
+    //display: none;
+    position: absolute;
+    right: 2rem;
+    background: $color-tertiary;
+    @media screen and (min-width:0px) and (max-width: 1065px) {
+      display: none;
+      top: 5.5rem;
+      right: 0;
+      left: 0;
+      padding: 0 2rem;
+    }
+    @media #{$small-only}{
+      padding: 0 1rem;
+    }
+  }
+
+  nav.nav-wrapper.link-nav.login-mobile.dashboard-header-wrapper {
+    height: 7.4rem;
+    //@media screen and (min-width:691px) and (max-width: 1065px){
+    //  height: 11rem;
+    //}
+    //@media #{$small-only}{
+    //  height: 17.5rem;
+    //}
+  }
+  fieldset.sign-in-fields{
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    input{
+      display: inline-block;
+      width: 16rem;
+      margin-left: 0.2rem;
+      @media screen and (min-width:691px) and (max-width: 796px){
+        width: 49%;
+      }
+      @media #{$small-only}{
+        width: 100%;
+        margin-top: 0.4rem;
+      }
+    }
+    input.button{
+      width: 8rem;
+      line-height: 1.2rem;
+      padding: 0;
+      text-align: center;
+      padding-left: 0 !important;
+      margin-left: 0.4rem;
+      @media screen and (min-width:691px) and (max-width: 796px){
+        position: absolute;
+        right: 3rem;
+      }
+      @media #{$small-only}{
+        width: 100%;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+
+  fieldset.sign-in-links{
+    text-align: left;
+  }
+
+
+  .remember-me-field, .forgot-password-box{
+    width: 16rem;
+    display: inline-block;
+    label{
+    color: $font-negative-color;
+      margin-right: 0 !important;
+      padding-right: .5rem;
+    }
+    @media screen and (min-width:691px) and (max-width: 796px){
+      width: auto;
+    }
+    @media #{$small-only}{
+      text-align: center !important;
+      width: 49%;
+      font-size: .9rem;
+    }
+  }
+  .remember-me-field{
+    text-align: right;
+    @media screen and (min-width:691px) and (max-width: 796px){
+      text-align: left !important;
+      padding-left: 0.2rem;
+    }
+    @media #{$small-only}{
+      text-align: left !important;
+      padding-left: 0.2rem;
+    }
+  }
+  .forgot-password-box{
+    padding-left: .5rem;
+    text-align: left;
+    a{
+      padding-left: .5rem;
+    }
+    @media #{$small-only}{
+      text-align: right !important;
+    }
+  }
+
+  ///////////////////****ADDRESS LIST PAGE*****///////////////////
+
+  .fragment.address-list-page{
+    i.fas.fa-trash{
+      color: $custom-black;
+      padding-left: 1rem;
+    }
+    
+    li a{
+      color: $color-tertiary;
+    }
+
+  }
+
+///////////////////****REGISTRATION*****///////////////////
+
+  .form-fields{
+    input, select, textarea{
+      border: 1px solid $custom-grayer;
+      border-radius: 2px;
+    }
+    select{
+    font-size: 1rem;
+    font-family: $font-primary;
+    color: $font-default-color;
+    }
+  }
+
+  .form-fields, .UG-document{
+    padding: 0rem 2rem;
+  }
+
+  .form-fields + .step-title{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-title, .form-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $color-tertiary;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .form-title{
+    padding-top: 0;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .lightbox.form-title{
+  }
+
+  .registration-step{
+    border-bottom: solid $color-primary 1px;
+    padding: 3rem 0;
+    &.step-3-upload-document{
+      border-bottom: none;
+    }
+  }
+
+    span.registration-step-number{
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border: solid $color-primary 3px;
+    padding: 0.2rem 0.6rem;
+    line-height: 2.7rem;
+    text-align: center;
+    background: transparent;
+    font-size: 1.2rem;
+    }
+
+  .different-address-button{
+    display: block;
+  }
+
+  .address-different-button, .registration-step.step-2-shipping-address legend{
+    padding: 2rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #040054;
+    display: block;
+  }
+
+  .registration-step.step-2-shipping-address legend {
+    //margin-bottom: 2rem;
+    //padding-top: 3;
+    display: none;
+  }
+
+  .different-address.option-yes {
+    margin-left: 5rem;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: normal;
+    .radio-wrapper {
+      border: solid $color-secondary 1px;
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      margin-right: .4rem;
+      &:after{
+        opacity: 0;
+      }
+      &.active:after{
+        content: "\f111";
+        font-family: Font Awesome\ 5 Solid;
+        font-size: 0.6rem;
+        position: relative;
+        bottom: 6px;
+        left: 4px;
+        opacity:1;
+      }
+    }
+  }
+
+  .different-address.option-no {
+    margin-left: 2rem;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: normal;
+    .radio-wrapper {
+    border: solid $color-secondary 1px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    margin-right: .4rem;
+      &:after{
+        opacity:0;
+      }
+      &.active:after{
+        content: "\f111";
+        font-family: Font Awesome\ 5 Solid;
+        font-size: 0.6rem;
+        position: relative;
+        bottom: 6px;
+        left: 4px;
+        opacity:1;
+      }
+  }
+  }
+
+
+  input[type=file] {
+    border: none;
+  }
+
+  span.company-name-hide {
+    display: none;
+  }
+
+  .upload-tool {
+    & a.button.flat{
+      color: $button-orange;
+      text-transform: uppercase;
+    }
+  }
+
+  .wrapper-form-submit{
+    background: $custom-grayer;
+    height:10rem;
+    padding: 3.5rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  ///////////////////////*******NEW ORDER*************/////////////////////
+  .fragment.new-order{
+    button, a.button{
+      float: right;
+    }
+  }
+
+  label.target-date-label, label.target-hour-label, label.target-minute-label {
+    padding-top: .9rem;
+    padding-bottom: 0.7rem;
+  }
+
+  label.target-hour-label + select {
+    margin-bottom: 1rem;
+  }
+
+  select#ordered_product_category_form_relatedOrder_targetTime_time_minute {
+    position: absolute;
+    width: 3.4rem;
+    left: 6.5rem;
+    margin-top: -58px;
+  }
+
+  .fragment-calculator textarea {
+    height: 10rem;
+  }
+
+  .address-lightbox{
+    width: 100%;
+    display:none;
+    margin-bottom: -1.5rem;
+    .address-delivery-new-add-form{
+    padding-top: 0;
+    label{
+      float: left;
+      font-size: 1rem;
+      text-align: left;
+      width: 30%;
+      line-height: 1.7rem;
+    }
+    .form-group label + select {
+      margin-top: 0.5rem;
+    }
+    input, select {
+      width: 70%;
+      float: right;
+      height: 40px;
+      margin-top: 0.5rem;
+    }
+    }
+  }
+
+  .amount-area{
+    width: calc(100% - 2.5rem);
+    display: inline-block;
+  }
+
+  .new-order-confirmation {
+    .logo{
+      padding: 2rem 0;
+      img{
+        width: 12.5rem;
+        padding: 1rem;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .fragment.form-buttons{
+    background: transparent;
+    .form-group + .form-group, a.button + a.button {
+      margin-left: 2rem;
+    }
+
+    .form-group {
+      display: inline-block;
+    }
+  }
+
+  .form-group{
+    legend{
+      line-height: 1.2rem;
+      padding-top: 0.4rem;
+    }
+    label + select, label + textarea {
+      margin-top: 0.7rem;
+    }
+  }
+
+  .form-group + .select-amount-field, .select-amount-field + .form-group  {
+    margin-top: 0.7rem;
+  }
+
+  .column-50-size{
+    width:49%;
+    display: inline-block;
+    &.right{
+      text-align: right;
+    }
+  }
+
+  a.calculator-icon {
+    position: relative;
+    svg{
+      margin: 1.8rem 0 0 0.5rem;
+      position: absolute;
+      height: 2rem;
+      width: 2rem;
+        & path{
+          fill: $color-tertiary;
+        }
+      &:hover:before, &:hover:after {
+        display:block;
+        cursor: default;
+      }
+      &:before{
+        display:none;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid $color-secondary;
+      }
+      &:after{
+        display:none;
+        position: absolute;
+        content: attr(aria-label);
+        height:1.5rem;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        font-family: $font-primary;
+        background: $color-secondary;
+        padding: 0 0.5rem;
+        color:white;
+        text-decoration: none;
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        animation-delay: .4s;
+        transform: translateX(50%);
+        z-index: 1000000;
+        font-family: $font-primary;
+        border-radius: 2px;
+      }
+      }
+    }
+
+}

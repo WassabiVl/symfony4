@@ -1,0 +1,304 @@
+//
+// Typography
+//=================================================================================================
+
+
+// Font Imports
+@if  $font-primary-url != ""{
+  @font-face {
+    @import url($font-primary-url);
+  }
+}
+
+@if  $font-secondary-url != ""{
+  @import url($font-secondary-url);
+}
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+@mixin build-headlines-standard($pre-tag){
+
+}
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("typography") {
+
+  // Redefine font-size for mobile
+
+
+  // Headings
+  //-------------------------------------
+
+  h1, h2, h3,
+  h4, h5, h6 {
+    @extend %headings !optional;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    margin:0 0 0 0;
+    padding: 0 0 $pad/2 0;
+    font-weight: 400;
+  }
+  .headline{
+    text-align: center;
+    widht:100%;
+    display:block;
+    position: relative;
+    &:before{
+      content: " ";
+      width: 100%;
+      left: 0;
+      top: 50%;
+      position: absolute;
+      border-bottom: 1px solid #000;
+    }
+    margin: 0 $column-gutter 1.6rem $column-gutter;
+    @media #{$large-down} {
+      margin: 0 0 .75rem 0;
+    }
+    &.no-margin-bottom{
+      margin: 0 $column-gutter 0 $column-gutter;
+    }
+  }
+  @for $i from 1 through 6 {
+    h#{$i}{
+
+      $text-direction : none;
+      $font-style: normal;
+      $text-align: left;
+      $transform: none;
+
+      @if nth($h-underlines, $i) == true {
+        $text-direction: underline;
+      }
+      @if nth($h-italics, $i) == true {
+        $font-style: italic;
+      }
+      @if nth($h-centers, $i) == true {
+        $text-align: center;
+      }
+
+      @if nth($h-uppercases, $i) == true {
+        $transform: uppercase;
+      }
+
+
+
+
+      //@if luminance(nth($h-colors, $i)) < .80 {
+      //  color: $font-negative-color;
+      //}
+      //@else{
+      //  color: nth($h-colors, $i);
+      //}
+
+      font-family: nth($h-fonts, $i);
+      font-size: (3 - ((($i)-1))* .3)+rem;
+      line-height: (3 - ((($i)-1))* .3)+rem;
+      min-height: (3 - ((($i)-1))* .3)+rem;
+      text-decoration: $text-direction;
+      font-style: $font-style;
+      text-align: $text-align;
+      text-transform: $transform;
+      display:block;
+      position: relative;
+      padding: 0;
+      //margin: 0 $pad;
+      //max-width:90%;
+
+      @media #{$small-only}{
+        font-size:  (1.7 - ((($i)-1) * .15))+rem;
+        line-height:(1.7 - ((($i)-1) * .15))+rem;
+        min-height: (1.7 - ((($i)-1) * .15))+rem;
+        //padding: 0 .75rem;
+        max-width:95%;
+      }
+
+
+    }
+
+  }
+
+  h1, h2{
+    $line-distance: $pad/2;
+    $space: $pad/2;
+    $height : $font-size-base/(4.5);
+    padding-bottom: $line-distance+$space+$height;
+      &.center{
+        text-align: center;
+      }
+    }
+
+
+  .row+h1, .row+h2, .row+h3, .row+h4, .row+h5, .row+h6{
+    margin-top: $pad-double;
+  }
+
+
+  p{
+    margin: auto;
+    margin-top: -.4rem; // Fix that the first line is always sticky to the top of the parent element
+    color: $font-default-color;
+    font-size: 1rem;
+    line-height: 1.6rem;
+
+    &+p{
+      margin-top: .5rem;
+    }
+    h1+&, h2+&, h3+&, h4+&, h5+&{
+      margin-top: $pad;
+    }
+    &.teaser{
+      text-align: center;
+      font-weight: bold;
+      margin: 2rem auto;
+      .column-66 &{
+        @media #{$large-up}{
+          max-width: 90%;
+        }
+      }
+      @media #{$large-down}{
+        margin: -.75rem auto 2rem auto;
+      }
+    }
+    &.negative{
+      color: $font-negative-color;
+    }
+  }
+
+    .row p:first-child {
+      padding-top: $pad;
+      padding-bottom: $pad/2;
+  }
+
+
+  // Lists
+  ul, ol{
+    padding:0;
+    list-style-type: none;
+  }
+  .page-wrapper:not(.page-menu):not(.menu-wrapper):not(.footer-menu-wrapper){
+    ol{
+      display:inline-block;
+      list-style-type: none;
+      li{
+        counter-increment: step-counter;
+        &:before{
+          content: counter(step-counter) '.';
+          margin-right: 5px;
+          color: $list-ol-color;
+        }
+      }
+      ol{
+        li{
+          counter-increment: step-counter-2;
+          &:before{
+            content: counter(step-counter) '.' counter(step-counter-2) '.';
+            margin-right: 5px;
+            padding-left: 1rem;
+            color: mix($list-ol-color, $white, 70);
+          }
+          ol{
+            li{
+              counter-increment: step-counter-3;
+              &:before{
+                content: counter(step-counter) '.' counter(step-counter-2) '.'  counter(step-counter-3) '.';
+                margin-right: 5px;
+                padding-left: 2rem;
+                color: mix($list-ol-color, $white, 80);
+              }
+            }
+          }
+        }
+      }
+    }
+    ul{
+      display:block;
+      li{
+        position: relative;
+        list-style-type: none;
+        padding-left: 1rem;
+        line-height: 1.6rem;
+        margin-bottom: .6rem;
+        &:before{
+          content: "\2013";
+          position: absolute;
+          left: 0rem;
+          font-family: $font-family-primary;
+          top:0;
+          color: $list-ul-color;
+        }
+        &+li{
+          margin-top:.5rem;
+        }
+        ul{
+          padding-left: 1rem;
+          li{
+            &:before{
+              color: mix($list-ul-color, $white, 70);
+            }
+            ul{
+              padding-left: 1rem;
+              li{
+                &:before{
+                  color: mix($list-ul-color, $white, 50);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  span.hint{
+    font-size: .9rem;
+    color: $gray-dark;
+  }
+
+  li{
+
+  }
+
+  q{
+    font-style: italic;
+  }
+
+  .spacing{
+    padding: 0 $pad;
+  }
+
+  .font-primary{
+    font-family: $font-primary;
+  }
+
+  .font-secondary{
+    font-family: $font-secondary;
+  }
+
+}

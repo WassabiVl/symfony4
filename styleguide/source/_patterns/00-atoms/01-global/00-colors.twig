@@ -1,0 +1,16 @@
+{% for key, color in customVars.colors %}
+	<h5 class="pl-headline">{{key}} RGB ({{color.r}}, {{color.g}}, {{color.b}})</h5>
+	<ul class="sg-colors sg-color-{{ color.scssColor }}">
+		{% for i in 10..1  %}
+		<li>
+			<span class="sg-swatch sg-color-block-darken-{{ i }}"> {{ 100 - (10-i)*10 }}%</span>
+		{% endfor %}
+		<li>
+			<span class="sg-swatch sg-color-block"> 0%</span>
+		{% for i in 1..10  %}
+		<li>
+			<span class="sg-swatch sg-color-block-lighten-{{ i }} {% if i > 4 %} contrast {% endif %}"> {{ i*10 }}%</span>
+		{% endfor %}
+	</ul>
+{% endfor %}
+

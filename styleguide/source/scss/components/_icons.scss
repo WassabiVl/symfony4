@@ -1,0 +1,100 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+@mixin generate-icon-classes($items){
+
+  @each $item in $items{
+    .icon-#{$item}{
+      background-image: url('../../images/icons/#{$item}.svg');
+    }
+  }
+
+}
+
+@mixin generate-icon-classes-mobile($items){
+
+  @each $item in $items{
+    @media #{$small-only}{
+    .icon-#{$item}{
+        background-image: url('../../images/icons/#{$item}_mobile.svg');
+      }
+    }
+  }
+
+}
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("icons") {
+
+  .svg-icon{
+    display:inline-block;
+    height:1rem;
+    width:1rem;
+    padding: rem-calc(5);
+    background-size: contain;
+    vertical-align: middle;
+    margin: 0 rem-calc(5);
+
+  }
+
+  .svg-icon-nav{
+    height:rem-calc(35);
+    width:rem-calc(35);
+    @media (screen and max-width: (480px)) {
+      height:rem-calc(25);
+      width:rem-calc(25);
+    }
+  }
+  .svg-icon-1-2_5x{
+    height:1.25rem;
+    width: 1.25rem;
+    margin: 0 rem-calc(6);
+  }
+  .svg-icon-1-5x{
+    height:1.5rem;
+    width: 1.5rem;
+    margin: 0 rem-calc(8);
+  }
+  .svg-icon-2x{
+    height:2rem;
+    width: 2rem;
+    margin: 0 rem-calc(10);
+  }
+
+
+
+
+  $list: "search","twitter","facebook","linkedin","xing","email","google-plus";
+  @include generate-icon-classes($list);
+
+  $mobile-list: "";
+  @include generate-icon-classes-mobile($mobile-list);
+
+
+
+}

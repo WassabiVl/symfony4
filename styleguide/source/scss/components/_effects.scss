@@ -1,0 +1,53 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+@include keyframes('wave-material'){
+  0% {transform:scale(0); opacity: 1;}
+  90% { opacity: .0;}
+  100% {transform:scale(1);}
+}
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("effects") {
+  .material-click-action{
+    overflow:hidden;
+  }
+  .material-click{
+    position: absolute;
+
+    background: $color-primary;
+    z-index: -1;
+    border-radius: 50%;
+    transform:scale(0);
+    opacity: 0;
+    &.animate{
+      @include animation('wave-material 1s 1');
+    }
+  }
+  .material-click-content{
+    z-index:1;
+  }
+}

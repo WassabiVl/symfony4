@@ -1,0 +1,21 @@
+<div>
+    <table>
+        <tr>
+        {% for key, icon in customVars.faIcons %}
+            {% if ((loop.index - 1) % 5) == 0 %}
+                </tr><tr>
+            {% endif %}
+            <td style="text-align:center;"><span class="fal fa-{{ icon }} fa-3x"></span><br>{{ key }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+
+<div style="display:none!important">
+    {% for key, icon in customVars.faIcons %}
+        <numIndex index='{{loop.index - 1}}' type='array'>
+            <numIndex index='0'>{{key}}</numIndex>
+            <numIndex index='1'>{{icon}}</numIndex>
+        </numIndex>
+    {% endfor %}
+</div>

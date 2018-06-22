@@ -1,0 +1,15 @@
+@import 'variables-fontello';
+
+
+@font-face {
+  font-family: 'Fontello';
+  font-style: normal;
+  font-weight: 900;
+  src: url('#{$fontello-font-path}/#{$fontello-filename}.eot');
+  src: url('#{$fontello-font-path}/#{$fontello-filename}.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontello-font-path}/#{$fontello-filename}.woff2') format('woff2'),
+  url('#{$fontello-font-path}/#{$fontello-filename}.woff') format('woff'),
+  url('#{$fontello-font-path}/#{$fontello-filename}.ttf') format('truetype'),
+  url('#{$fontello-font-path}/#{$fontello-filename}.svg#fontello') format('svg');
+}
+

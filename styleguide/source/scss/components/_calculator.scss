@@ -1,0 +1,257 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("calculator") {
+
+  /////////////////+++++++++++Calcutator+++++++++++++/////////////////
+  .calculator-wrapper{
+    margin-top: -5rem;
+    min-height: 100vh;
+    background: #f3f4f4;
+    box-shadow: -4px 5px 8px #c7c7c7;
+    transform: translateX(50vw);
+    position: relative;
+    right: 48rem;
+    padding-bottom: 7rem;
+    &.open{
+      transform: translateX(0vw);
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  .column.calculator-layout-app{
+    display:none;
+    &.open{
+      display: inline-block;
+      //this is to not overlap the form order, otherwise the calculator will be
+      //on top of the form, the div is transparent but overlaps the form, therefore
+      //I had to make this fix
+      right: 5rem;
+    }
+  }
+
+  .calculator-top{
+    padding: 7rem 3rem 5.8rem;
+    background: $custom-gray;
+    label, span {
+      width: 50%;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+    }
+    span{
+      background: $card-default-color-dark;
+      margin-right: -0.3rem;
+      padding: 0.6rem;
+      line-height: 1rem;
+    }
+    select{
+      height:40px;
+    }
+    span.calculator-title{
+      text-align: center;
+      background: none;
+      width: 100%;
+      text-transform: uppercase;
+      padding-bottom: 1rem;
+    }
+    //.number-of-patients, .intervals-in-minutes{
+    //  padding: 1rem 2rem;
+    //}
+    label{
+      margin-top: .5rem;
+    }
+    a.button#createBaseSchedule{
+      margin-top: 1rem;
+      background: $color-secondary;
+      &:hover{
+        background: mix($color-secondary,$black, 80);
+      }
+      &:active{
+        background: mix($color-secondary,$black, 60);
+      }
+    }
+  }
+
+  .calculator-bottom{
+    padding: 1rem;
+    display:none;
+
+    &.open{
+      padding: 1rem;
+      display: block;
+    }
+  }
+
+  .add-event-card{
+    margin-top: 1rem;
+    position: relative;
+    background:white;
+    box-shadow: 1px 1px 8px  rgba(black, .5);
+    border-radius: 4px;
+    .add-event-trigger, .add-event-unfold{
+      line-height:4rem;
+      display: block;
+    }
+    .add-event-trigger{
+      &.open{
+        border-top: $divider-color solid 1px;
+        a.small-fab {
+          background: $card-default-color-darkest;
+          i{
+            transform: rotate(225deg);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        &.hover{
+          background: $color-primary-hover;
+        }
+      }
+    }
+    .add-event-trigger:hover{
+      background-color: $tab-default-color-light;
+      transition: all 0.3s ease-in-out;
+      box-shadow: $custom-shadow-high;
+      span.add-event{
+        color: $color-tertiary;
+      }
+      &.open{
+        box-shadow:none;
+      }
+    }
+    .add-event-trigger:active{
+      background-color: mix($tab-default-color-hover, transparent, 50);
+    }
+    span.add-event{
+      margin-left: 4.7rem;
+      line-height: 4.5rem;
+      color: $color-tertiary;
+    }
+
+    a.button.event-confirm {
+      position: absolute;
+      right: 1.3rem;
+      bottom: 0.8rem;
+      background: $color-secondary;
+      display: none;
+      transition: all .1s ease-in-out;
+      &:hover{
+        background: mix($color-secondary,$black, 80);
+      }
+      &:active{
+        background: mix($color-secondary,$black, 60);
+      }
+    }
+
+    .add-event-unfold{
+      display:none;
+    }
+
+  }
+
+  a.button.calculator-button{
+    margin-top: 3rem;
+    float: none !important;
+  }
+
+  .results-row{
+    display: block;
+    line-height: 1.2rem;
+    padding: 1rem;
+  }
+  .results-row-one-more {
+    padding-left: 1rem !important;
+  }
+
+  .results-cell{
+    display:inline-block;
+    position: relative;
+    width: calc(96% / 5);
+    padding: 0 0.2rem;
+
+    //label[for^="event_time"]{
+    //  position: relative;
+    //  width: 120%;
+    //  left: -10px;
+    //}
+  }
+  .results-cell-patientmbq, .results-cell-patientmbqhl, .results-cell-totalmbq{
+    text-align: center;
+  }
+  //.results-cell-patientnum{
+  //  left: -20px;
+  //}
+  .results-content{
+    border-top: $divider-color 1px solid;
+    padding-left: 0;
+  }
+
+  .calculator-results {
+    margin: 1rem 0 1rem;
+    padding: 1.5rem;
+    border: 2px solid #f15a24;
+    border-radius: 2px;
+    transition: sll 1s ease-in-out;
+    display:none;
+  }
+
+  .calculator-results span {
+    display: block;
+    line-height: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .fragment.new-order.fragment-calculator {
+    padding-bottom: 0;
+  }
+
+  #calculator-wait{
+    display: none;
+    border: 16px solid $color-secondary-lightest;
+    border-radius: 50%;
+    border-top: 16px solid $color-primary;
+    width: 120px;
+    height: 120px;
+    opacity: 0.7;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    z-index: 1000;
+    top: 55vh;
+    margin-top: -12vh;
+    margin-left: -8.5rem;
+    position: sticky;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+}

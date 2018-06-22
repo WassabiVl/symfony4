@@ -1,0 +1,78 @@
+//
+// Navigation
+//=================================================================================================
+// @globals
+//
+//===================================================================
+@import "../base/globals";
+
+// @variables
+//
+//===================================================================
+
+// @mixins
+//
+//===================================================================
+
+// @styles
+//
+//===================================================================
+
+@include exports("news") {
+
+  .news-box{
+    background: $white;
+    padding:2rem ;
+    & + & {
+      margin-top: $pad/2;
+    }
+    .news-box-date{
+      color:$color-primary;
+    }
+    .news-box-headline{
+      %headings {
+        color: $color-gold;
+        margin: 1.5rem 0 1rem;
+      }
+    }
+  }
+
+  .news-box:last-child{
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }
+
+  .news-title{
+    background: $color-secondary;
+    color:$color-gold;
+    height: 3.5rem;
+    padding: 1rem 2rem 2.7rem;
+
+    & + .news-box{
+      margin-top: $pad/2;
+    }
+  }
+
+  .news-box-link{
+    margin-top: 1rem;
+  }
+
+  a.link-underline{
+    display: inline-block;
+    background: transparent;
+    margin: 0.4166666667rem 0;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+  }
+  a.link-underline::after{
+    width: 100%;
+    bottom: 0px;
+    right: 0;
+    border-bottom: 2px solid $color-gold;
+    content: '';
+    position: absolute;
+    background: transparent;
+  }
+}

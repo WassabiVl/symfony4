@@ -1,0 +1,21 @@
+@import "../base/globals";
+
+@include exports('scrollIndicator'){
+  .scroll-x-indicator{
+    text-align: center;
+  }
+  .scroll-indicator-point{
+    display: inline-block;
+    height: .75rem;
+    width: .75rem;
+    margin: 0 $pad;
+    border-radius: 100%;
+    border: 1px solid $gray-dark;
+    cursor: pointer;
+    transition: background 300ms ease-in-out;
+    &.active{
+      background: $gray-dark;
+    }
+  }
+
+}

@@ -1,0 +1,396 @@
+//
+// Fragments
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+@mixin fragment-pagecolors($font-color, $background-color){
+  p,label {
+    color: $font-color;
+  }
+  thead th{
+    background: $font-color;
+    color: $background-color;
+  }
+  table td{
+    color: $font-color;
+  }
+  h1,h2,h3,h4,h5,h6{
+    color: $font-color;
+    //background: $background-color;
+  }
+  .page-wrapper:not(.page-menu):not(.menu-wrapper):not(.footer-menu-wrapper) ul li:before{
+    color: $font-color;
+  }
+  .headline{
+    &:before{
+      border-bottom-color: $font-color;
+    }
+  }
+  .slick-next{
+    &:before{
+      border-left-color: $font-color;
+    }
+    &:after{
+      border-left-color: $background-color;
+    }
+  }
+  .slick-prev{
+    &:before{
+      border-right-color: $font-color;
+    }
+    &:after{
+      border-right-color: $background-color;
+    }
+  }
+  .slick-dots{
+    button{
+      border-color: $font-color;
+    }
+    .slick-active{
+      button{
+        background: $font-color;
+      }
+
+    }
+
+
+  }
+  .box-with-icon{
+    border-color: $font-color;
+    color: $font-color;
+    height: 18rem;
+    &:before{
+      color: $font-color;
+      background-color: $background-color;
+    }
+  }
+  .line{
+    height: 0px;
+    width:100%;
+    border-bottom: 1px solid $font-color;
+    margin-top: .5rem;
+  }
+
+  fieldset{
+    border:2px $font-color solid;
+    &+fieldset{
+      margin-top:2rem;
+    }
+    legend{
+      padding: 0 .5rem;
+    }
+  }
+  .slick-dots{
+    li{
+      button{
+        @if luminance($font-color) > .5 {
+          background: mix($font-color, $black, 60);
+          border-color: mix($font-color, $black, 60);
+        }
+        @else{
+          background: mix($font-color, $white, 60);
+          border-color: mix($font-color, $white, 60);
+        }
+      }
+      &.slick-active{
+        button{
+          background-color: $font-color;
+        }
+      }
+    }
+  }
+}
+
+@mixin fragment-button($background, $font-color){
+  a.button, input[type=submit], label.uploadFile, button, span.button {
+    color: $button-default-color;
+    background-color: $background;
+    //border: 1px solid rgba($border-default-color,.5);
+    &:hover, &:active, &:focus{
+      // Is color dark or bright?
+      @if luminance($background) > .5 {
+        background: mix($background, $black, 80);
+        border-color: mix($background, $black, 80);
+      }
+      @else{
+        background: mix($background, $white, 80);
+        border-color: mix($background, $white, 80);
+      }
+    }
+  }
+}
+
+@mixin fragment-boxes($background, $font-color){
+  .box{
+    color:$font-color;
+    background: $background;
+    h1,h2,h3,h4,h5,h6, p, .icon{
+      color:$font-color;
+      background: transparent;
+    }
+    li{
+      color:$font-color;
+      &:before{
+        color: $font-color;
+      }
+    }
+    a{
+      $luminance-font : luminance($font-default-link-color);
+      $luminance-background : luminance($background);
+      $contrast : 0;
+      @if $luminance-font < $luminance-background {
+        $contrast: ($luminance-background+0.001) / ($luminance-font+0.001);
+      }
+      @else{
+        $contrast: ($luminance-font+0.001) / ($luminance-background+0.001);
+      }
+      @if $contrast < 3 {
+        color: $font-color !important;
+      }
+      @else{
+        color: $link-color !important;
+      }
+    }
+    ul li:before{
+      color: $font-color !important;
+    }
+  }
+}
+// @styles
+//
+//===================================================================
+
+@include exports("fragments") {
+  .fragment {
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    padding: 1.6rem+$column-gutter 0;
+    @media #{$large-down} {
+      padding: 0.6rem+$column-gutter 0;
+    }
+    &:nth-of-type(1){
+      //padding-top: $pad/2 !important;
+      padding-top: 6.2rem !important;
+    }
+    &:last-of-type{
+      //padding-top: $pad/2 !important;
+      padding-bottom: 6.2rem;
+    }
+    .page-wrapper {
+      font-size: $font-size;
+      line-height: $line-height-base;
+    }
+
+    &.no-vertical-padding {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    &.white {
+      background: #fff;
+    }
+
+    &.base-bg {
+      background: $base-bg;
+      color: $color-primary;
+      @include fragment-pagecolors($color-tertiary, #fff);
+      @include fragment-button($color-primary, #fff);
+      @include fragment-boxes($color-secondary, $white);
+    }
+
+    &.radiopharma-pages {
+        padding-bottom: 6rem;
+      }
+
+    &.radiopharma-pages + &.radiopharma-pages {
+      padding-bottom: 2rem !important;
+    }
+
+    &.image-with-text {
+      @include colorize-button($color-tertiary, $white, $color-tertiary, $white);
+      background-position: center center;
+      background-size:cover;
+
+      height: rem-calc(380);
+      color: #fff;
+      position: relative;
+
+      .page-wrapper{
+        padding: 0 $pad*2;
+        height: 100%;
+      }
+
+      &:before{
+        content: " ";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:linear-gradient(180deg,rgba(70,60,60,.5),rgba(40,40,50,.6))
+      }
+      .content{
+        position: relative;
+        padding: 1rem .5rem .5rem .5rem;
+        height: 100%;
+        z-index:2;
+        h2,h3,h4,h5,h6{
+          margin: 0rem 3rem 0rem 3rem;
+          padding:0;
+          color:#fff;
+          @media #{$large-down} {
+            margin: 0;
+          }
+        }
+        p{
+          margin: 2rem 0rem 0rem 3rem;
+          color: #fff;
+          max-width: 60%;
+        }
+      }
+
+      @media #{$small-only}{
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        .page-wrapper .content{
+          padding-top: 1rem;
+          p{
+            max-width:95%;
+            margin: 1rem 0 0 1rem;
+          }
+        }
+      }
+      @media #{$medium-up}{
+        &:nth-child(2n){
+          .content{
+            text-align: right;
+            p{
+              margin: 2rem 3rem 0 40%;
+            }
+          }
+        }
+      }
+
+    }
+
+    &.image{
+      height:rem-calc(500);
+      background-position: center center;
+      background-size:cover;
+    }
+
+    &.image-with-video{
+      height:rem-calc(500);
+      position: relative;
+      background-position: center center;
+      background-size:cover;
+      .play-button{
+
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        margin-top: -3rem;
+        margin-left: -3rem;
+        background: rgba($color-secondary, .4);
+        transition: background 300ms ease-in-out;
+        cursor: pointer;
+        &:hover{
+          background: rgba($color-secondary, .8);
+        }
+        &:before{
+          content: "\f04b";
+          color: #fff;
+          font-family: "Font Awesome 5 Solid";
+          font-size:2.5rem;
+          line-height: 6rem;
+          padding: 0 .5rem 0 1rem;
+        }
+      }
+      .youtube-video{
+        display:none;
+        position: fixed;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        background: rgba(0,0,0,.75);
+        z-index: 9999;
+        .inner{
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform:translate(-50%,-50%);
+          iframe{
+            width:960px;
+            height: 540px;
+            max-width: 90vw;
+            max-height: 50.62vw;
+          }
+          p{
+            color:#fff;
+            font-size: 1rem;
+            padding-top:2rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &.button-solo{
+      text-align: center !important;
+      .column{
+        text-align: center;
+      }
+      &.less-top{
+        margin-top:-($pad*2);
+      }
+      a.button, button{
+        min-width: rem-calc(300);
+
+      }
+    }
+
+    &.new-order-confirmation {
+      color: $gray-dark;
+    }
+
+    .teaserbox {
+      background: $color-primary;
+    }
+
+    .gallery-photo-box {
+      min-height: 30vh;
+      background: $color-secondary;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      cursor: pointer;
+    }
+
+
+
+  }
+}

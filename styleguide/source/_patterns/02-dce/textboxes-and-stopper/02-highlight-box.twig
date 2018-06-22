@@ -1,0 +1,27 @@
+{% block content %}
+    {#{% set bgColor = 'base-bg' %}#}
+    {#{%  if bgColor is defined %}#}
+        {#<div class="fragment {{bgColor}}">#}
+    {#{% else %}#}
+        {#<div class="fragment {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    <div class="fragment">
+        <div class="page-wrapper">
+
+            <div class="row">
+                <div class="column center column-100">
+                    <div class="text-boxes-highlight">
+
+                        <span class="text-boxes-highlight-span"></span>
+                        <div class="row">
+                            <div class="column column-100">
+                                {{ paragraph }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

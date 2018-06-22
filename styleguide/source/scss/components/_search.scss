@@ -1,0 +1,183 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("search") {
+  $height : 3rem;
+  .search-field{
+    display:none;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: $height;
+    z-index: 1000;
+    background: #fff;
+    &.active{
+      display: block;
+    }
+    input{
+      border:0;
+      outline:none;
+      vertical-align: top;
+      margin: 0;
+      height: $height;
+    }
+    input[type=submit]{
+      position: absolute;
+      right: 0;
+      width: 100px;
+      text-align: center;
+      padding: .5rem;
+      margin: 0;
+      vertical-align: top;
+      top:0;
+      background: $color-primary-contrast;
+      color: $color-primary!important;
+      height: $height;
+      border:0;
+      border-bottom: 1px solid $color-primary-contrast;
+      border-left: 1px solid $gray;
+      &:hover{
+        background: $color-secondary;
+        color: $color-secondary-contrast !important;
+        border-bottom: 1px solid $color-secondary;
+      }
+    }
+    @media #{$menu-break-down} {
+      display: block;
+      position: relative;
+      text-align: center;
+      height: 5rem;
+      background: #fff;
+      padding-top: 1rem;
+      form{
+        position: relative;
+        display: inline-block;
+        width: 93%;
+        input{
+          border: 1px solid $gray;
+        }
+        input[type=submit]{
+          bottom: 1.2rem;
+          background: $color-secondary;
+          color: $color-secondary-contrast !important;
+          border-bottom: 1px solid $color-secondary;
+        }
+
+      }
+
+    }
+  }
+
+  .search{
+    display:inline-block;
+    margin-left: $pad;
+    line-height: 3rem;
+    width: rem-calc(20);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $color-primary-contrast;
+
+    .fa{
+      vertical-align: bottom;
+      font-size: 20px;
+      display: none;
+    }
+
+    .active {
+      display: inline-block;
+    }
+    @media #{$menu-break-down}{
+      display: none !important;
+    }
+  }
+
+  /* KE Search */
+
+  .kesearch_searchbox{
+    .kesearchbox{
+      position: relative;
+      .reset{
+        position: absolute;
+        top:$pad/2;
+        right:$pad/2;
+        line-height: 2rem;
+        cursor: pointer;
+        opacity: .4;
+        transition: opacity 300ms ease-in-out;
+        &:hover{
+          opacity: 1;
+        }
+        &:after{
+          font-family: 'Font Awesome 5 Light';
+          content:"\f00d";
+          font-size: 1rem;
+          color: $color-primary;
+        }
+      }
+    }
+    .submitbutt{
+      input[type=submit]{
+        margin-top: $pad;
+        margin-bottom: $pad;
+      }
+    }
+  }
+  .tx-kesearch-pi1{
+    .messsage{
+      padding: $pad 0;
+    }
+    #kesearch_num_results{
+      padding: $pad 0;
+    }
+    .result-list-item{
+      padding-bottom: $pad*2;
+    }
+    .kesearch_pagebrowser{
+      ul{
+        li{
+          list-style-type: none;
+          display:inline-block;
+          &:first-child{
+            padding-left: 0;
+          }
+          &:before{
+            display:none;
+            content: " ";
+          }
+        }
+      }
+    }
+  }
+
+}

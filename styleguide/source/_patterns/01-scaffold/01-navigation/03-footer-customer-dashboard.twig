@@ -1,0 +1,35 @@
+{% block content %}
+    {#{% set bgColor = 'color-secondary' %}#}
+    {#{%  if bgColor is defined %}#}
+    {#<div class="footer {{bgColor}}">#}
+    {#{% else %}#}
+    {#<div class="footer {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    {#{% if templateRender == false %}#}
+    {#{% include "atoms-colorswitch" %}#}
+    {#{% endif %}#}
+<div class="footer-gradient">
+    <footer class="footer-dashboard">
+            <div class="row">
+                <div class="column no-vertical-padding column-30">
+                    <span class="pagination">PAGE < 1 2 3 4 5 6 7 8 ... 15></span>
+                </div>
+                <div class="column no-vertical-padding column-60">
+                    <ul>
+                        <li class="footer-dashboard-item"><a href="#">OPEN ORDERS</a></li>
+                        <li class="footer-dashboard-item"><a href="#">CLOSED ORDERS</a></li>
+                        <li class="footer-dashboard-item dashboard-search-tool"><a href="#">SEARCH</a><input type="search" class="footer-search-field"></li>
+                    </ul>
+                </div>
+                <div class="column no-vertical-padding column-10">
+                    <a class="button-fab">
+                        <i class="far fa-plus"></i>
+                        <div class="tooltip-fab">
+                            <span>NEUE BESTELLUNG</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </footer>
+</div>
+{% endblock %}

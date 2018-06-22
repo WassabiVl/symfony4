@@ -1,0 +1,29 @@
+{% block content %}
+    {#{% set bgColor = 'color-secondary' %}#}
+    {#{%  if bgColor is defined %}#}
+    {#<div class="footer {{bgColor}}">#}
+    {#{% else %}#}
+    {#<div class="footer {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    {#{% if templateRender == false %}#}
+    {#{% include "atoms-colorswitch" %}#}
+    {#{% endif %}#}
+
+    <footer class="footer dark main-footer-menu">
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="column column-s-0 column-m-0 column-50">
+                </div>
+                <div class="column column-s-100 column-m-100 column-50">
+                    <ul>
+                        <li class="menu-item"><a href="#">Impressum</a></li>
+                        <li class="menu-item"><a href="#">AGB</a></li>
+                        <li class="menu-item"><a href="#">Datenschutz-Bestimmungen</a></li>
+                        <li class="menu-item"><a href="#">Über uns</a></li>
+                        <li class="menu-item"><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

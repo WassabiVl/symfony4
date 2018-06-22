@@ -1,0 +1,170 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("table") {
+
+  .center{
+    table{
+      margin:auto;
+    }
+  }
+
+  .right{
+    table{
+      float:right;
+
+    }
+  }
+
+  @media #{$medium-down}{
+    .column-m-100 {
+      .right, .center, .left {
+        clear: both;
+        float: none;
+        margin: auto;
+      }
+    }
+  }
+  @media #{$small-only}{
+    .column-s-100 {
+      .right, .center, .left {
+        clear: both;
+        float: none;
+        margin: auto;
+      }
+    }
+  }
+
+  p+table{
+    margin-top:1rem;
+  }
+  .table-container{
+    @media #{$large-down}{
+      overflow-x:scroll;
+    }
+  }
+  table{
+    width:100%;
+    word-break: normal;
+    border-collapse: collapse !important;
+    background:transparent;
+    th, td, th{
+      padding: $pad;
+      text-align: left;
+    }
+    td,th{
+      &.center{
+        text-align: center;
+      }
+      &.left{
+        text-align: left;
+      }
+      &.right{
+        text-align: right;
+      }
+    }
+    thead{
+      background: $gray-light;
+      font-weight: 700;
+    }
+    tbody{
+      font-family: $font-family-primary;
+    }
+
+    &.full-size{
+      width: 100%;
+    }
+
+    &.center{
+      text-align: center;
+    }
+    &.jobs{
+      color: $font-default-color;
+      td:nth-child(1){
+        width: 45%;
+      }
+      td:nth-child(2){
+        width: 30%;
+        text-align: center;
+      }
+      tbody{
+        td:nth-child(2) {
+          color: $gray-dark;
+        }
+      }
+      td:nth-child(3){
+        width: 25%;
+        text-align: center;
+      }
+      @media #{$large-down}{
+        thead{
+          display:none;
+        }
+        td{
+          display:inline-block;
+          width:50% !important;
+          border:0;
+          text-align: left !important;
+          font-size: 1rem;
+          &:first-child{
+            width:100% !important;
+            padding-bottom: 0;
+          }
+          &:last-child{
+            text-align: right !important;
+          }
+          span{
+            display:inline;
+          }
+        }
+        tr{
+          font-size:0;
+          display:block;
+          border: 1px solid $gray-dark;
+          margin-top:$pad;
+        }
+
+
+      }
+      @media #{$medium-down}{
+        td {
+          width: 100% !important;
+          text-align: left;
+        }
+      }
+    }
+
+  }
+
+  table.table.table-sm:last-of-type {
+    margin-bottom: 8rem;
+  }
+
+
+}

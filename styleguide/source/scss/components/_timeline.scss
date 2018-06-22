@@ -1,0 +1,405 @@
+////
+//// Navigation
+////=================================================================================================
+//// @globals
+////
+////===================================================================
+//@import "../base/globals";
+//
+//// @variables
+////
+////===================================================================
+//
+//// @mixins
+////
+////===================================================================
+//
+//// @styles
+////
+////===================================================================
+//
+//@include exports("timeline") {
+//
+//  h1 {
+//    font-size:2em;
+//    text-align:center;
+//    margin:20px 0 40px;
+//    padding:0;
+//  }
+//  .container {
+//    //background:#222;
+//    width:80%;
+//    margin:0 auto;
+//    overflow:auto;
+//    padding:2%;
+//  }
+//  .switch-content {
+//    float:left;
+//    display:block;
+//    width:40%;
+//    padding:1% 2%;
+//  }
+//
+//
+//  .switch-content li.timeline-element:nth-child(odd) .timeline-card {
+//    border-right:5px dashed #666;
+//    text-align:right;
+//  }
+//
+//  .switch-content li.timeline-element:nth-child(even) .timeline-card {
+//    border-right:5px dashed #666;
+//    text-align:right;
+//  }
+//
+//  .switch-content li.timeline-element:nth-child(odd) {
+//    margin:150px 0 0;
+//    background: green;
+//    right: -11rem;
+//    position: relative;
+//  }
+//  li.timeline-element:nth-child(even) {
+//    margin:80px 0 150px;
+//    background: red;
+//    left: 29rem;
+//    position: relative;
+//  }
+//  .container p {
+//    -webkit-transition: all 0.7s ease-in-out;
+//    -moz-transition: all 0.7 ease-in-out;
+//    -ms-transition: all 0.7s ease-in-out;
+//    -o-transition: all 0.7s ease-in-out;
+//    transition: all 0.7s ease-in-out;
+//  }
+//  .switch-content .more-padding {
+//    padding-right:100px;
+//  }
+//
+//   ul:after {
+//    content: " ";
+//    position: absolute;
+//    height: 100%;
+//    width: 2px;
+//    background-color: #48ec1b;
+//    left: 50%;
+//    margin-left: 2px;
+//    top: 0;
+//   }
+//}
+//
+
+
+
+
+
+
+
+//
+// Navigation
+//=================================================================================================
+// @globals
+//
+//===================================================================
+@import "../base/globals";
+
+// @variables
+//
+//===================================================================
+
+// @mixins
+//
+//===================================================================
+
+// @styles
+//
+//===================================================================
+
+@include exports("timeline") {
+
+  //NEW CODE////
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .intro {
+    background: #F45B69;
+    padding: 100px 0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+
+  ///* TIMELINE
+  //–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .timeline ul.my-ul {
+    background: $base-bg;
+    padding: 50px 0;
+  }
+
+  .timeline ul.my-ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    border: solid #a7b3bd;
+    //border-image: url("/fileadmin/lombego/layout/images/misc/timeline-dashed-bg.svg") 25% repeat;
+  }
+
+
+  .timeline ul.my-ul li .timeline-card {
+    position: relative;
+    bottom: 0;
+    width: 36vw;
+    padding: 0 2.5rem;
+    background-color: $base-bg;
+    border: $color-primary solid 5px;
+  }
+
+  .timeline ul.my-ul li .timeline-card::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .timeline ul.my-ul li:nth-child(even) .timeline-card {
+    left: 3.8vw;
+  }
+
+  .timeline ul.my-ul li:nth-child(even) .timeline-card::before {
+    top: 50%;
+    left: -4vw;
+    //width: 4vw;
+    width: 0vw;
+    border: solid $color-primary 3px;
+    animation: sideline2 1s linear forwards;
+  }
+
+  @keyframes sideline2 {
+    from {
+      width:0vw;
+    }
+    to {
+      width:4vw;
+    }
+  }
+
+
+  //line under box error
+  //.timeline ul.my-ul li .timeline-card:after {
+  //  content: "";
+  //  position: absolute;
+  //  bottom: 7px;
+  //  width: 0;
+  //  height: 0;
+  //  border-style: solid;
+  //}
+
+///Little dot
+  //.timeline ul.my-ul li .timeline-card:after {
+  //  content: '';
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translateX(-50%);
+  //  width: 1.2rem;
+  //  height: 1.2rem;
+  //  border-radius: 50%;
+  //  background: inherit;
+  //}
+
+
+  .timeline ul.my-ul li:nth-child(odd) .timeline-card {
+    left: -39.8vw;
+  }
+
+  .timeline ul.my-ul li:nth-child(odd) .timeline-card::before {
+    top: 50%;
+    right: -4vw;
+    width: 0vw;
+    border: solid $color-primary 3px;
+    animation: sideline1 1s linear forwards;
+  }
+
+@keyframes sideline1 {
+  from {
+    width:0vw;
+  }
+  to {
+    width:4vw;
+  }
+}
+
+
+
+  time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+
+  ///* EFFECTS
+  //–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .timeline ul.my-ul li::after {
+    transition: background .5s ease-in-out;
+  }
+
+  .timeline ul.my-ul li.in-view::after {
+    background: #4f677b;
+  }
+
+  .timeline ul.my-ul li .timeline-card {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+
+//animation timeline-card side line
+  .timeline ul.my-ul li .timeline-card:before {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+  }
+
+  .timeline ul.my-ul li.in-view .timeline-card:before {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+//end of animation
+
+
+  .timeline ul.my-ul li:nth-child(odd) .timeline-card {
+    transform: translate3d(0, 10rem, 0);
+  }
+
+  .timeline ul.my-ul li:nth-child(even) .timeline-card {
+    transform: translate3d(0, 10rem, 0);
+  }
+
+  .timeline ul.my-ul li.in-view .timeline-card {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+  .timeline-card.more-padding{
+    margin-top: 5rem !important;
+  }
+    .timeline-box-part{
+    }
+
+    .timeline-box-year{
+      position: relative;
+      top: -1.5rem;
+      background: $base-bg;
+      h3{
+        text-align: center;
+      }
+    }
+    .timeline-box-photo{
+      height: 28vh;
+      width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      //img{
+      //  width: 100%;
+      //}
+    }
+
+    .timeline-box-text{
+      position: relative;
+      bottom: -1rem;
+      background: $base-bg;
+      padding: 1rem 0 3rem;
+    }
+
+  ///* GENERAL MEDIA QUERIES
+  //–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  @media screen and (max-width: 600px) {
+    .timeline ul.my-ul li .timeline-card {
+      width: 84vw;
+    }
+
+    .timeline ul.my-ul li:nth-child(odd) .timeline-card {
+      left: -42.1vw;
+    }
+
+    .timeline ul.my-ul li:nth-child(even) .timeline-card {
+      left: -42.1vw;
+    }
+
+    .timeline ul.my-ul li:nth-child(odd) .timeline-card::before{
+      display: none;
+    }
+
+    .timeline ul.my-ul li:nth-child(even) .timeline-card::before {
+      display: none;
+    }
+
+  }
+
+  //@media screen and (max-width: 900px) {
+  //  .timeline ul.my-ul li .timeline-card {
+  //    width: 20rem;
+  //  }
+  //
+  //  .timeline ul.my-ul li:nth-child(odd) .timeline-card {
+  //    left: -23.5rem;
+  //  }
+  //
+  //}
+
+
+  //@media screen and (max-width: 900px) {
+  //  .timeline ul.my-ul li {
+  //    margin-left: 20px;
+  //  }
+  //  .timeline ul.my-ul li .timeline-card {
+  //    width: 35rem;
+  //  }
+  //  .timeline ul.my-ul li:nth-child(even) .timeline-card {
+  //    left: -22.8rem;
+  //  }
+  //}
+  //
+  //@media #{$medium-only} {
+  //  .timeline ul.my-ul li .timeline-card {
+  //    //width: 250px;
+  //  }
+  //  .timeline ul.my-ul li:nth-child(even) .timeline-card{
+  //    left: -289px;
+  //  }
+  //}
+
+  ///* END OF GENERAL MEDIA QUERIES
+  //–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+}

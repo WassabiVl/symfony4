@@ -1,0 +1,49 @@
+{% block content %}
+    {#{% set bgColor = 'primary-color' %}#}
+    {#{%  if bgColor is defined %}#}
+        {#<div class="fragment {{bgColor}}">#}
+    {#{% else %}#}
+        {#<div class="fragment {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    {#{% if templateRender == false %}#}
+        {#{% include "atoms-colorswitch" %}#}
+    {#{% endif %}#}
+<div class="fragment homepage-header" style="background-image:url('../../images/header-bild.jpg');">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="column column-80 header-main-content-box">
+                <div class="column column-s-100 column-m-100 column-55">
+                    <div class="header-left-content">
+                        <h4 class="negative">Willkommen</h4>
+                        <div class="logo-header-main-content-box">
+                            <img src="../../images/R24-white-logo.png" alt="Radiopharma24">
+                        </div>
+                        <p> {{ text }}</p>
+                    </div>
+                </div>
+                <div class="column right column-s-100 column-m-100 column-40">
+                    <div class="sign-up-card">
+                        <span class="bolder-span block">Registrieren Sie sich</span>
+                        <span>(in 3 einfachen Schritten)</span>
+                            <div class="steps-group">
+                                <div class="step">
+                                    <span class="step-number bolder-span">1</span>
+                                    <span>Kontaktdaten hinterlegen</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number bolder-span">2</span>
+                                    <span>Lieferadresse angeben</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number bolder-span">3</span>
+                                    <span>UG Dokument hochladen</span>
+                                </div>
+                            </div>
+                        <a class="bottom button floating broad">Registrieren Sie sich</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

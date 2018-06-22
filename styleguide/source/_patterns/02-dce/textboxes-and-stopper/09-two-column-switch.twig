@@ -1,0 +1,53 @@
+{% block content %}
+    {#{% set bgColor = 'primary-color' %}#}
+    {#{%  if bgColor is defined %}#}
+        {#<div class="fragment {{bgColor}}">#}
+    {#{% else %}#}
+        {#<div class="fragment {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    {#{% if templateRender == false %}#}
+        {#{% include "atoms-colorswitch" %}#}
+    {#{% endif %}#}
+    {% for i in 0..5 %}
+        <div class="fragment bg-color two-column-image-switch">
+            <div class="page-wrapper text-bild">
+                <div class="row hr-line">
+                    <div class="column column-85 column-s-100 no-medium-padding no-desktop-padding">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row ns">
+                    <div class="side-text h-gold column column-s-100">
+                        <h6>Vorstandswechsel im Bildungsbereich
+                            der Schneider Edelstahl</h6><br>
+                        <p>{{ text }}</p>
+                        <a href="#" class="link-underline">zur weitere Information</a>
+                    </div>
+                    <div class="side-image column column-s-100">
+                        <div class="photo-video">
+                            {#<iframe width="560" height="349" src="https://www.youtube.com/embed/_XArFZPmAuY" frameborder="0" allowfullscreen> </iframe>#}
+
+                            <div class="gallery-photo-box sponsor-with-content" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg')">
+                                <div class="gallery-text">
+                                    Das ist Text
+                                </div>
+                            </div>
+                            <div class="gallery-popup-overlay">
+                                <div class="gallery-popup-overlay-content">
+                                    <div class="gallery-popup-overlay-content-close" style=""><span class="fal fa-times"></span></div>
+                                    <div class="gallery-popup-overlay-content-photo">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg" width="200">
+                                    </div>
+                                    {#<div class="gallery-popup-overlay-content-text">#}
+                                        {#{{ text }}#}
+                                    {#</div>#}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

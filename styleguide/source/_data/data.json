@@ -1,0 +1,171 @@
+{
+  "general" : {
+    "company" : "lombego Systems GmbH",
+    "extraInfo": "Amtsgericht Jena 505418, Umsatzsteuer-Identifikationsnummer: DE272037292",
+    "address":{
+      "street" : "Frauentor Strasse 3",
+      "zip" : "99423",
+      "city" : "Weimar",
+      "country" : "Germany"
+    }
+  },
+  "title" : "Pattern Lab",
+  "htmlClass": "pl",
+  "bodyClass": "body",
+  "img": {
+    "landscape_4x3": {
+      "src": "../../images/fpo_4x3.png",
+      "alt": "4x3 Image"
+    },
+    "landscape_2x1": {
+      "src": "../../images/fpo_2x1.png",
+      "alt": "2x1 Image"
+    },
+    "landscape_1x1": {
+      "src": "../../images/fpo_1x1.png",
+      "alt": "1x1 Image"
+    },
+    "landscape_16x9": {
+      "src": "../../images/fpo_16x9.png",
+      "alt": "16x9 Image"
+    },
+    "square": {
+      "src": "../../images/fpo_square.png",
+      "alt": "Square Thumbnail"
+    },
+    "avatar" : {
+      "src" : "../../images/fpo_avatar.png",
+      "alt" : "Person Name"
+    },
+    "rectangle": {
+      "src": "http://placeimg.com/400/300/tech",
+      "alt": "Rectangle"
+    }
+  },
+  "imgPath" : "../../images/",
+  "url" : "#",
+  "name" : {
+    "first": "Lacy",
+    "firsti": "L",
+    "middle": "Tommie",
+    "middlei": "T",
+    "last": "Way",
+    "lasti": "W"
+  },
+  "year" : {
+    "long": "2013",
+    "short": "13"
+  },
+  "month" : {
+    "long": "February",
+    "short": "Feb",
+    "digit": "02"
+  },
+  "dayofweek" : {
+    "long": "Monday",
+    "short": "Mon"
+  },
+  "day" : {
+    "long": "10",
+    "short": "10",
+    "ordinal": "th"
+  },
+  "hour" : {
+    "long": "01",
+    "short": "1",
+    "military": "13",
+    "ampm": "pm"
+  },
+  "minute" : {
+    "long": "20",
+    "short": "20"
+  },
+  "seconds" : "31",
+  "author" : {
+    "firstName": "Faker.firstName",
+    "lastName": "Faker.lastName"
+  },
+  "hero": true,
+  "emergency" : false,
+
+  "button_link" : "#",
+  "headline": "Faker.text(40)",
+  "text": "Faker.paragraph(6,true)",
+  "image" :{
+    "src" : "Faker.imageUrl(700,350)",
+    "alt": "Alttext ",
+    "w" : 895,
+    "h" : 350
+  },
+  "galleryImages" : [
+    {
+      "src" : "Faker.imageUrl(700,350)",
+      "alt": "Alttext ",
+      "w" : 700,
+      "h" : 350
+    },
+    {
+      "src" : "Faker.imageUrl(750,250)",
+      "alt": "Alttext ",
+      "w" : 750,
+      "h" : 250
+    },
+    {
+      "src" : "Faker.imageUrl(700,250)",
+      "alt": "Alttext ",
+      "w" : 700,
+      "h" : 250
+    }
+  ,
+    {
+      "src" : "Faker.imageUrl(600,250)",
+      "alt": "Alttext ",
+      "w" : 600,
+      "h" : 250
+    },
+    {
+      "src" : "Faker.imageUrl(700,700)",
+      "alt": "Alttext ",
+      "w" : 700,
+      "h" : 700
+    }
+  ],
+  "fullWidthSeparator" : [
+    "http://lorempixel.com/output/nature-q-c-1920-550-3.jpg",
+    "http://lorempixel.com/output/sports-q-c-1920-550-2.jpg",
+    "http://lorempixel.com/output/city-q-c-1920-550-1.jpg"
+  ],
+  "navigation":{
+    "contact" : {
+      "title": "Contact",
+      "subnav": {}
+    }
+  },
+  "footer_navigation":{
+    "home" :{
+      "title" : "Home",
+      "src" : "#"
+    },
+    "contact" :{
+      "title" : "Contact",
+      "src" : "#"
+    },
+    "Imprint" :{
+      "title" : "Imprint",
+      "src" : "#"
+    }
+  },
+  "user_is_logged_in" : true,
+
+  "headlineContent" : "Faker.text(40)",
+  "headlineLevel" : "2",
+  "text" : "Faker.text(400)",
+  "text2" : "Faker.text(800)",
+  "text3" : "Faker.text(1200)",
+  "paragraph" : "Faker.paragraph(30,true)",
+
+  "fragmentSetup" :{
+    "colorRange" : ["primary-color","secondary-color","tertiary-color"],
+    "defaultColor" : "primary-color"
+  }
+}

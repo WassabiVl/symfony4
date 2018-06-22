@@ -1,0 +1,173 @@
+//
+// Navigation
+//=================================================================================================
+// @globals
+//
+//===================================================================
+@import "../base/globals";
+
+// @variables
+//
+//===================================================================
+
+// @mixins
+//
+//===================================================================
+
+// @styles
+//
+//===================================================================
+
+@include exports("text-boxen") {
+  //advice box
+  .text-boxes-advice {
+    padding: $pad*4;
+    width: 100%;
+    display: inline-block;
+    font-family: $font-family-primary;
+    margin: $pad;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: none;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-decoration: none;
+    text-align: center;
+    &::before, &::after, span::before, span::after {
+      color: $color-primary;
+    }
+
+    &.negative::before, &.negative::after {
+      color: $white;
+    }
+    &.negative {
+      span::before, span::after {
+        color: $white !important;
+      }
+    }
+
+    & .h-box {
+      text-align:center;
+      margin-top:-5rem;
+      margin-bottom: $pad*3;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      word-break: normal;
+    }
+
+    .advice-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .text-boxes-advice::before,
+  .text-boxes-advice::after,
+  span.text-boxes-advice-span::before,
+  span.text-boxes-advice-span::after {
+    content: '';
+    position: absolute;
+    width: $pad*5;
+    height: 20%;
+  }
+
+
+  .text-boxes-advice::before {
+    top: -4px;
+    left: -4px;
+    border-top: 5px solid;
+    border-left: 5px solid;
+  }
+
+  .text-boxes-advice::after {
+    top: -4px;
+    right: -4px;
+    border-top: 5px solid;
+    border-right: 5px solid;
+  }
+
+  span.text-boxes-advice-span::before {
+    bottom: -4px;
+    left: -4px;
+    border-bottom: 5px solid;
+    border-left: 5px solid;
+  }
+
+  span.text-boxes-advice-span::after {
+    bottom: -4px;
+    right: -4px;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+  }
+
+//highlight box
+  .text-boxes-highlight {
+    padding: $pad*4;
+    width: 100%;
+    display: inline-block;
+    font-family: $font-family-primary;
+    margin: $pad;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: none;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-decoration: none;
+    text-align: center;
+    &::before, &::after, span::before, span::after {
+      color: $color-primary;
+    }
+
+    &.negative::before, &.negative::after {
+      color: $white;
+    }
+    &.negative {
+      span::before, span::after {
+        color: $white !important;
+      }
+    }
+  }
+
+  .text-boxes-highlight::before,
+  .text-boxes-highlight::after,
+  span.text-boxes-highlight-span::before,
+  span.text-boxes-highlight-span::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 20%;
+  }
+
+
+  .text-boxes-highlight::before {
+    top: -4px;
+    left: -4px;
+    border-top: 5px solid;
+    border-left: 5px solid;
+  }
+
+  .text-boxes-highlight::after {
+    top: -4px;
+    right: -4px;
+    border-top: 5px solid;
+    border-right: 5px solid;
+  }
+
+  span.text-boxes-highlight-span::before {
+    bottom: -4px;
+    left: -4px;
+    border-bottom: 5px solid;
+    border-left: 5px solid;
+  }
+
+  span.text-boxes-highlight-span::after {
+    bottom: -4px;
+    right: -4px;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+  }
+}

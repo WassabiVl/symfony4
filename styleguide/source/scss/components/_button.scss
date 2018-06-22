@@ -1,0 +1,187 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+@mixin icon-class($className, $code){
+  &.#{$className}:before{
+    content: $code;
+  }
+}
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("button") {
+
+  // Link-Buttons
+
+  a.button, input[type=submit], label.uploadFile, button, span.button  {
+    height: rem-calc(40px);
+    line-height: 1.5rem;
+    display:inline-block;
+    padding: $pad/2 $pad-double;
+    background: $button-simple-default-color;
+    color: $button-negative-font-color;
+    font-family: $font-family-primary;
+    margin: $pad/2 0;
+    font-size: 1rem;
+    transition: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    border-radius:2px;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    &:hover, &:active, &:focus{
+      background: $color-primary-hover;
+      //// Is color dark or bright?
+      //@if luminance($button-simple-default-color) > .5 {
+      //  background: $white;
+      //  color: $color-primary;
+      //  //border-color: mix($button-simple-default-color, $white, 80);
+      //}
+      //@else{
+      //  background: $color-primary;
+      //  color: $white;
+      //  //border-color: mix($button-simple-default-color, $black, 80);
+      //}
+    }
+    &.button-small{
+    }
+    &.button-full-width{
+      display:block;
+      clear:both;
+      width:100%;
+      text-align: center;
+      padding: $pad/2 $pad;
+    }
+    z-index:0;
+    overflow:hidden;
+    position: relative;
+
+    &.flat{
+      //line-height: 1.2rem !important;
+      background: transparent;
+      border: solid 2px $color-primary;
+    }
+
+    &.no-border{
+      border: none;
+      color: $color-secondary;
+    }
+
+    &.floating{
+    box-shadow: 0px 2px 4px $shadow-color;
+  }
+    &.button-right{
+      float:right;
+    }
+  }
+
+
+  label.uploadFile{
+    padding: $pad/2 $pad*4 !important;
+    width: auto;
+    text-align: center;
+  }
+
+
+  .button-text{
+    position: relative;
+    display:inline-block;
+    .button-icon{
+      display:inline-block;
+      font-weight: 400;
+      &:before{
+        position: absolute;
+        left: -1.8rem;
+        font-family: "Font Awesome 5 Light";
+        font-size:1rem;
+        top:50%;
+        margin-top:-.5rem;
+      }
+      &.icon-size-2x{
+        &:before{
+          left: -2.8rem;
+          font-size: 2rem;
+          margin-top:-1rem;
+        }
+      }
+      @include icon-class("newsletter", "\f1ea");
+      @include icon-class("voucher", "\f3ff");
+    }
+  }
+
+  /* MAILCHIMP SPECIFIC */
+  #mc-embedded-subscribe{
+    padding: $pad/2 $pad-double !important;
+    background: $button-default-color !important;
+    color: $button-default-font-color !important;
+    font-family: $font-family-primary !important;
+    border: 1px solid rgba($border-default-color,.5) !important;
+    width:100% !important;
+    font-size: 1rem !important;
+    height: auto !important;
+
+  }
+
+  a.button-box {
+      display:inline-block;
+      padding: $pad/2 $pad-double;
+      background: $button-default-color;
+      font-family: $font-family-primary;
+      margin: $pad/2 0;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: none;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      text-align: center;
+      font-family: $font-family-primary;
+
+    &:hover{
+      background: $button-default-color-hover;
+    }
+
+    &:active{
+      color:$button-default-font-color-active;
+      background:$button-default-color-active;
+    }
+    }
+
+
+
+
+
+
+
+
+
+}

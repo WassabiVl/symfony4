@@ -1,0 +1,175 @@
+//-- generated
+
+$color-primary: #f15a24;
+$color-secondary: rgb(60, 88, 136);
+$color-tertiary: rgb(4, 0, 84);
+$color-quaternary: rgb(0, 0, 0);
+
+$color-primary-hover: rgb(226, 64, 7);
+$color-primary-light: mix($color-primary, white, 50);
+$color-secondary-light: mix($color-secondary, white, 65);
+$color-secondary-lighter: mix($color-secondary, white, 50);
+$color-secondary-lightest: mix($color-secondary, white, 40);
+$color-tertiary-dark: mix($color-tertiary, black, 20);
+$custom-black: #393939;
+$custom-gray: #e3e5e9;
+$custom-grayer: #c6cad2;
+$custom-grayest: #b6bac2;
+$custom-shadow-highest: 0px 5px 13px 2px rgba(black, .5);
+$custom-shadow-high: 1px 1px 8px  rgba($custom-black, .5);
+$custom-shadow-high-darkest: 1px 1px 8px $custom-black;
+
+$color-primary-contrast: rgb(233, 236, 238);
+$color-secondary-contrast: rgb(211, 217, 222);
+$color-tertiary-contrast: rgb(211, 217, 222);
+
+$font-default-color: rgb(25, 47, 69);
+$font-default-placeholder: mix(black, white, 40);
+$font-default-link-color: $color-primary;
+$font-default-link-color-hover: $color-secondary;
+
+$font-size: 18px!default;
+$namespace: bootstrap !default;
+
+$font-primary: 'Roboto', sans-serif;
+$font-primary-url: '';
+$font-secondary: 'Roboto', cursive;
+$font-secondary-url: '';
+
+$card-default-color: mix($color-secondary, white, 20);
+$card-default-color-dark: #c4cedf;
+$card-default-color-darker: mix($color-secondary, white, 40);
+$card-default-color-darkest: mix($color-secondary, white, 55);
+
+$shadow-color: mix(black, white, 50);
+
+$tab-default-color: mix(rgb(10, 30, 40), transparent, 55);
+$tab-default-color-light:  mix(rgb(10, 30, 40), transparent, 4);
+$tab-default-color-hover:  mix(rgb(10, 30, 40), transparent, 25);
+$tab-default-color-active:  mix(rgb(10, 30, 40), transparent, 80);
+
+$button-default-color: white;
+$button-orange: mix($color-primary, black, 90);
+$button-simple-default-color: $color-primary;
+$button-default-font-color: $color-primary;
+$button-simple-default-font-color: white;
+$border-default-color: $color-primary-contrast;
+
+$button-default-color-hover: mix($color-primary, black, 90);
+$button-default-font-color-hover: $color-primary;
+$border-default-color-hover: $color-primary;
+$button-default-font-color-active: white;
+$button-default-color-active: $color-primary;
+
+$divider-color: mix($custom-black, white, 25);
+
+$font-negative-color: white;
+//$font-negative-color: mix($color-primary, white, 10);
+$button-negative-font-color: $font-negative-color;
+$border-negative-color: white;
+$button-negative-color-hover: mix($color-primary, white, 70);
+$button-negative-font-color-hover: $font-negative-color;
+$border-negative-color-hover: white;
+$button-negative-font-color-active: mix($color-primary, white, 90);
+$button-negative-color-active: white;
+
+//---
+//--- Headlines
+$h1-font: $font-primary;
+$h2-font: $font-primary;
+$h3-font: $font-primary;
+$h4-font: $font-primary;
+$h5-font: $font-primary;
+$h6-font: $font-primary;
+
+$h-fonts: $h1-font, $h2-font, $h3-font, $h4-font, $h5-font, $h6-font;
+
+$h1-color: $color-primary;
+$h2-color: $color-primary;
+$h3-color: $color-primary;
+$h4-color: $color-primary;
+$h5-color: $color-primary;
+$h6-color: $color-primary;
+$h-colors: $h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color;
+
+$h1-underline: false;
+$h2-underline: false;
+$h3-underline: false;
+$h4-underline: false;
+$h5-underline: false;
+$h6-underline: false;
+$h-underlines: $h1-underline, $h2-underline, $h3-underline, $h4-underline, $h5-underline, $h6-underline;
+
+$h1-italic: false;
+$h2-italic: false;
+$h3-italic: false;
+$h4-italic: false;
+$h5-italic: false;
+$h6-italic: false;
+$h-italics: $h1-italic, $h2-italic, $h3-italic, $h4-italic, $h5-italic, $h6-italic;
+
+$h1-center: false;
+$h2-center: false;
+$h3-center: false;
+$h4-center: false;
+$h5-center: false;
+$h6-center: false;
+$h-centers: $h1-center, $h2-center, $h3-center, $h4-center, $h5-center, $h6-center;
+
+$h1-uppercase: false;
+$h2-uppercase: false;
+$h3-uppercase: false;
+$h4-uppercase: false;
+$h5-uppercase: false;
+$h6-uppercase: false;
+$h-uppercases: $h1-uppercase, $h2-uppercase, $h3-uppercase, $h4-uppercase, $h5-uppercase, $h6-uppercase;
+
+//---
+//--- List Color
+
+$list-ul-color: $font-default-color;
+$list-ol-color: $font-default-color;
+
+//--
+//---- Content as Boxes?
+
+$content-as-boxes: false;
+
+//--
+//--- Effects
+
+$effect-scroll-appear: true;
+$effect-head-image-parallax: false; // Needs images with 400px height
+$effect-image-zoom-on-hover: true;
+
+// Fonts
+
+@font-face {
+  font-family: 'PTSans';
+  src:  url('../fonts/ptsans_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/ptsans_bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/ptsans_italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+
+}
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/ptsans_bolditalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+
+}
+

@@ -1,0 +1,162 @@
+{
+  "customVars":{
+    "colors" : {
+      "Primary (R24-Orange)" : {
+        "r" : 35,
+        "g" : 65,
+        "b" : 90,
+        "scssColor" : "pantone"
+      },
+      "Secondary (R24-Blue)" : {
+        "r": 10,
+        "g": 30,
+        "b": 40,
+        "scssColor" : "vinered"
+      },
+      "Tertiary (R24-Blue-Purple)":{
+        "r":  102,
+        "g" : 102,
+        "b" : 102,
+        "scssColor" : "blue-purple"
+      },
+      "Quaternary (R24-Standard-Gray)":{
+        "r":  102,
+        "g" : 102,
+        "b" : 102,
+        "scssColor" : "grayscale"
+      }
+    },
+    "fonts": {
+      "Primary" :{
+        "family": "Open Sans",
+        "alt" : "Arial",
+        "kind" : "sans-serif",
+        "url": ""
+      },
+      "Secondary" : {
+        "family": "Playfair Display",
+        "alt" : "Times New Roman",
+        "kind" : "serif",
+        "url" : ""
+      }
+    },
+    "faIcons":{
+      "Wecker" : "alarm-clock",
+      "Krankenwagen" : "ambulance",
+
+      "Bad": "bath",
+      "Bett" : "bed",
+      "Klingel": "bell",
+      "Fahrrad" : "bicycle",
+      "Geburtstagskuchen" : "birthday-cake",
+      "Buch" : "book",
+      "Bus": "bus",
+      "Megaphone" : "bullhorn",
+
+
+      "Kalendar": "calendar-alt",
+      "Kalendar (check)": "calendar-check",
+      "Rechner": "calculator",
+      "Fotokamera": "camera",
+      "Auto" : "car",
+      "Zertifikat (Badge)" : "certificate",
+      "Diagramm" : "chart-pie",
+      "Check" : "check",
+      "Check (Kreis)" : "check-circle",
+      "Kind" : "child",
+      "Clipboard" : "clipboard",
+      "Uhr" : "clock",
+      "Kaffee" : "coffee",
+      "Kommentare" : "comments",
+      "Kompass" : "compass",
+      "Kreditkarte" : "credit-card",
+
+      "Bearbeiten" : "edit",
+      "Brief" : "envelope",
+      "Euro (€-Symbol)" : "euro-sign",
+
+      "Frau (Symbol)" : "female",
+      "Datei" : "file-alt",
+      "Film" : "film",
+      "Flagge" : "flag",
+
+      "Edelstein" : "gem",
+      "Martini Glass" : "glass-martini",
+
+
+
+      "Herz" : "heart",
+      "Herzschlag" : "heartbeat",
+      "Haus" : "home",
+
+      "Identifikation Abzeichen" : "id-badge",
+      "Info" : "info",
+
+      "Kürbis (Halloween)" : "jack-o-lantern",
+
+
+
+      "Blatt" : "leaf",
+      "Glühbirne" : "lightbulb",
+      "Liste" : "list-alt",
+      "Ortungspfeil" : "location-arrow",
+      "Vorhängeschloss" : "lock-alt",
+
+
+      "Mann (Symbol)" : "male",
+      "Karte" : "map",
+      "Map-Marker" : "map-marker",
+      "Wegweiser" : "map-signs",
+      "Medizinkoffer" : "medkit",
+      "Smartphone" : "mobile-alt",
+      "Motorrad" : "motorcycle",
+      "Musik" : "music",
+
+
+      "Büroklammer" : "paperclip",
+      "Telefon" : "phone",
+      "Prozent" : "percent",
+      "Play" : "play",
+      "Drucker" : "print",
+
+
+      "Frage" : "question",
+
+
+
+      "Dusche": "shower",
+      "Einschreiben" : "sign-in",
+      "Ausschreiben" : "sign-out",
+      "Smile" : "smile",
+      "Sortierungspfeile" : "sort",
+      "Stern" : "star",
+      "Stopuhr" : "stopwatch",
+      "Streetview" : "street-view",
+      "Koffer" : "suitcase",
+
+
+      "Etikett" : "tag",
+      "Checkliste" : "tasks",
+      "Taxi" : "taxi",
+      "Daumen hoch" : "thumbs-up",
+      "Ticket" : "ticket-alt",
+      "Zug" : "train",
+      "Pokal" : "trophy-alt",
+
+      "Nutzer (einzeln)" : "user",
+      "Nutzer (mehrere)" : "users",
+      "Nutzer (Arzt)" : "user-md",
+      "Nutzer (einzeln mit Plus)" : "user-plus",
+      "Gabel und Messer" : "utensils",
+
+
+      "Videokamera" : "video",
+      "Lautstärke (hoch)" : "volume-up",
+      "Lautstärke (niedrig)" : "volume-down",
+
+      "Rollstuhl": "wheelchair",
+      "WiFi" : "wifi"
+    }
+  }
+
+}

@@ -1,0 +1,448 @@
+//
+// Globals
+//=================================================================================================
+
+
+// Global inserts
+//===================================================================
+
+@import "functions";
+@import "generated";
+
+
+// Global Mixin
+//====================================================================
+
+@mixin colorize-button($font-color, $background-color, $font-color-hover: null, $background-color-hover: null){
+  .button{
+    color: $font-color !important;
+    background-color: $background-color;
+    border-color: rgba($background-color, .5);
+    transition: all 150ms ease-in-out !important;
+    &:hover{
+      @if $font-color-hover != null and $background-color-hover != null{
+        background: $background-color-hover;
+        border-color: $background-color-hover;
+        color: $font-color-hover;
+      }
+      @else {
+        @if luminance($background-color) < .5 {
+          background: mix($background-color, $white, 80);
+          border-color: mix($background-color, $white, 80);
+        }
+        @else{
+          background: mix($background-color, $black, 80);
+          border-color: mix($background-color, $black, 80);
+        }
+      }
+
+    }
+  }
+}
+
+// @variables
+//
+//===================================================================
+
+$rem-base:                                    $font-size;
+$icon-height:                                 2rem;
+
+
+
+
+
+// Colors
+//-----------------------------------------------
+$message-red:                                 rgb(255,   0,   0) !default;
+
+$white:                                       rgb(255, 255, 255) !default;
+$base-bg:                                     rgb(255,255,255) !default;
+
+$black:                                       rgb(10, 30, 40) !default;
+
+$gray-dark:                                  mix($black, white, 75) !default;
+$gray-medium:                                 mix($black, white,40) !default;
+$gray-light:                                   mix($black, white, 10) !default;
+$gray-lighter:                                   mix($black, white, 5) !default;
+
+$gray:                                        $gray-dark; // Alias
+
+$advantage-green:                             rgb(127,165,122) !default;
+$disadvantage-red:                            rgb(214,120,129) !default;
+
+
+
+// Spacing
+//-----------------------------------------------
+
+$pad:                                         rem-calc(15) !default;
+$pad-double:                                  $pad * 2 !default;
+
+
+
+// Typography
+//-----------------------------------------------
+
+$font-family-primary:              $font-primary, 'Roboto', sans-serif !default;
+$font-family-secondary:              $font-secondary, 'Roboto', sans-serif !default;
+
+
+
+
+$font-family-base: $font-family-primary !default;
+
+
+$font-size-base:                              rem-calc($rem-base) !default;
+$line-height-base:                            1.6rem !default;
+
+
+$font-headline-serif:                    $font-secondary;
+
+$h1-font-size:                                rem-calc(80) !default;
+$h2-font-size:                                rem-calc(45) !default;
+$h3-font-size:                                rem-calc(30) !default;
+$h4-font-size:                                rem-calc(50)!default;
+$h5-font-size:                                rem-calc(30) !default;
+$h6-font-size:                                rem-calc(25) !default;
+
+
+
+$h1-font-weight:                              400 !default;
+$h2-font-weight:                              400 !default;
+$h3-font-weight:                              400 !default;
+$h4-font-weight:                              300 !default;
+$h5-font-weight:                              400 !default;
+$h6-font-weight:                              400 !default;
+
+$h1-line-height:                              rem-calc(90) !default;
+$h2-line-height:                              rem-calc(52) !default;
+$h3-line-height:                              rem-calc(35) !default;
+$h4-line-height:                              rem-calc(60) !default;
+$h5-line-height:                              rem-calc(35) !default;
+$h6-line-height:                              rem-calc(28) !default;
+
+$h1-font-style:                               normal;
+$h2-font-style:                               normal;
+$h3-font-style:                               normal;
+$h4-font-style:                               normal;
+$h5-font-style:                               normal;
+$h6-font-style:                               normal;
+
+$h1-text-decoration:                               underline;
+$h2-text-decoration:                               underline;
+$h3-text-decoration:                               none;
+$h4-text-decoration:                               none;
+$h5-text-decoration:                               none;
+$h6-text-decoration:                               none;
+
+$font-smoothing:                              antialiased !default;
+
+
+$link-color: $color-primary !default;
+$link-color-hover: $color-secondary !default;
+
+
+
+
+// Media Query Ranges
+//-----------------------------------------------
+
+$small-range:                                 (0, 690px) !default;
+$medium-range:                                (691px, 1480px) !default;
+$large-range:                                 (1481px, 1680px) !default;
+$xlarge-range:                                (rem-calc(1681), rem-calc(1920)) !default;
+$xxlarge-range:                               (rem-calc(1921), 99999999rem) !default;
+
+$height-limit-down:                                (rem-calc(820)) !default;
+$height-limit-up:                                (rem-calc(821)) !default;
+
+$screen:                                      "only screen" !default;
+$landscape:                                   "#{$screen} and (orientation: landscape)" !default;
+$portrait:                                    "#{$screen} and (orientation: portrait)" !default;
+
+$small-only-low-height:                       "#{$screen} and (max-width: #{upper-bound($small-range)}), (max-height: #{$height-limit-down})" !default;
+$medium-up-more-height:                       "#{$screen} and (min-width: #{lower-bound($medium-range)}) and (min-height: #{$height-limit-up})" !default;
+
+$small-up:                                    $screen !default;
+$small-only:                                  "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
+$medium-down:                                 "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
+$medium-up:                                   "#{$screen} and (min-width: #{lower-bound($medium-range)})" !default;
+$medium-only:                                 "#{$screen} and (min-width: #{lower-bound($medium-range)}) and (max-width: #{upper-bound($medium-range)})" !default;
+$large-down:                                  "#{$screen} and (max-width: #{upper-bound($medium-range)})" !default;
+$large-up:                                    "#{$screen} and (min-width: #{lower-bound($large-range)})" !default;
+$large-only:                                  "#{$screen} and (min-width: #{lower-bound($large-range)}) and (max-width: #{upper-bound($large-range)})" !default;
+$xlarge-up:                                   "#{$screen} and (min-width: #{lower-bound($xlarge-range)})" !default;
+$xlarge-only:                                 "#{$screen} and (min-width: #{lower-bound($xlarge-range)}) and (max-width: #{upper-bound($xlarge-range)})" !default;
+$xxlarge-up:                                  "#{$screen} and (min-width: #{lower-bound($xxlarge-range)})" !default;
+$xxlarge-only:                                "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and (max-width: #{upper-bound($xxlarge-range)})" !default;
+
+// Limits
+//------------------------------------------------
+
+
+$header-limit-width:                          1400px;
+
+$content-limit-width:                         rem-calc(1400);
+$footer-limit-width:                          rem-calc(1400);
+
+$menu-break-down:                                   $large-down;
+$menu-break-up:                                   $large-up;
+
+// Cursors
+//-----------------------------------------------
+
+$cursor-auto-value:                           auto !default;
+$cursor-crosshair-value:                      crosshair !default;
+$cursor-default-value:                        default !default;
+$cursor-disabled-value:                       not-allowed !default;
+$cursor-pointer-value:                        pointer !default;
+$cursor-help-value:                           help !default;
+$cursor-text-value:                           text !default;
+
+
+
+// global grid
+//-----------------------------------------------
+
+$page-width-px:                               1400;
+$page-width:                                  rem-calc($page-width-px) !default;
+$column-gutter-px:                            15;
+$column-gutter:                               rem-calc($column-gutter-px) !default;
+
+
+
+$box-shadow-default:                          0 0 12px $gray !default;
+$box-shadow-default-offset:                   4px 4px 12px $gray !default;
+
+$box-shadow-decent-default:                   0 5px 4px -2px $gray, 0 0 4px $gray !default;
+$box-shadow-decent-no-blur:                   0 5px 4px -2px $gray;
+
+$box-shadow:                           0 4px 4px -2px $gray;
+
+
+
+
+// Media
+//-----------------------------------------------
+
+$image-path:                                  "../images" !default;
+
+$text-direction: ltr !default;
+$default-float: left !default;
+$opposite-direction: right !default;
+@if $text-direction == ltr {
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
+}
+
+
+
+
+// @mixins
+//
+//===================================================================
+
+// Import Once
+// prevent styles from being loaded
+// multiple times for components that
+// rely on other components.
+//-----------------------------------------------
+
+$modules: () !default;
+
+@mixin exports($name) {
+  $modules: $modules !global; // Import from global scope
+  $module_index: index($modules, $name); // Check if a module is already on the list
+
+  @if (($module_index == null) or ($module_index == false)) {
+    $modules: append($modules, $name) !global;
+    @content;
+  }
+}
+
+// Key-Frames
+
+@mixin keyframes( $animationName )
+{
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes  #{$animationName} {
+    @content;
+  }
+  @-o-keyframes  #{$animationName} {
+    @content;
+  }
+  @keyframes  #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+
+
+
+
+// clear floats
+//-----------------------------------------------
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%clearfix {
+  @include clearfix();
+}
+
+
+
+// css3
+//-----------------------------------------------
+
+@mixin single-transition($property: all, $speed: 300ms, $ease: ease-out) {
+  -webkit-transition: $property $speed $ease;
+  transition: $property $speed $ease;
+}
+
+@mixin translate2d($horizontal: 0, $vertical: 0) {
+  -webkit-transform: translate($horizontal, $vertical);
+  transform: translate($horizontal, $vertical);
+}
+
+@mixin translate3d($tx, $ty, $tz) {
+  -webkit-transform: translate3d($tx, $ty, $tz);
+  transform: translate3d($tx, $ty, $tz);
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+  -ms-transform: translateY($y);
+  transform: translateY($y);
+}
+
+@mixin translateX($x) {
+  -webkit-transform: translateY($x);
+  -ms-transform: translateY($x);
+  transform: translateY($x);
+}
+
+
+
+// Makes an element visually hidden, but accessible.
+//-----------------------------------------------
+
+@mixin element-invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+
+
+// Turns off the element-invisible effect.
+//-----------------------------------------------
+
+@mixin element-invisible-off {
+  position: static !important;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip: auto;
+}
+
+
+// Gradients
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("global") {
+
+  // Meta styles are included in all builds,
+  // as they are a dependancy of the javascript.
+  // Used to provide media query values for
+  // javascript components. Forward slash placed
+  // around everything to convince PhantomJS to
+  // read the value.
+  //-----------------------------------------------
+
+  meta.foundation-version {
+    font-family: "/{{VERSION}}/";
+  }
+
+  meta.foundation-mq-small {
+    font-family: "/" + unquote($small-up) + "/";
+    width: lower-bound($small-range);
+  }
+
+  meta.foundation-mq-small-only {
+    font-family: "/" + unquote($small-only) + "/";
+    width: lower-bound($small-range);
+  }
+
+  meta.foundation-mq-medium {
+    font-family: "/" + unquote($medium-up) + "/";
+    width: lower-bound($medium-range);
+  }
+
+  meta.foundation-mq-medium-only {
+    font-family: "/" + unquote($medium-only) + "/";
+    width: lower-bound($medium-range);
+  }
+
+  meta.foundation-mq-large {
+    font-family: "/" + unquote($large-up) + "/";
+    width: lower-bound($large-range);
+  }
+
+  meta.foundation-mq-large-only {
+    font-family: "/" + unquote($large-only) + "/";
+    width: lower-bound($large-range);
+  }
+
+  meta.foundation-mq-xlarge {
+    font-family: "/" + unquote($xlarge-up) + "/";
+    width: lower-bound($xlarge-range);
+  }
+
+  meta.foundation-mq-xlarge-only {
+    font-family: "/" + unquote($xlarge-only) + "/";
+    width: lower-bound($xlarge-range);
+  }
+
+  meta.foundation-mq-xxlarge {
+    font-family: "/" + unquote($xxlarge-up) + "/";
+    width: lower-bound($xxlarge-range);
+  }
+
+  meta.foundation-data-attribute-namespace {
+    font-family: #{$namespace};
+  }
+}

@@ -1,0 +1,40 @@
+{% block content %}
+
+<div class="fragment white">
+    {% if templateRender == false %}
+        {% include "atoms-colorswitch" %}
+    {% endif %}
+    <div class="page-wrapper">
+        <div class="row ns">
+            <div class="column column-100 no-padding">
+                <div class="headline">
+                    <h2>Formular</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row ns">
+            <div class="column column-100  no-padding">
+                <form>
+                    <label>Name</label>
+                    <input>
+                    <label>E-Mail</label>
+                    <input>
+                    <label>Nachricht</label>
+                    <textarea rows="8"></textarea>
+                    <ul>
+                        <li><input id="radio1" name="radio" type="radio" class="radio" checked="checked"><label for="radio1"> Option 1</label></li>
+                        <li><input id="radio2" name="radio" type="radio" class="radio"><label for="radio2"> Option 2</label></li>
+                        <li><input id="radio3" name="radio" type="radio" class="radio"><label for="radio3"> Option 3</label></li>
+                    </ul>
+                    <ul>
+                        <li><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"><label for="checkbox1"> Choice A</label></li>
+                        <li><input id="checkbox2" name="checkbox" type="checkbox"><label for="checkbox2"> Choice B</label></li>
+                        <li><input id="checkbox3" name="checkbox" type="checkbox"><label for="checkbox3"> Choice C</label></li>
+                    </ul>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

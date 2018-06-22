@@ -1,0 +1,117 @@
+//
+// Brand
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include keyframes("pulse")
+{
+  0%    { transform: scale(1);}
+  100%  { transform: scale(1.2);}
+}
+
+
+
+@include exports("box") {
+  .lb-box-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 99999;
+    background-color: rgba(0,0,0,.4);
+    cursor: pointer;
+      .lb-box-content{
+        width: 100px;
+        height: 120px;
+        box-sizing: content-box;
+        margin: 0;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 1rem;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        border: #777 solid 1px;
+        box-shadow: 0 0 5px #333;
+        cursor: default;
+        @include single-transition(all,.6s);
+        .lb-box-closing{
+          $size: 1.5;
+          position: absolute;
+          width: ($size)+rem;
+          height: ($size)+rem;
+          border-radius: 0;
+          border: 0px solid #fff;
+          top: 0;
+          right: -($size/3)+rem;
+          margin-top: -($size/2)+rem;
+          background-color: $color-secondary;
+          color: $white;
+          text-align: center;
+          font-size: (($size/3)*2)+rem;
+          cursor: pointer;
+          font-family: Verdana;
+          transition: all .3s ease-in-out;
+          &:hover{
+            background-color: lighten($color-secondary, 10%);
+          }
+        }
+        .lb-box-imgbox{
+          overflow: hidden;
+        }
+
+        .loading{
+          position: relative;
+          height: 100px;
+          width: 100px;
+          background-size: contain;
+          border-radius: 0;
+          background-repeat: no-repeat;
+          animation-duration:.5s;
+          animation-direction:alternate;
+          animation-iteration-count: infinite;
+          @include animation("pulse");
+          div{
+            width: 100%;
+            height: 100%;
+            border-radius: 0%;
+            background-color: rgba(0,0,0,0.0);
+
+          }
+        }
+
+        .loadingText{
+          padding-top: .5rem;
+          text-align: center;
+        }
+      }
+
+  }
+}
+

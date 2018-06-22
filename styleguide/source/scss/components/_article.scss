@@ -1,0 +1,80 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("article") {
+
+  article{
+    &+h1,&+h2,&+h3,&+h4,&+h5,&+h6{
+      margin-top: $pad*2;
+    }
+    +article{
+      margin-top: $pad*2;
+    }
+  }
+
+  @if ($effect-scroll-appear){
+    article, section{
+      transition: all 300ms ease-in-out;
+      &.hide{
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+    }
+    .row{
+      &.split {
+        .column:first-child article.hide{
+          opacity: 0;
+          transform: translateX(-150px);
+        }
+        .column:last-child article.hide{
+          opacity: 0;
+          transform: translateX(150px);
+        }
+
+      }
+    }
+  }
+
+  .read-more{
+    padding: 0 $pad*2 !important;
+    a{
+      border-bottom: none;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font-family-secondary;
+      color: $font-default-link-color;
+      &:hover, &:focus, &:active{
+        color: $font-default-link-color-hover;
+      }
+    }
+  }
+
+
+}

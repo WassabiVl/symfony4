@@ -1,0 +1,67 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("404") {
+  section.error-404 {
+    .page-wrapper {
+      font-size: 1rem;
+      text-align: center;
+      code {
+        font-size: 1rem;
+      }
+      h5 {
+        border-bottom: 0;
+      }
+      a {
+        border-bottom: 0;
+      }
+      ul {
+        margin-left: 1rem;
+        li {
+          padding-bottom: rem-calc(6);
+        }
+      }
+    }
+  }
+
+  .fragment.error-page {
+    svg {
+      width: 50%;
+      margin: 0 auto;
+      display: block;
+      padding: 2rem 0 3rem;
+    }
+    %headings, p {
+      text-align: center;
+    }
+    %headings {
+      color: $color-primary;
+    }
+  }
+}

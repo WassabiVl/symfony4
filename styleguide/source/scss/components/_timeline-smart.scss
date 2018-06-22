@@ -1,0 +1,229 @@
+//
+// Navigation
+//=================================================================================================
+// @globals
+//
+//===================================================================
+@import "../base/globals";
+
+// @variables
+//
+//===================================================================
+
+// @mixins
+//
+//===================================================================
+
+// @styles
+//
+//===================================================================
+
+@include exports("timeline-smart") {
+
+
+  .timeline-wrapper {
+    text-align:center;
+    word-break: break-word;
+
+    ul {
+      list-style: none;
+      max-width: 1000px;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: inline-block;
+      text-align: left;
+      padding: 0;
+      padding-bottom: 50px;
+      &:after {
+        content: " ";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: #555;
+        left: 50%;
+        margin-left: 2px;
+        top: 0;
+      }
+      .date-line{
+        width: 90%;
+        max-width:90%;
+        text-align: center;
+        float:none;
+        clear:both;
+        background: #000;
+        z-index: 5;
+        padding:12px;
+        background: url('../../images/bg-brushed-metal.jpg');
+        margin: 40px auto;
+        color: #333;
+        font-size: 4rem;
+        text-shadow: 1px 1px 0px #777, 1px 0 0 #777, 0 1px 0 #777, -1px -1px 0 #777, 0px -1px 0 #777, 0px -1px 0 #777;
+        &:first-child{
+          margin: 0px auto 40px auto;
+        }
+        &:after, &:before{
+          display: none;
+          content: "";
+        }
+      }
+    }
+    li {
+      position: relative;
+      color: #fff;
+      width: 100%;
+      margin: 3rem 0;
+      padding: 5px;
+      opacity: 1;
+      transition: all 1s linear;
+      transform: translateY(0);
+
+
+      &.hide {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      &.element{
+        background: transparent;
+        z-index:900;
+        &:before{
+          content: " ";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 11px;
+          width: 11px;
+          border-radius: 50%;
+          background: #bc0377;
+          z-index:100000;
+          margin-left:-3px;
+          margin-top:-5px;
+        }
+        &.first{
+          margin-top:50px;
+        }
+        &.even{
+          padding-left:0%;
+          margin-right:0%;
+          &:after{
+            content: " ";
+            position: absolute;
+            top:50%;
+            left:50%;
+            height: 2px;
+            width:20%;
+            background: #aaa;
+            z-index:0;
+          }
+          div.timeline-card{
+            left: auto;
+            margin-left:58%;
+
+          }
+          div.date{
+            left: auto;
+            right: 53%;
+            margin-left:58%;
+            background: transparent;
+            word-break:normal;
+          }
+        }
+        &.odd{
+          padding-left:0%;
+          margin-left:0%;
+          div{
+            margin-left:5%;
+          }
+          &:after{
+            content: " ";
+            position: absolute;
+            top:50%;
+            right:50%;
+            height: 2px;
+            width:20%;
+            background: #aaa;
+            z-index:0;
+          }
+        }
+
+      }
+
+      div {
+        z-index: 2;
+        &.date {
+          position: absolute;
+          left: 48%;
+          color: #777;
+          font-size: 40px;
+          top: 50%;
+          margin-top: -30px;
+
+        }
+      }
+      @media #{$small-only}{
+        &.element{
+          margin-top:20px !important;
+          width:100%;
+          text-align: center;
+          padding-top:0;
+          .timeline-card{
+            width: 95%;
+            max-width:95%;
+            min-width:95%;
+            margin: auto !important;
+            border-top: 0;
+          }
+          &:before{
+            display:none;
+          }
+          &.first{
+            margin-top: 0 !important;
+          }
+        }
+        .date{
+          display:block;
+          width: 95%;
+          background: red !important;
+          color: $white !important;
+          position: relative !important;
+          margin:auto !important;
+          right: auto !important;
+          left: auto !important;
+          border: 1px solid $gray-dark;
+          border-bottom: 0;
+          box-shadow:  0 10px 20px -2px rgba(13,6,114,0.5);
+
+        }
+
+      }
+    }
+  }
+
+  .timeline-card{
+    position: relative;
+    min-width: 37%;
+    max-width:37%;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: rgba(13,6,114,0.25);
+    border-bottom-color: rgba(3,1,29,0.35);
+    box-shadow:  $box-shadow-decent-default;
+    color: #555;
+    padding:0px;
+    display:inline-block;
+    img{
+      max-width:100%;
+    }
+    p, h3{
+      padding: $pad;
+      background: transparent;
+      text-align: center;
+    }
+    p{
+      text-align: left;
+      margin-top:0;
+    }
+  }
+
+
+}

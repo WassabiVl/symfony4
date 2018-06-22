@@ -1,0 +1,30 @@
+{% block content %}
+    {#{% set bgColor = 'base-bg' %}#}
+    {#{%  if bgColor is defined %}#}
+        {#<div class="fragment {{bgColor}}">#}
+    {#{% else %}#}
+        {#<div class="fragment {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+<div class="fragment">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="column center column-100">
+                    <div class="text-boxes-advice h-gold">
+                    <span class="text-boxes-advice-span"></span>
+                <div class="row">
+                        <h3 class="h-box">hochwertige Produkte</h3>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-s-100">
+                        {{ paragraph }}
+                    </div>
+                    <div class="column column-50 column-s-100">
+                        <img class="advice-image" src="https://ipost.files.wordpress.com/2012/05/long_cat1_2.gif">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

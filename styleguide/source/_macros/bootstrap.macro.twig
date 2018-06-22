@@ -1,0 +1,28 @@
+{% macro inputForm(data) %}
+    <h2>{{ data.headline }}</h2>
+    <form>
+        {% for element in data.fields %}
+            {%  if not (element.special in ['checkbox', 'radio']) %}
+                <label for="{{ element.id }}">{{ element.label }}</label>
+                {% if element.special == 'textarea' %}
+                    <textarea id="{{ element.id }}" rows="10"></textarea>
+                {% else %}
+                    <input id="{{ element.id }}" placeholder="{{ element.placeholder }}">
+                {% endif %}
+            {% else %}
+                <span class="label">{{ element.label }}</span>
+                {% if element.special == 'radio' %}
+                    {%  for option in element.options %}
+                        <input id="{{ option.id }}" type="radio" name="{{ option.id }}" value="{{ option.value }}" {{ option.selected | replace({1:'checked'}) }}><label for="{{ option.id }}">{{ option.label }}</label>
+                    {% endfor %}
+                {% endif %}
+                {% if element.special == 'checkbox' %}
+                    {%  for option in element.options %}
+                        <input id="{{ option.id }}" type="checkbox" name="{{ option.id }}" value="{{ option.value }}" {{ option.selected | replace({1:'checked'}) }}><label for="{{ option.id }}">{{ option.label }}</label>
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        <input type="submit" value="{{data.submitText}}">
+    </form>
+{% endmacro %}

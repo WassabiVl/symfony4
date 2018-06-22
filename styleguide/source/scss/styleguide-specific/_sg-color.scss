@@ -1,0 +1,122 @@
+//
+// SG: Colors
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+// Dummy to generate Brand-Colors
+@mixin generate-color($name, $color){
+
+  .sg-color-#{$name}{
+    .sg-color-block {
+      background: $color;
+    }
+    @for $i from 1 through 10 {
+      .sg-color-block-lighten-#{$i} {
+        background: mix($white,$color,$i*10);
+      }
+      .sg-color-block-darken-#{$i}{
+        background: mix($black, $color,$i*10);
+      }
+    }
+  }
+}
+
+@mixin generate-color-gradient($name, $color){
+  .sg-color-#{$name}{
+    .sg-color-block {
+      background: $color;
+    }
+  }
+}
+
+// @styles
+//
+//===================================================================
+
+@include exports("sg-colors") {
+  .sg-colors {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    vertical-align: top;
+    &.full-width{
+      li{
+        width: 100%;
+        .sg-swatch{
+          border-radius:6px !important;
+        }
+      }
+    }
+
+
+    span {
+      display: block;
+      line-height: 1.5;
+    }
+
+    li{
+      display:inline-block;
+      width: 4.7%;
+      vertical-align: top;
+      .sg-swatch{
+        color: #fff;
+        padding: 3px;
+        padding-top:30px;
+        text-align: center;
+        height:90px;
+
+        &.contrast{
+          color: #000;
+        }
+      }
+      &:first-child{
+        .sg-swatch{
+          border-radius: 6px 0 0 6px;
+        }
+      }
+
+      &:last-child{
+        .sg-swatch{
+          border-radius:  0 6px 6px 0;
+        }
+      }
+    }
+  }
+
+
+  // Generic
+  @include generate-color("white", $white);
+  @include generate-color("black", $black);
+  @include generate-color("primary", $color-primary);
+  @include generate-color("warm-grey", $gray-medium);
+  @include generate-color("dark-grey" , $gray-dark );
+  @include generate-color("light-grey", $gray-light);
+  @include generate-color("pantone", $color-primary);
+  @include generate-color("vinered", $color-secondary);
+  @include generate-color("blue-purple", $color-tertiary);
+  @include generate-color("grayscale", $color-quaternary);
+
+  // Feedback
+  @include generate-color("warning-red", $message-red);
+
+}

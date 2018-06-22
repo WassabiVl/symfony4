@@ -26,7 +26,7 @@ class DefaultController extends Controller
     {
         $this->tokenManager = $tokenManager;
     }
-
+    
     /**
      * @Route("/", name="homepage")
      * @Route("/page")

@@ -1,0 +1,139 @@
+//
+// Navigation
+//=================================================================================================
+// @globals
+//
+//===================================================================
+@import "../base/globals";
+
+// @variables
+//
+//===================================================================
+
+// @mixins
+//
+//===================================================================
+
+// @styles
+//
+//===================================================================
+
+@include exports("two-column-switch") {
+  .fragment {
+    &.two-column-image-switch {
+      padding-top: 9rem;
+      @media #{$medium-only} {
+        padding-bottom: 2.5rem;
+      }
+      hr {
+        margin-top: -$pad*(10/3);
+        display: none;
+      }
+      .hr-line {
+        height: 0;
+      }
+      @media #{$small-only}{
+        .hr-line {
+          height: $pad;
+        }
+        hr {
+          margin-top: -$pad*(3/3);
+        }
+      }
+
+      & + .two-column-image-switch {
+        padding-top: 1rem;
+        @media #{$medium-only} {
+          padding-bottom: 3rem;
+        }
+        hr {
+          display: block;
+          position: relative;
+          @media #{$small-only} {
+            left: 0;
+          }
+        }
+      }
+      .text-bild {
+        @media #{$small-up} {
+          margin: 0 $pad;
+        }
+        @media #{$small-only} {
+          margin-left: 0;
+        }
+
+        .side-image {
+          padding-bottom: 3rem;
+          width: 50%;
+          @media #{$medium-up}{
+            padding-right: 10%;
+          }
+          @media #{$medium-down} {
+            width: 100% !important;
+            padding-bottom: 1.5rem !important;
+          }
+          .photo-video {
+            width: 100%;
+            text-align: right;
+            min-height: 12rem;
+            background: $gray-light;
+            font-size: 0;
+            //line-height: 0;
+            position: relative;
+            @media #{$large-down}{
+              position: relative;
+              iframe {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+              }
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+        }
+        .side-text {
+          width: 50%;
+          padding-left: 10%;
+
+          a {
+            color: $color-primary !important;
+          }
+
+          p {
+            text-align: left;
+          }
+          @media #{$medium-down}{
+            width: 100%;
+            padding-left: $pad;
+          }
+        }
+      }
+      &:nth-child(2n) {
+        .side-image {
+          float: left;
+          padding-right: $pad;
+          padding-left: 10%;
+          @media #{$medium-down}{
+            padding-left: $pad;
+          }
+        }
+        .side-text {
+          float: right;
+          padding: $pad 10% $pad*2 $pad;
+          @media #{$medium-down}{
+            padding-right: $pad;
+            //padding-top: 0;
+          }
+        }
+      }
+      @media #{$medium-down}{
+        padding-top: 2rem;
+        padding-bottom: 0;
+      }
+    }
+ }
+}

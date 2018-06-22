@@ -1,0 +1,135 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("footerElements") {
+  footer{
+    text-align: center;
+    color: $font-negative-color;
+    background: $color-secondary;
+      *:not(.button, .button-box){
+        text-align: left;
+      }
+
+    ul{
+      position:relative;
+      margin:0;
+      list-style-type: none;
+      li.menu-item, li.sub-menu-item{
+        padding-left:0 !important;
+        padding-right:1rem;
+        &:before{
+          content: "";
+          display:none;
+        }
+      }
+      li.menu-item{
+        display:inline-block;
+      }
+    }
+    a{
+      color:$font-negative-color;
+      width: 100%;
+    }
+    @include colorize-button($color-primary, $white);
+
+    p.footer-legal{
+      position: relative;
+      top: 1rem;
+      font-size: 0.8rem;
+      color: $font-negative-color;
+      text-align: right;
+    }
+  }
+
+
+  footer.page-footer {
+    color: $font-negative-color;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index:95;
+
+    .row + .row {
+      margin-top: 3*$pad;
+    }
+
+    .copyright,.short-links,.social-media{
+      width:100%;
+      color: mix(mix($black,$color-tertiary, 80), $color-tertiary-contrast, 35);
+      padding: rem-calc(20) 0;
+      text-align: center;
+    }
+  }
+
+  .top-jump{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+    color: $white;
+    background: rgba($color-primary, .7);
+    border-radius: 12px;
+    z-index: 100;
+    display:none;
+    cursor: pointer;
+    @media #{$large-down}{
+      bottom: 1rem;
+      right: 1rem;
+      height: 2rem;
+      width: 2rem;
+      line-height: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .footer-map{
+    margin: $pad 0 $pad-double 0;
+    width: 100%;
+    height: 400px;
+    background: grey;
+    border: 4px solid $color-primary;
+  }
+
+  .js-map {
+    width: 100% !important;
+  }
+
+  footer.main-footer-menu  {
+    li.menu-item a:hover {
+    border-bottom: solid white 1px;
+    color: $color-primary;
+    transition: all .2s ease-in-out;
+  }
+  }
+}

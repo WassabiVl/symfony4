@@ -1,0 +1,165 @@
+{% block content %}
+<div class="fragment">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="column column-s-100 column-m-70 column-60">
+                <div class="registration-step step-1-personal-info">
+                    <div class="step-title">
+                        <span class="registration-step-number">1</span>
+                        <span class="registration-step-title">Kontaktdaten</span>
+                    </div>
+                    <div class="form-fields">
+                        <form action="">
+                            <label for="title">
+                               Titel:<select id="title" name="title">
+                                        <option>Frau</option>
+                                        <option>Herr</option>
+                                        <option>Frau Dr.</option>
+                                        <option>Dr.</option>
+                                        <option>Frau Prof.</option>
+                                        <option>Herr Prof.</option>
+                                        <option>Frau Prof. Dr.</option>
+                                        <option>Herr Prof. Dr.</option>
+                                     </select>
+                            </label>
+                            <label for="first-name">
+                                Vorname: <input type="text" id="first-name" placeholder="">
+                            </label>
+                            <label for="last-name">
+                                Nachname:<input type="text" id="last-name" placeholder="">
+                            </label>
+                            <label for="company">
+                               Firma:<input type="text" id="company" placeholder="">
+                            </label>
+                            <label for="telephone">
+                                Telefonnummer:<input type="tel" id="tel" placeholder="+49">
+                            </label>
+                            <label for="email">
+                                Email:<input type="email" id="email" placeholder="">
+                            </label>
+                            <label for="password">
+                                Passwort:<input type="password" id="pwd" name="pwd" placeholder="">
+                            </label>
+                            <label for="confirm-password">
+                                Passwort bestätigen:<input type="password" id="confirm-password" placeholder="">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="registration-step step-2-shipping-address">
+                    <div class="step-title">
+                        <span class="registration-step-number">2</span>
+                        <span class="registration-step-title">Lieferadresse</span>
+                    </div>
+                    <div class="form-fields">
+                        <form action="">
+                            <label for="title">
+                                Titel:<select id="shipping-title" name="title">
+                                    <option>Frau</option>
+                                    <option>Herr</option>
+                                    <option>Frau Dr.</option>
+                                    <option>Dr.</option>
+                                    <option>Frau Prof.</option>
+                                    <option>Herr Prof.</option>
+                                    <option>Frau Prof. Dr.</option>
+                                    <option>Herr Prof. Dr.</option>
+                                </select>
+                            </label>
+                            <label for="first-name">
+                                Vorname: <input type="text" id="shipping-first-name" placeholder="">
+                            </label>
+                            <label for="last-name">
+                                Nachname:<input type="text" id="shipping-last-name" placeholder="">
+                            </label>
+                            <label for="company">
+                                Firma:<input type="text" id="shipping-company" placeholder="">
+                            </label>
+                            <label for="shipping-address">
+                                Adresse:<input type="text" id="shipping-address-main" placeholder="Straße und Nummer">
+                                <input type="text" id="shipping-address-additional" placeholder="Gebäude, Etage, Praxis, Eingang, etc ">
+                            </label>
+                            <label for="zip">
+                                PLZ:<input type="text" id="shipping-zip" placeholder="">
+                            </label>
+                            <label for="city">
+                                Stadt:<input type="text" id="shipping-city" placeholder="">
+                            </label>
+                            <label for="state">
+                                Bundesland:<input type="text" id="shipping-state" placeholder="">
+                            </label>
+                            <label for="country">
+                                Land:<input type="text" id="shipping-country" placeholder="">
+                            </label>
+                        </form>
+                    </div>
+                    <div class="step-title billingAddressToggle">
+                    {#<div class="step-title accordionToggle">#}
+                        <span class="registration-step-title">Haben Sie eine andere Rechnungsadresse?</span>
+                    </div>
+                    {#<div class="form-fields accordionContent">#}
+                    <div class="form-fields billingAddressContent">
+                        <form action="">
+                            <label for="title">
+                                Titel:<select id="billing-title" name="title">
+                                    <option>Frau</option>
+                                    <option>Herr</option>
+                                    <option>Frau Dr.</option>
+                                    <option>Dr.</option>
+                                    <option>Frau Prof.</option>
+                                    <option>Herr Prof.</option>
+                                    <option>Frau Prof. Dr.</option>
+                                    <option>Herr Prof. Dr.</option>
+                                </select>
+                            </label>
+                            <label for="first-name">
+                                Vorname: <input type="text" id="billing-first-name" placeholder="">
+                            </label>
+                            <label for="last-name">
+                                Nachname:<input type="text" id="billing-last-name" placeholder="">
+                            </label>
+                            <label for="company">
+                                Firma:<input type="text" id="billing-company" placeholder="">
+                            </label>
+                            <label for="shipping-address">
+                                Adresse:<input type="text" id="billing-address-main" placeholder="Straße und Nummer">
+                                <input type="text" id="billing-address-additional" placeholder="Gebäude, Etage, Praxis, Eingang, etc ">
+                            </label>
+                            <label for="zip">
+                                PLZ:<input type="text" id="billing-zip" placeholder="">
+                            </label>
+                            <label for="city">
+                                Stadt:<input type="text" id="billing-city" placeholder="">
+                            </label>
+                            <label for="state">
+                                Bundesland:<input type="text" id="billing-state" placeholder="">
+                            </label>
+                            <label for="country">
+                                Land:<input type="text" id="billing-country" placeholder="">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="registration-step step-3-upload-document">
+                    <div class="step-title">
+                        <span class="registration-step-number">3</span>
+                        <span class="registration-step-title">UG Dokument</span>
+                    </div>
+                    <div class="UG-document">
+                        <div class="legal-info">
+                            {{ text }}
+                        </div>
+                        <div class="upload-tool">
+                            <a href="#" class="button flat">HOCHLADEN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="wrapper-form-submit">
+            <a href="#" class="button">SPEICHERN & SCHICKEN</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

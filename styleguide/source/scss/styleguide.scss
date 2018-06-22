@@ -1,0 +1,62 @@
+/*
+ * Mind and Life
+ */
+
+
+// Base
+//-----------------------------------------------
+
+$image-path: "../../images";
+
+
+// Components
+//-----------------------------------------------
+@import "components/404";
+@import "components/article";
+
+@import "components/boxes";
+@import "components/footer-elements";
+@import "components/two-column-switch";
+@import "components/homepage";
+@import "components/charts-general";
+
+@import "components/button";
+@import "components/required-label";
+@import "components/misc";
+@import "components/cookie_control";
+@import "components/effects";
+
+@import "components/icons";
+
+@import "components/share";
+@import "components/layout";
+@import "components/navigation";
+@import "components/scaffold";
+@import "components/search";
+@import "components/sections";
+@import "components/table";
+@import "components/typography";
+@import "components/calculator";
+@import "components/dashboards";
+@import "components/calculator";
+@import "components/pages";
+@import "components/lightbox";
+@import "components/forms";
+
+@import "vendor/lombego_box";
+@import "vendor/lombego_scollIndicator";
+@import "vendor/mag_settings";
+@import "vendor/mag_main";
+@import "vendor/slick";
+@import "vendor/slick-theme";
+
+@import "vendor/font-awesome/font-awesome-core";
+@import "vendor/font-awesome/font-awesome-light";
+@import "vendor/font-awesome/font-awesome-solid";
+@import "vendor/font-awesome/font-awesome-regular";
+@import "vendor/font-awesome/font-awesome-brands";
+@import "vendor/fontello/fontello";
+@import "vendor/photoswipe-skin";
+@import "vendor/photoswipe";
+
+@import "components/fragments";

@@ -1,0 +1,5 @@
+{% for key, font in customVars.fonts %}
+    <p class="font-{{key|lower}}">{{key}} font: {{ font.family }}, {{ font.alt }}, {{ font.kind }}</p>
+    <p class="font-{{key|lower}}"><em>{{key}} font: {{ font.family }}, {{ font.alt }}, {{ font.kind }}</em></p>
+    <p class="font-{{key|lower}}"><strong>{{key}} font: {{ font.family }}, {{ font.alt }}, {{ font.kind }}</strong></p>
+{%  endfor %}

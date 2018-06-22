@@ -1,0 +1,134 @@
+//
+// Navigation
+//=================================================================================================
+// @globals
+//
+//===================================================================
+@import "../base/globals";
+
+// @variables
+//
+//===================================================================
+
+// @mixins
+//
+//===================================================================
+
+// @styles
+//
+//===================================================================
+
+@include exports("teaserbox") {
+  .teaserbox-block {
+    img {
+      width: 100%;
+    }
+    .teaserbox-block-title{
+      color: $font-negative-color;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      left: 1rem;
+      background: $color-gold-transparent;
+      padding: $pad*1.8;
+      text-align: right;
+      & p.negative {
+        bottom: 0.3rem;
+        position: relative;
+      }
+    }
+  }
+
+  .teaserbox-block-text {
+    background: white;
+    padding: 1rem $pad-double !important;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }
+
+  .scroll-teaserbox-wrapper {
+    .teaserbox-slide-element {
+      width: 30rem;
+      opacity: 0.6;
+      &.slick-current, &.slick-active, .slick-center {
+        opacity: 1;
+      }
+    }
+  }
+  //.standalone-gallery {
+  //  margin: $pad*3 0;
+  //  div {
+  //    padding: 5px;
+  //    text-align: center;
+  //    img {
+  //      max-height: 400px;
+  //      display: inline-block;
+  //    }
+  //  }
+  //}
+  //
+  //.scroll-gallery-wrapper {
+  //  .gallery-slide-element {
+  //    width: 70rem;
+  //    opacity: 0.4;
+  //    &.slick-current, &.slick-active, .slick-center {
+  //      opacity: 1;
+  //    }
+  //  }
+  //  .slick-prev, .slick-next{
+  //    &:after{
+  //      font-size: 4rem;
+  //    }
+  //  }
+  //  .slick-prev {
+  //    z-index: 2;
+  //    left: 9rem;
+  //    //width: 4.3rem;
+  //    //background: $color-secondary !important;
+  //    &:before{
+  //      content: "";
+  //      display:none;
+  //    }
+  //    &:after{
+  //      content: "\f053";
+  //      color: $font-negative-color;
+  //      font-family: "Font Awesome 5 Light";
+  //      background: $color-secondary;
+  //      border: 0 !important;
+  //      //transform: translate(-1.8rem,0) !important;
+  //    }
+  //  }
+  //  .slick-next{
+  //    z-index: 2;
+  //    right: 9rem;
+  //    //width: 4.3rem;
+  //    //background: $color-secondary !important;
+  //    &:before{
+  //      content: "\f054";
+  //      color: $font-negative-color;
+  //      font-family: "Font Awesome 5 Light";
+  //      display:none;
+  //    }
+  //    &:after{
+  //      content: "\f054";
+  //      color: $font-negative-color;
+  //      font-family: "Font Awesome 5 Light";
+  //      border: 0 !important;
+  //      //transform: translate(1.8rem,0) !important;
+  //    }
+  //  }
+  //}
+  //
+  //.slick-dots li {
+  //  margin-top: 0 !important;
+  //  & button {
+  //  border-radius: 0 !important;
+  //  background: rgba(white, .5) !important;
+  //  border: 1px solid transparent !important;
+  //  min-height:0px; //overrides button height
+  //  }
+  //  &.slick-active button {
+  //    background: white !important;
+  //  }
+  //}
+}

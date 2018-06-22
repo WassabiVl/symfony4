@@ -1,0 +1,65 @@
+{% block content %}
+<div class="fragment new-order">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="column column-s-100 column-m-70 column-60">
+                <div class="form-fields">
+                    <form action="">
+                        <label for="product-new-order">
+                            Produkt:<select id="product-new-order" name="product-new-order">
+                                <option selected>Illum</option>
+                                <option>Illum2</option>
+                                <option>Illum3</option>
+                                <option>Illum4</option>
+                            </select>
+                        </label>
+                        <label for="quantity-new-order">
+                            Menge:<select id="quantity-new-order" name="quantity-new-order">
+                                <option selected>500-1000 Units</option>
+                                <option>1001-1500 Units</option>
+                                <option>1501-2000 Units</option>
+                                <option>2001-2500 Units</option>
+                            </select>
+                            <a class="calculator-icon" href="#" aria-label="Menge rechnen">
+                                <svg version="1.1" id="calculator-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve"> <path d="M50.6,0H9.4C7.8,0,6.5,1.3,6.5,2.9v54.2c0,1.6,1.3,2.9,2.9,2.9h41.2c1.6,0,2.9-1.3,2.9-2.9V2.9C53.5,1.3,52.2,0,50.6,0z M51.5,57.1c0,0.5-0.4,0.9-0.9,0.9H9.4c-0.5,0-0.9-0.4-0.9-0.9V2.9C8.5,2.4,8.9,2,9.4,2h41.2c0.5,0,0.9,0.4,0.9,0.9V57.1z"/><path d="M11.5,55h11V44h-11V55z M13.5,46h7v7h-7V46z"/><path d="M24.5,55h11V44h-11V55z M26.5,46h7v7h-7V46z"/><path d="M37.5,55h11V31h-11V55z M39.5,33h7v20h-7V33z"/><path d="M11.5,42h11V31h-11V42z M13.5,33h7v7h-7V33z"/><path d="M24.5,42h11V31h-11V42z M26.5,33h7v7h-7V33z"/><path d="M11.5,29h11V18h-11V29z M13.5,20h7v7h-7V20z"/><path d="M24.5,29h11V18h-11V29z M26.5,20h7v7h-7V20z"/><path d="M37.5,29h11V18h-11V29z M39.5,20h7v7h-7V20z"/><path d="M11.5,15h37V5h-37V15z"/></svg>
+                            </a>
+                        </label>
+                        <label for="delivery-date-new-order">
+                            Lieferung am:<input type="date" id="delivery-date-new-order" placeholder="">
+                        </label>
+                        <label for="delivery-time-new-order">
+                            Lieferzeit:<select id="delivery-time-new-order" name="delivery-time-new-order">
+                                <option selected>08:00</option>
+                                <option>08:30</option>
+                                <option>09:00</option>
+                                <option>09:30</option>
+                            </select>
+                        </label>
+                        <label for="shipping-address-new-order">
+                            Lieferadresse:<select id="shipping-address-new-order" name="shipping-address-new-order">
+                                <option selected>Krankenhausstraße 67 / 50674 Köln</option>
+                                <option>Kaufstraße 2 / 50674 Köln</option>
+                                <option>Geschwister-Scholl-Str. 15 / 50674 Köln</option>
+                                <option>Bahnhofstraße 85 / 50976 Köln</option>
+                            </select>
+                        </label>
+                        <label for="billing-address-new-order">
+                            Rechnungsadresse:<select id="billing-address-new-order" name="billing-address-new-order">
+                                <option selected>Geschwister-Scholl-Str. 15 / 50674 Köln</option>
+                                <option>Kaufstraße 2 / 50674 Köln</option>
+                                <option>Krankenhausstraße 67 / 50674 Köln</option>
+                                <option>Bahnhofstraße 85 / 50976 Köln</option>
+                            </select>
+                        </label>
+                        <label for="comments-new-order">
+                            Kommentaren: <textarea id="comments-new-order" rows="10" placeholder=""></textarea>
+                        </label>
+                        <a href="#" class="button new-order">BESTELLVORSCHAU</a>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

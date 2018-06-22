@@ -1,0 +1,49 @@
+{% block content %}
+    {%  if bgColor is defined %}
+        <div class="fragment {{bgColor}}">
+    {% else %}
+        <div class="fragment {{random(fragmentSetup.colorRange)}}">
+    {% endif %}
+    {% if templateRender == false %}
+        {% include "atoms-colorswitch" %}
+    {% endif %}
+
+    <div class="page-wrapper">
+        <div class="row ns">
+            <div class="column column-100 no-padding">
+                <div class="headline">
+                    <h2>Boxed Content</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row ns">
+            <div class="column column-33 column-s-100">
+                <div class="box">
+                    {{text}}
+                </div>
+            </div>
+            <div class="column column-33 column-s-100">
+                <div class="box">
+                    {{text}}
+                </div>
+            </div>
+            <div class="column column-33 column-s-100">
+                <div class="box">
+                    {{text}}
+                </div>
+            </div>
+            <div class="column column-33 column-s-100">
+                <div class="box">
+                    {{text}}
+                </div>
+            </div>
+            <div class="column column-33 column-s-100">
+                <div class="box">
+                    {{text}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

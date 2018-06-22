@@ -1,0 +1,25 @@
+/*
+    ACHTUNG RUBY MUSS INSTALLIERT SEIN !!
+    ANSCHLIESSEND MUSS 'gem install sass' ausgeführt werden.
+    Ggf. muss der PC mehrmals neu gestartet werden.
+*/
+
+
+/* Nur JS+CSS */
+1. Terminal: npm link bzw. npm install
+2. Rechtsklick gulpfile.js: Run 'default'
+
+
+/* Patternlab + JS/CSS */
+1. Terminal: composer install
+    -> n bei der Abfrage zum ändern der Config
+2. npm link
+
+3. Rechtsklick auf die Gulp-File run 'default'
+
+4. Run / Edit Configuration / PHP Scripts
+4.1. + (neuen PHP-Script erstellen)
+4.2. Name Patternlab geben
+4.3. File auswählen: <PATH>/styleguide/core/console
+4.4. Arguments: --watch
+4.5. Den Prozess 'Patternlab' starten

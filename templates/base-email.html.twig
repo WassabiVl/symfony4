@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <base href="http://dev.radiopharma24.de">
+    <style>
+        .email-wrapper {padding: 15px;}
+        .email-wrapper span {display: block; font-family: Roboto,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 14px;}
+        .email-wrapper span.line-jump {margin-top: 15px;}
+        .email-wrapper span.line-initial {margin-top: 30px;margin-bottom:30px; font-size: 18px; color:#f15a24; font-weight:bold;}
+        .email-wrapper .e-mail-logo-stripe {display: block; background: #040054; width:auto; padding:15px; margin-top: 20px;margin-left: -15px;}
+        .email-wrapper .e-mail-logo {display: block;}
+        .email-wrapper .e-mail-logo svg {max-width: 180px;}
+        .email-wrapper .e-mail-logo img {max-width: 180px;}
+        .email-wrapper hr {margin-top: 10px;margin-bottom: 10px}
+        .email-wrapper span.e-mail-footer {color:#040054;}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<header>
+
+</header>
+{% block subject %}
+{% endblock %}
+{% block body_text %}
+{% endblock %}
+{% block body_html %}
+{% endblock %}
+{% block footer %}
+    <div class="email-wrapper">
+        <hr>
+        <span class="e-mail-footer">WINKGEN MEDICAL SYSTEMS</span>
+        <span class="e-mail-footer">Eichendorffstraße 3</span>
+        <span class="e-mail-footer">35584 Wetzlar</span>
+        <span class="e-mail-footer">+49 (0) 6441 / 381437</span>
+        <span class="e-mail-footer">email@winkgen.de</span>
+    </div>
+{% endblock %}
+
+</body>
+</html>

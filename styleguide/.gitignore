@@ -1,0 +1,11 @@
+.DS_Store
+export/*
+public/*
+source/styleguide/*
+source/js/min/
+source/js/tmp/
+source/css/maps/
+vendor/*
+node_modules/*
+.idea
+.sass-cache

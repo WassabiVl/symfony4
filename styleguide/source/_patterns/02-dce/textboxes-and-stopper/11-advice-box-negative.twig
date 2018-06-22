@@ -1,0 +1,68 @@
+{% block content %}
+    {#{% set bgColor = '$color-secondary' %}#}
+    {#{%  if bgColor is defined %}#}
+        {#<div class="fragment {{bgColor}}">#}
+    {#{% else %}#}
+        {#<div class="fragment {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    {#{% if templateRender == false %}#}
+        {#{% include "atoms-colorswitch" %}#}
+    {#{% endif %}#}
+
+<div class="fragment no-vertical-padding primary-color advice-box-n">
+    <div class="horizontal-stripe">
+    </div>
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="column column-100">
+                <div class="advice-box-n-title">
+                    <h4>Call me mr. action</h4>
+                </div>
+                <div class="advice-box-n-text">
+                    <p class="negative"> {{ text }}</p>
+                </div>
+                    <a id="ServerSort" href="javascript:void(0)" class="button-box negative advice-box-n-button clickable-with-content"><span class="button-box-span"></span>BUTTON-</a>
+                <div class="button-popup-overlay">
+                    <div class="button-popup-overlay-content">
+                        <div class="button-popup-overlay-content-close" style=""><span class="fal fa-times"></span></div>
+                        <div class="button-popup-overlay-content-background">
+
+                            <div class="popup-form-wrapper">
+                                    <h2 class="h-no-underline">Formulare</h2>
+                                    <div class="form-input-box">
+                                        <div class="input-box-title">
+                                            <span>Name:</span>
+                                        </div>
+                                        <input id="Name" placeholder="Name">
+                                    </div>
+                                    <div class="form-input-box">
+                                        <div class="input-box-title">
+                                            <span>E-Mail:</span>
+                                        </div>
+                                        <input id="Email" placeholder="Email">
+                                    </div>
+                                    <div class="form-input-box">
+                                        <div class="input-box-title">
+                                            <span>Betreff:</span>
+                                        </div>
+                                        <select id="select">
+                                            <option value="" id=""></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input-box under-select-field">
+                                        <div class="input-box-title">
+                                            <span>Anliegen:</span>
+                                        </div>
+                                        <textarea id="Textarea" placeholder="Schreiben Sie uns"></textarea>
+                                    </div>
+                                    <a class="button negative" href="#">ABSENDEN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+         </div>
+    </div>
+</div>
+{% endblock %}

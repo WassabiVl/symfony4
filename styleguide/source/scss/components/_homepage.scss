@@ -1,0 +1,114 @@
+//
+// Navigation
+//=================================================================================================
+
+
+// @globals
+//
+//===================================================================
+
+@import "../base/globals";
+
+
+
+// @variables
+//
+//===================================================================
+
+
+
+// @mixins
+//
+//===================================================================
+
+
+
+// @styles
+//
+//===================================================================
+
+@include exports("homepage") {
+  .fragment.homepage-header:first-of-type {
+    height: 100%;
+    @media screen and (max-width: 796px){
+    padding-top: 11.2rem!important;
+    }
+  }
+
+  .homepage-header{
+    background-size: cover;
+    background-position: center top;
+    height: calc(100vh - 5.9rem);
+    img{
+    }
+  }
+
+  .header-main-content-box{
+    padding: 3rem;
+    margin-top: 3rem;
+    background: rgba(0,0,0,.5);
+  }
+
+  .logo-header-main-content-box{
+    margin:1rem 0;
+  }
+
+  .sign-up-card{
+    padding:2.5rem;
+    background: $white;
+    border-radius: 4px;
+    text-align: left;
+    @media #{$large-only}{
+      margin-left: 2rem;
+    }
+    &.signed-in-user-promo_pic{
+      padding-top: 88%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  span.bolder-span{
+    font-weight: bold;
+    &.block{
+      display: block;
+    }
+  }
+
+  .step-number{
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    color: $font-default-color;
+    line-height: 2.7rem;
+    text-align: center;
+    background: mix($color-primary, white, 40);
+    font-size: 1.2rem;
+  }
+
+  .steps-group{
+    margin: 1rem 0;
+  }
+
+  .header-left-content{
+    %headings, p, span{
+      color: $font-negative-color;
+    }
+  }
+
+  .column.column-44{
+    width:44%;
+  }
+
+  a.button.broad{
+    width:100%;
+    text-align: center;
+  }
+
+  a.button.bottom{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    line-height: 1.5rem;
+  }
+}

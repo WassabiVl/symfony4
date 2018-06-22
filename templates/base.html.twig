@@ -1,12 +1,233 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('lombego/layout/css/styles.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<header class="header">
+    {% if not is_granted('ROLE_ADMIN') %}
+        {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+            <nav class="nav-wrapper link-nav login-mobile dashboard-header-wrapper" style="top: 0; transition: top 0.3s ease-in-out;">
+                <div class="menu-wrapper">
+                    <div class="row">
+                        <div class="column column-100 right">
+
+                            {{ render(controller('AppBundle:Default:login')) }}
+                            <div class="logo not-authenticated-user">
+                                <img src="{{ asset('images/R24-white-logo.png') }}" alt="Radiopharma24">
+                            </div>
+                            <div class="authenticate-user-mobile">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        {% endif %}
+        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+            <nav class="nav-wrapper link-nav  dashboard-header-wrapper" style="top: 0; transition: top 0.3s ease-in-out;">
+                <div class="menu-wrapper">
+                    <div class="row">
+                        <div class="column column-100 right">
+                            {% if is_granted('ROLE_CUSTOMER') %}
+                                <div class="logo">
+                                    <a href="{{ path('customer_dashboard') }}"><img src="{{ asset('images/R24-white-logo.png') }}" alt="Radiopharma24"></a>
+                                </div>
+                                <div class="dashboard-header">
+                                    <ul class="signed-in-user-info">
+                                        <li class="dashboard-header-item my-addresses addresses-button">
+                                            <div class="dashboard-color-arrow" href="">
+                                                <span class="label-signed-in left">{{ 'layout.logged_in_address'|trans([], 'FOSUserBundle') }}</span>
+                                                <span class="signed-in-address clickable-hoverable">
+                                                {% if app.user.relatedCustomerEntry.shippingAddress == not null %}
+                                                    {{ app.user.relatedCustomerEntry.shippingAddress.street ~ ' '
+                                                    ~ app.user.relatedCustomerEntry.shippingAddress.buildingNumber ~ '/ '
+                                                    ~ app.user.relatedCustomerEntry.shippingAddress.zip ~ ', '
+                                                    ~ app.user.relatedCustomerEntry.shippingAddress.city
+                                                    }}
+                                                {% endif %}
+                                            </span>
+                                            </div>
+                                        </li>
+
+                                        <div class="addresses-popup-overlay">
+                                            <div class="addresses-popup-overlay-content">
+                                                <div class="addresses-popup-overlay-content-close" style="">
+                                                    <span class="fal fa-times"></span>
+                                                </div>
+                                                <div class="overlay-content-shipping-module">
+                                                    <div class="address-shipping-existing-select-form">
+                                                        <span class="title">{{ 'addresses.shipping_addresses'|trans([], 'FOSUserBundle') }}</span>
+                                                        <div class="address-item">
+                                                            <span>Standard Lieferadresse</span>
+                                                            <div class="address-item-select">
+                                                                {{ render(controller(
+                                                                    'AppBundle\\Controller\\AddressDashBoardController::changeAddress', {'slug':"ship"}
+                                                                )) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="address-item buttons-group">
+                                                            <a class="button flat no-border address-new-shipping">{% trans %}NEUE HINZUFÜGEN{% endtrans %}</a>
+                                                            <a id="address-shipping-see-all" class="button flat no-border" href="{{ path('address_show') }}">{% trans %}ALLE ANSEHEN{% endtrans %}</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="address-lightbox shipping-lightbox">
+                                                        <div class="lightbox form-title title-new-shipping-address">
+                                                            <span>Neue Lieferaddresse</span>
+                                                        </div>
+                                                        {{ render(controller(
+                                                            'AppBundle\\Controller\\AddressDashBoardController::newAddressAction', {'slug':"ship"}
+                                                        )) }}
+                                                    </div>
+                                                    <div class="address-lightbox billing-lightbox">
+                                                        <div class="lightbox form-title title-new-billing-address">
+                                                            <span>Neue Rechnungsadresse</span>
+                                                        </div>
+                                                        {{ render(controller(
+                                                            'AppBundle\\Controller\\AddressDashBoardController::newAddressAction', {'slug':"bill"}
+                                                        )) }}
+                                                    </div>
+                                                </div>
+                                                <div class="overlay-content-billing-module">
+                                                    <span class="title">{% trans %}Rechnungsadresse{% endtrans %}</span>
+                                                    <div class="address-billing-existing-select-form">
+                                                        <div class="address-item">
+                                                            <span>{% trans %}Standard Rechnungsadresse{% endtrans %}</span>
+                                                            <div class="address-item-select">
+                                                                {{ render(controller(
+                                                                    'AppBundle\\Controller\\AddressDashBoardController::changeAddress', {'slug':"bill"}
+                                                                )) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="address-item buttons-group">
+                                                            <a class="button flat no-border address-new-billing">{% trans %}NEUE HINZUFÜGEN{% endtrans %}</a>
+                                                            <a id="address-billing-see-all" class="button flat no-border" href="{{ path('address_show') }}">{% trans %}ALLE ANSEHEN{% endtrans %}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <li class="dashboard-header-item my-account-item">
+                                            <div class="dashboard-color-arrow" href="">
+                                                <span class="label-signed-in">{{ 'layout.logged_in_solo'|trans([], 'FOSUserBundle') }}</span>
+                                                <span class="username clickable-hoverable">{{ app.user.contactName }}</span>
+                                            </div>
+                                            <ul class="my-account-dropdown">
+                                                <li>
+                                                    <a href="{{ path('user_setting') }}">{% trans %}Mein Konto{% endtrans %}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ path('fos_user_change_password') }}">{% trans %}Passwort ändern{% endtrans %}</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            {% if is_granted('ROLE_PRODUCER')  or is_granted('ROLE_CARRIER') %}
+                                <div class="logo">
+                                    <a href="{{ path('producer_dashboard') }}">
+                                        <img src="{{ asset('images/R24-white-logo.png') }}" alt="Radiopharma24">
+                                    </a>
+                                </div>
+                                <div class="column column-60 right">
+                                    <div class="dashboard-header">
+                                        <ul class="signed-in-user-info">
+                                            <li class="dashboard-header-item my-account-item">
+                                                <div class="dashboard-color-arrow" href="">
+                                                    <span class="label-signed-in">{{ 'layout.logged_in_solo'|trans([], 'FOSUserBundle') }}</span>
+                                                    <span class="username clickable-hoverable">{{ app.user.contactName }}</span>
+                                                </div>
+                                                <ul class="my-account-dropdown">
+                                                    <li>
+                                                        <a href="{{ path('user_setting') }}">{% trans %}Mein Konto{% endtrans %}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('fos_user_change_password') }}">{% trans %}Passwort ändern{% endtrans %}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </nav>
+        {% endif %}
+    {% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <nav class="nav-wrapper link-nav  admin-nav dashboard-header-wrapper" style="top: 0; transition: top 0.3s ease-in-out;">
+            <div class="navbar-custom-menu">
+                <a class="admin-back" href="{{ path('admin') }}">
+                    {% trans %}back to Admin Dashboard{% endtrans %}
+                    <i class="hidden-xs fa fa-user"></i></a>
+            </div>
+        </nav>
+    {% endif %}
+</header>
+{% for msg in app.session.flashBag.get('success') %}
+    <div class="alert alert-success">
+        {{ msg }}
+    </div>
+{% endfor %}
+{# Enable showing alerts -Wael #}
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="alert alert-{{ label }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+{% block body %}
+{% endblock %}
+
+<footer class="footer dark main-footer-menu thin-footer">
+
+    <div class="">
+        {% block footer %}
+        {% endblock %}
+        <div class="row">
+            <div class="column column-s-0 column-m-0 column-50">
+            </div>
+            <div class="column right column-s-100 column-m-100 column-50 thin-footer-links">
+                <ul>
+                    <li class="menu-item"><a href="{{ path('orbitale_cms_page', {"slugs": "Impressum"}) }}">{% trans %}Impressum{% endtrans %}</a></li>
+                    <li class="menu-item"><a href="{{ path('orbitale_cms_page', {"slugs": "AGB"}) }}">{% trans %}AGB{% endtrans %}</a></li>
+                    <li class="menu-item"><a href="{{ path('orbitale_cms_page', {"slugs": "Datenschutz-Bestimmungen"}) }}">{% trans %}Datenschutz-Bestimmungen{% endtrans %}</a></li>
+                    <li class="menu-item"><a href="{{ path('orbitale_cms_page', {"slugs": "uberuns"}) }}">{% trans %}Über uns{% endtrans %}</a></li>
+                    <li class="menu-item"><a href="{{ path('orbitale_cms_page', {"slugs": "Kontakt"}) }}">{% trans %}Kontakt{% endtrans %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="{{ asset('lombego/layout/js/main.min.js') }}"></script>
+<script src="{{ asset('bundles/app/js/backend/main.js') }}"></script>
+<script src="{{ asset('bundles/app/js/backend/admin/account_relations.js') }}"></script>
+<script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+{% block javascripts %}
+{% endblock %}
+</body>
 </html>

@@ -1,0 +1,21 @@
+{% block content %}
+{%  if bgColor is defined %}
+    <div class="fragment {{bgColor}}">
+{% else %}
+    <div class="fragment {{random(fragmentSetup.colorRange)}}">
+{% endif %}
+    {% if templateRender == false %}
+        {% include "atoms-colorswitch" %}
+    {% endif %}
+
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="column column-100">
+                    <div class="headline">
+                        <h2>Zwischenüberschrift</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

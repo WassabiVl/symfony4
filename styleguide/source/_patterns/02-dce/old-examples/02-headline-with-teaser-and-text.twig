@@ -1,0 +1,23 @@
+{% block content %}
+{%  if bgColor is defined %}
+    <div class="fragment {{bgColor}}">
+{% else %}
+    <div class="fragment {{random(fragmentSetup.colorRange)}}">
+{% endif %}
+    {% if templateRender == false %}
+        {% include "atoms-colorswitch" %}
+    {% endif %}
+
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="column column-100">
+                    <div class="headline">
+                        <h1>Willkommen</h1>
+                    </div>
+                    <p class="teaser">{{ text }}</p>
+                    <p>{{ paragraph }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

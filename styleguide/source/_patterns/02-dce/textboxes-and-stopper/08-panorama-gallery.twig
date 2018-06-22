@@ -1,0 +1,31 @@
+{% block content %}
+    {#{% set bgColor = 'primary-color' %}#}
+    {#{%  if bgColor is defined %}#}
+    {#<div class="fragment {{bgColor}}">#}
+    {#{% else %}#}
+    {#<div class="fragment {{random(fragmentSetup.colorRange)}}">#}
+    {#{% endif %}#}
+    {#{% if templateRender == false %}#}
+        {#{% include "atoms-colorswitch" %}#}
+    {#{% endif %}#}
+<div class="fragment h-gold gallery-schneider">
+        <div class="slick no-padding slick-center dots arrows slick-focus variable-width scroll-gallery-wrapper">
+            {% for i in 0..5 %}
+                <div class="gallery-slide-element">
+                    <div class="row ">
+                        <div class="column column-90">
+                         <h3>Schneider Edelstahl</h3>
+                         <p class=" highlighted-text negative ">{{ text }}</p>
+                        </div>
+
+                        <div class="column column-95 no-side-padding gallery-block" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Walt_Disney_Concert_Hall%2C_LA%2C_CA%2C_jjron_22.03.2012.jpg')">
+                                <div class="gallery-image-text">
+                                  <p class="negative">This is Q sample text for the image</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+</div>
+{% endblock %}
