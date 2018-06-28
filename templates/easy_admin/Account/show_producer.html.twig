@@ -1,0 +1,98 @@
+{% block main %}
+
+    {% if value is not null %}
+        {% set producerData = {
+            'No.': value.number,
+            'Head title' : value.headTitle,
+            'Head firstname' : value.headFirstName,
+            'Head lastname' : value.headLastName
+        } %}
+
+
+        <div class="form-group col-lg-12 ">
+            <h3>{% trans %}Carrier Specific Details{% endtrans %}</h3>
+            {% for key, value in producerData  %}
+                <div class="form-group field-text col-lg-6 col-s-12">
+                    <label>
+                        {{key}}
+                    </label>
+                    <div class="form-control">
+                        <div class="context">
+                            {{ value }}
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="form-group col-lg-12 ">
+            <h3>
+                Related carrier &nbsp;
+                <a href="{{ path('easyadmin', {entity: "Account", action: 'show', id: value.relatedCarrier.relatedAccount.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                <a href="{{ path('easyadmin', {entity: "Account", action: 'edit', id: value.relatedCarrier.relatedAccount.id }) }}"><i class="fa fa-pencil"></i></a>
+            </h3>
+            {% set carrierData = {
+                'Name': value.relatedCarrier.relatedAccount,
+                'Carrier cost' : value.headTitle,
+                'Address' : value.headFirstName
+            } %}
+            <div class="table-responsive">
+                {% for key, value in producerData  %}
+                    <div class="form-group field-text col-lg-6 col-s-12">
+                        <label>
+                            {{key}}
+                        </label>
+                        <div class="form-control">
+                            <div class="context">
+                                {{ value }}
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="form-group col-lg-12 ">
+            <h3>Related batches</h3>
+            <div class="table-responsive">
+                <table class="table table-ea">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Related product</th>
+                        <th>Start time</th>
+                        <th>End time</th>
+                        <th>Batch limit</th>
+                        <th>Batch fix cost</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for  batch in value.relatedBatches %}
+                        <tr>
+                            <td> {{ batch.id }}</td>
+                            <td> {{ batch.relatedProduct}}</td>
+                            <td> {{ batch.dailyStartTime | date('H:i')}}</td>
+                            <td> {{ batch.dailyEndTime | date('H:i')}}</td>
+                            <td> {{ batch.batchAmount}}</td>
+                            <td> {{ batch.batchCost}}</td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "Batch", action: 'show', id: batch.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "Batch", action: 'edit', id: batch.id }) }}"><i class="fa fa-pencil"></i></a>&nbsp;
+                                <a href="{{ path('easyadmin', {entity: "BatchLockTime", action: 'filter', id: batch.id }) }}"><i class="fa fa-clock-o"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <th colspan="7" class="center">
+                            <a  href="{{ path('easyadmin', {entity: "Batch", action: 'new', parent: value.id })}}" class="full-width add-action"><i class="fa fa-plus-square"></i> Add new batch</a>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

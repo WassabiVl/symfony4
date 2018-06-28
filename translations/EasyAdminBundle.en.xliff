@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2018-06-28T12:55:20Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="2386c61b05b805583a25390c532aadc130dae161" resname="action.add_another_item">
+        <source>action.add_another_item</source>
+        <target>Add another item</target>
+      </trans-unit>
+      <trans-unit id="e28aaf37d6db10d08f96d3dc382f3789d3b6dbe5" resname="action.add_new_item">
+        <source>action.add_new_item</source>
+        <target>Add a new item</target>
+      </trans-unit>
+      <trans-unit id="efd41d3e958dc833bd1e519fe6105437c63f1eb9" resname="action.remove_item">
+        <source>action.remove_item</source>
+        <target>Remove the item</target>
+      </trans-unit>
+      <trans-unit id="fa947777d7ab958fa297310d2f21674b1b0c6a6e" resname="delete_modal.action">
+        <source>delete_modal.action</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="6586bb7a6f01b4e771f01fa947c9b7327462a0c3" resname="delete_modal.content">
+        <source>delete_modal.content</source>
+        <target>There is no undo for this operation.</target>
+      </trans-unit>
+      <trans-unit id="943f1ed9f9aec2e11cb2058744a8b2c7ca188964" resname="delete_modal.title">
+        <source>delete_modal.title</source>
+        <target>Do you really want to delete this item?</target>
+      </trans-unit>
+      <trans-unit id="a27199fd55c9e3a5c5425c99907c67badb54c33e" resname="edit.page_title">
+        <source>edit.page_title</source>
+        <target>Edit %entity_name% (#%entity_id%)</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\EasyAdminBundle\views\Account\edit.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\edit.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Pages\edit.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Pages\new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="570043596e41f9067d43fbff99f1acb348a090bf" resname="errors">
+        <source>errors</source>
+        <target>Error|Errors</target>
+      </trans-unit>
+      <trans-unit id="b4ceadc3c450363bb6d42c3921bf46e698a60462" resname="exception.entity_not_found">
+        <source>exception.entity_not_found</source>
+        <target>This item is no longer available.</target>
+      </trans-unit>
+      <trans-unit id="01aba6a0cce84667fdc5ed5a46074f15388f7456" resname="exception.entity_remove">
+        <source>exception.entity_remove</source>
+        <target>This item can't be deleted because other items depend on it.</target>
+      </trans-unit>
+      <trans-unit id="209039bf3d07569a026893ed445af39912d1387c" resname="exception.forbidden_action">
+        <source>exception.forbidden_action</source>
+        <target>The requested action can't be performed on this item.</target>
+      </trans-unit>
+      <trans-unit id="881ba4c96ab5f75b784f7faa349df81e341eb8f0" resname="exception.no_entities_configured">
+        <source>exception.no_entities_configured</source>
+        <target>The application is not properly configured.</target>
+      </trans-unit>
+      <trans-unit id="bdfdbb0e7a96475087dd2f77a852c78e0fbf6651" resname="exception.undefined_entity">
+        <source>exception.undefined_entity</source>
+        <target>The application is not properly configured for this kind of items.</target>
+      </trans-unit>
+      <trans-unit id="119ed4148c15e62d9ffda71a34f04b5326b10378" resname="form.are_you_sure">
+        <source>form.are_you_sure</source>
+        <target>You haven't saved the changes made on this form.</target>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app\Resources\EasyAdminBundle\views\Account\edit.html.twig</jms:reference-file>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\edit.html.twig</jms:reference-file>
+        <jms:reference-file line="169">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Pages\edit.html.twig</jms:reference-file>
+        <jms:reference-file line="169">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Pages\new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5dfa6c71f476b1abc2d879b97fc93f13292373e6" resname="form.tab.error_badge_title">
+        <source>form.tab.error_badge_title</source>
+        <target>One invalid input|%count% invalid inputs</target>
+      </trans-unit>
+      <trans-unit id="7626f4b0807fa7d8555f1a7797dbf677b69b5167" resname="label.empty">
+        <source>label.empty</source>
+        <target>Empty</target>
+      </trans-unit>
+      <trans-unit id="a6e5231737756d18c9d07fbc8b097ccfcd8a01e6" resname="label.false">
+        <source>label.false</source>
+        <target>No</target>
+      </trans-unit>
+      <trans-unit id="77af369cf24e1342e574b8333ee9384ac7c52fa8" resname="label.inaccessible">
+        <source>label.inaccessible</source>
+        <target>Inaccessible</target>
+      </trans-unit>
+      <trans-unit id="d8ac17a6f02d6017fb1dad76e56fd6fdb3a33b02" resname="label.inaccessible.explanation">
+        <source>label.inaccessible.explanation</source>
+        <target>Getter method does not exist for this field or the property is not public</target>
+      </trans-unit>
+      <trans-unit id="13fcbfdfcd07982f0e24a5ea0c20bc02635ec4bb" resname="label.null">
+        <source>label.null</source>
+        <target>Null</target>
+      </trans-unit>
+      <trans-unit id="359ee71d174bf6d4fd11224ec633c3e37cbb6521" resname="label.nullable_field">
+        <source>label.nullable_field</source>
+        <target>Leave empty</target>
+      </trans-unit>
+      <trans-unit id="1eb1200a1a6a5ff71015d231eb74ac07d593eccf" resname="label.object">
+        <source>label.object</source>
+        <target>PHP Object</target>
+      </trans-unit>
+      <trans-unit id="06cc935a3ea6eb2ea85a2fcec8aa2eeb01b3c7e4" resname="label.true">
+        <source>label.true</source>
+        <target>Yes</target>
+      </trans-unit>
+      <trans-unit id="2970ef73e133340f73c36512acda937a39683b5f" resname="list.page_title">
+        <source>list.page_title</source>
+        <target>%entity_name%</target>
+      </trans-unit>
+      <trans-unit id="d4028513f22ca501cb71565f9589ab9d58d2b358" resname="list.row_actions">
+        <source>list.row_actions</source>
+        <target>Actions</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\list.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d90a90c86a14e5deceeede09b005b1afa9a0c94c" resname="new.page_title">
+        <source>new.page_title</source>
+        <target>Create %entity_name%</target>
+      </trans-unit>
+      <trans-unit id="29de46f1150318027a0b469b06d474cf366c9ce5" resname="paginator.counter">
+        <source>paginator.counter</source>
+        <target><![CDATA[<strong>%start%</strong> - <strong>%end%</strong> of <strong>%results%</strong>]]></target>
+      </trans-unit>
+      <trans-unit id="12738950fc67fc00a6bb3f4aac5bafca013f4c5c" resname="paginator.first">
+        <source>paginator.first</source>
+        <target>First</target>
+      </trans-unit>
+      <trans-unit id="036487c0b6571bacd17accc77db91a98a080091d" resname="paginator.last">
+        <source>paginator.last</source>
+        <target>Last</target>
+      </trans-unit>
+      <trans-unit id="1101382ee5da3028e4688325bc919a1f8e22aa25" resname="paginator.next">
+        <source>paginator.next</source>
+        <target>Next</target>
+      </trans-unit>
+      <trans-unit id="c25e7488b84ff6b79f5a131b0da9c7febd262dd2" resname="paginator.previous">
+        <source>paginator.previous</source>
+        <target>Previous</target>
+      </trans-unit>
+      <trans-unit id="8a3a6b538d81237dcb9533496c691a7685e456de" resname="search.no_results">
+        <source>search.no_results</source>
+        <target>No results found.</target>
+      </trans-unit>
+      <trans-unit id="1cfb9196a0249fafa6dead9f77cac0aad078dcd1" resname="search.page_title">
+        <source>search.page_title</source>
+        <target><![CDATA[{0} No results found|{1} <strong>1</strong> result found|]1,Inf] <strong>%count%</strong> results found]]></target>
+      </trans-unit>
+      <trans-unit id="9b29fa1b5effd3dfdf5551fb6010ab13a766c724" resname="show.page_title">
+        <source>show.page_title</source>
+        <target>%entity_name% (#%entity_id%)</target>
+      </trans-unit>
+      <trans-unit id="a1154231b2f7bfad79e582f022cbada5fd8ffa94" resname="show.remaining_items">
+        <source>show.remaining_items</source>
+        <target>{1} there is another item not displayed in this listing|]1,Inf] %count% other items are not displayed in this listing</target>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\EasyAdminBundle\views\Account\field_association.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1041af26a994241504648b37585c695bfb3d43ae" resname="toggle_navigation">
+        <source>toggle_navigation</source>
+        <target>Toggle navigation</target>
+      </trans-unit>
+      <trans-unit id="0176f16b9b3cc8d952e63f5b6129d63692220668" resname="user.anonymous">
+        <source>user.anonymous</source>
+        <target>Anonymous User</target>
+      </trans-unit>
+      <trans-unit id="22e26b73acff3a2106f67c72fa4a47f5d710213d" resname="user.exit_impersonation">
+        <source>user.exit_impersonation</source>
+        <target>Exit impersonation</target>
+      </trans-unit>
+      <trans-unit id="5c27d793b0c11d9e0028d477c62c247270aa1b8a" resname="user.logged_in_as">
+        <source>user.logged_in_as</source>
+        <target>Logged in as</target>
+      </trans-unit>
+      <trans-unit id="bbc320c75897d5adf0f71b89375de27f77b2c321" resname="user.signout">
+        <source>user.signout</source>
+        <target>Sign out</target>
+      </trans-unit>
+      <trans-unit id="e5d741ddc3f82c273497bde18555a5f92acf7cc5" resname="user.unnamed">
+        <source>user.unnamed</source>
+        <target>Unnamed User</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,24 @@
+{% extends 'base-email.html.twig' %}
+{% block subject %}{% endblock %}
+{% block body_html %}
+    <div class="email-wrapper">
+        {% autoescape false %}
+            <div class="e-mail-logo-stripe">
+                <div class="e-mail-logo">
+                    <img src="http://dev.radiopharma24.de/images/R24-white-logo.png">
+                </div>
+            </div>
+            <span class="e-mail-subject line-initial">{% trans %}Your submitted order{% endtrans %}</span>
+            <span class="e-mail-title line-jump">{% trans %}Hello{% endtrans %} {{ name }}</span>
+            <span class="e-mail-intro line-jump">{% trans %}We are sorry to inform you, but your order{% endtrans %}# {{ order }}</span>
+            <span >{% trans %}has been rejected by admin{% endtrans %}</span>
+
+
+            <span class="e-mail-outro line-jump">{% trans %} Thanks and Regards {% endtrans %},</span>
+            <span class="e-mail-signature line-jump">{% trans %}the Radiopharma24 team{% endtrans %}</span>
+        {% endautoescape %}
+    </div>
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

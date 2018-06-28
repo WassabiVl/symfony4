@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 12:51
  */
-namespace app\Entity;
+namespace App\Entity;
 
 
 use Doctrine\Common\Collections\ArrayCollection;

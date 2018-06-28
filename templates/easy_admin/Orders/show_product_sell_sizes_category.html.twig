@@ -1,0 +1,33 @@
+{% block main %}
+    <div class="form-group col-lg-12 ">
+        <h3>{% trans %}Sell Sizes{% endtrans %}</h3>
+        <div class="table-responsive">
+            <table class="table table-ea">
+                <thead>
+                <tr>
+                    <th>{% trans %}Id{% endtrans %}</th>
+                    <th>{% trans %}Amount{% endtrans %}</th>
+                    <th>{% trans %}Discount In Percent{% endtrans %}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if value is not null %}
+                    {% for owner in value %}
+                        <tr>
+                            <td> {{ owner.id }}</td>
+                            <td> {{ owner.amount }} GBq</td>
+                            <td> {{ owner.discountInPercent }}%</td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "ProductSellSizes", action: 'show', id: owner.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "ProductSellSizes", action: 'edit', id: owner.id }) }}"><i class="fa fa-pencil"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+            <a href="{{ path('easyadmin', {entity: "ProductSellSizes", action: 'new', parent: value.owner.id }) }}"><i class="fa fa-plus"></i> {% trans %}Add New Sell Sizes{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}

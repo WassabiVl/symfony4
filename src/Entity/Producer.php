@@ -6,10 +6,10 @@
  * Time: 11:10
  */
 
-namespace app\Entity;
+namespace App\Entity;
 
 
-use AppBundle\Entity\Interfaces\UserInterface;
+use App\Entity\Interfaces\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -62,7 +62,7 @@ class Producer implements UserInterface
     private $relatedAccount;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Batch", mappedBy="relatedProducer")
+     * @ORM\OneToMany(targetEntity="App\Entity\Batch", mappedBy="relatedProducer")
      */
     private $relatedBatches;
 

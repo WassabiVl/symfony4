@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 13:02
  */
-namespace app\Entity;
+namespace App\Entity;
 
 
 use Doctrine\Common\Collections\ArrayCollection;
@@ -27,7 +27,7 @@ class Product
     protected $id;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Batch", mappedBy="relatedProduct")
+     * @ORM\OneToOne(targetEntity="App\Entity\Batch", mappedBy="relatedProduct")
      */
     private $relatedBatch;
 
@@ -54,7 +54,7 @@ class Product
     private $productCategory;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\OrderedProducts", mappedBy="relatedProduct")
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderedProducts", mappedBy="relatedProduct")
      */
     private $relatedOrderedProduct;
 

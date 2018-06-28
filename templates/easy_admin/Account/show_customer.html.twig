@@ -1,0 +1,119 @@
+{% block main %}
+    {% if value is not null %}
+        {% set payDate = 'abcdef' %}
+        {% set customerData = {
+            'Instiution' : value.institution,
+            'Debit Number' : value.debitNumber,
+            'Customer Number' : value.customerNumber,
+        } %}
+        <div class="form-group col-lg-12 ">
+            <h3>{% trans %}Customer Specific Details{% endtrans %}</h3>
+            {% for key, value in customerData  %}
+                <div class="form-group field-text col-lg-6 col-s-12">
+                    <label>
+                        {{key}}
+                    </label>
+                    <div class="form-control">
+                        <div class="context">
+                            {{ value }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="form-group field-text col-lg-6 col-s-12">
+                <label>
+                    {% trans %}Is Ug Valid{% endtrans %}
+                </label>
+                <div class="form-control">
+                    <div class="context">
+                        {{ value.isUgValid ? 'Yes' : 'No' }}
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group field-text col-lg-6 col-s-12">
+                <label>
+                    {% trans %}UG Document{% endtrans %}
+                </label>
+                <div class="form-control">
+                    <div class="context">
+                        <a href="{{ vich_uploader_asset(value.relatedUg, 'documentFile') }}">{{ value.relatedUg.name }}</a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group field-text col-lg-6 col-s-12">
+                <label>
+                    {% trans %}To pay date{% endtrans %}
+                </label>
+                <div class="form-control">
+                    <div class="context">
+                        {# Convert time into days / weeks #}
+                        {% set days = (1144567|date('U') / 60 / 60 / 24)| round( 0,'common')  %}
+                        {% set weeks = (days/7) | round(0, 'floor') %}
+                        {% set days = (days - weeks * 7) %}
+
+                        {{ weeks }}w {{ days }}d <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group field-text col-lg-6 col-s-12">
+                <label>
+                    {% trans %}Related discount group{% endtrans %}
+                </label>
+                <div class="form-control">
+                    <div class="context">
+                        <div class="col-sm-10">
+                            {{ value.discountGroup.name | default('none') }}
+                        </div>
+                        <div class="col-sm-2">
+                            {% if value.discountGroup is not null %}
+                                <a href="{{ path('easyadmin', {entity: "DiscountGroup", action: 'show', id: value.discountGroup.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "DiscountGroup", action: 'edit', id: value.discountGroup.id }) }}"><i class="fa fa-pencil"></i></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-lg-12 ">
+            <h3>{% trans %}Customer Orders{% endtrans %}</h3>
+            {% trans %}Recent orders{% endtrans %}:
+            <div class="table-responsive">
+                <table class="table table-ea">
+                    <thead>
+                    <tr>
+                        <th>{% trans %}Number{% endtrans %}</th>
+                        <th>{% trans %}Status{% endtrans %}</th>
+                        <th>{% trans %}Granted discount{% endtrans %}</th>
+                        <th>{% trans %}Target time{% endtrans %}</th>
+                        <th>{% trans %}Documents{% endtrans %}</th>
+                        <th>{% trans %}Actions{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for  order in value.relatedOrders %}
+                        <tr>
+                            {# dump(order) #}
+                            <td> {{ order.id }}</td>
+                            <td> {{ order.flag }}</td>
+                            <td> {{ order.grantedDiscount*100 }}</td>
+                            <td> {{ order.targetTime | date('d-m-Y') }}</td>
+                            <td> {% trans %}Documents{% endtrans %}</td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "Order", action: 'show', id: order.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "Order", action: 'edit', id: order.id }) }}"><i class="fa fa-pencil"></i></a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

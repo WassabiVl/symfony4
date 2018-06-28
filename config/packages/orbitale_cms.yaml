@@ -1,6 +1,12 @@
 orbitale_cms:
     page_class: App\Entity\Page
     category_class: App\Entity\Category
-# Define your layout here if you need a custom layout for your CMS
-#    layouts:
-#         main: { resource: base.html.twig }
+    layouts:
+          front: { resource: 'CMSBundle\Resources\views\default_layout.html.twig' }
+#    orbitale_cms_category:
+#            resource: "@OrbitaleCmsBundle/Resources/config/routing/categories.yaml"
+#            prefix:   /category/
+#    orbitale_cms_page:
+#        resource: "@OrbitaleCmsBundle/Resources/config/routing/pages.yaml"
+#        prefix:   /page/
+

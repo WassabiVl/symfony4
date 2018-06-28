@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="fragment customer-dashboard">
+                <div class="column column-70 carrier-dashboard-table">
+                    <table class="dashboard-table table table-sm">
+                        <tr class="table-row">
+                            {# sorting of properties based on query components #}
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Delivery Date' |trans, 'orderedProductCategory.relatedOrder.targetTime') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Order Number' |trans, 'orderedProductCategory.relatedOrder.id') }} </th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Product' |trans, 'relatedProduct') }} </th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Producer Name' |trans, 'relatedProduct.relatedBatch.relatedProducer') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'PickUp Address' |trans, 'producerAddress') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Amount Requested' |trans, 'amount') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Customer Name' |trans, 'orderedProductCategory.relatedOrder.relatedCustomer.institution') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Delivery Address' |trans, 'orderedProductCategory.relatedOrder.customerShippingAddress') }}</th>
+                            <th class="table-top-bar-item">Distance</th>
+                        </tr>
+                        {# table body #}
+                        {% if pagination is not empty %}
+                            {% for OrderedProductCategory in pagination %}
+                                <tr {% if loop.index is odd %}class="color"{% endif %}>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.targetTime|date('d.m.Y H') }}:00</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.id }}</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.relatedProduct }}</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.relatedProduct.relatedBatch.relatedProducer }}</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.producerAddress |nl2br }}</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.amount }}</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.relatedCustomer.institution }}</span></td>
+                                    <td class="table-item"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.customerShippingAddress |nl2br }}</span></td>
+                                    <td class="table-item"><span>{{distance[OrderedProductCategory.id]}}Km</span></td>
+                                </tr>
+                            {% endfor %}
+                        {% elseif pagination is empty  %}
+                            <td colspan="11"  align="center"> {% trans %}No Orders Found{% endtrans %} </td>
+                        {% endif %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column column-30 center carrier-preview-map" id = 'map_canvas'>
+        {{ ivory_google_map(map) }}{{ ivory_google_api([map]) }}
+    </div>
+    <br><br><br>
+
+{% endblock %}

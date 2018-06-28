@@ -1,0 +1,22 @@
+
+<div class="address-delivery-new-add-form">
+    <div class="row">
+        {#<div class="lightbox form-title title-edit-shipping-address">#}
+        {#<span>Lieferaddresse bearbeiten</span>#}
+        {#</div>#}
+        {#<div class="lightbox form-title title-edit-billing-address">#}
+        {#<span>Rechnungsadresse bearbeiten</span>#}
+        {#</div>#}
+        {{ form_start(form,{'attr': {'id': 'edit_address_form_' ~  type, 'action':path('address_change', {'slug':type})}}) }}
+        {{ form_row(form) }}
+        <button class="button-right address-submit" type="submit" onclick="form_submit_edit_{{type}}()">{% trans %}SPEICHERN{% endtrans %}</button>
+        {{ form_end(form) }}
+        <a href="{{ path('user_setting') }}">{% trans %}Cancel{% endtrans %}</a>
+        <script>
+            function form_submit_edit_{{type}}() {
+                document.getElementById("edit_address_form_{{type}}").submit();
+            }
+        </script>
+    </div>
+</div>
+

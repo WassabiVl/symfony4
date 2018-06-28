@@ -1,0 +1,259 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container container-producer">
+        <div class="row">
+            <div class="fragment producer-dashboard">
+                <div class="column column-80 producer-dashboard-table">
+                    <table class="dashboard-table">
+                        <tr class="table-row table-title">
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Delivery Date'|trans, 'orderedProductCategory.relatedOrder.targetTime') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Product'|trans, 'relatedProduct') }} </th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Ammount Requested'|trans, 'amount') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Ammount Delivered'|trans, 'orderedProductCategory.deliveredAmount') }}</th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Order Number'|trans, 'orderedProductCategory.relatedOrder.id') }} </th>
+                            <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Customer Name'|trans, 'orderedProductCategory.relatedOrder.relatedCustomer.institution') }}</th>
+                            <th class="table-top-bar-item producer-d-delivery" aria-label="Test Delivery">{{ knp_pagination_sortable(pagination, 'Delivery Address'|trans, 'orderedProductCategory.relatedOrder.customerShippingAddress') }}</th>
+                        </tr>
+                        {% if pagination is not empty %}
+                            {% for OrderedProductCategory in pagination %}
+                                <tr class="table-row table-content" {% if loop.index is odd %}class="color"{% endif %}>
+                                    <td class="table-item table-item-toggle" aria-label="Lieferung am"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.targetTime|date('d.m.Y H') }}:00</span></td>
+                                    <td class="table-item table-item-content" aria-label="Lieferung am"><span>{{ OrderedProductCategory.relatedProduct }}</td>
+                                    <td class="table-item table-item-content" aria-label="Lieferung am"><span>{{ OrderedProductCategory.amount }}</td>
+                                    <td class="table-item table-item-content" aria-label="Lieferung am"><span>{{ OrderedProductCategory.orderedProductCategory.deliveredAmount }}</span></td>
+                                    <td class="table-item table-item-content" aria-label="Lieferung am"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.id }}</span></td>
+                                    <td class="table-item table-item-content" aria-label="Lieferung am"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.relatedCustomer.institution }}</span></td>
+                                    <td class="table-item producer-d-delivery table-item-content" aria-label="Lieferung am"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.customerShippingAddress |nl2br }}</span></td>
+                                </tr>
+                            {% endfor %}
+                        {% elseif pagination is empty  %}
+                            <td colspan="7"  align="center"> {% trans %}No Orders Found{% endtrans %} </td>
+                        {% endif %}
+                    </table>
+                </div>
+                {% trans %}producer-statistics-slider{% endtrans %}
+                <div class="column column-20 center producer-d-stats">
+                    <div class="producer-statistics-slider">
+                    </div>
+                    <div class="stats-general-conventions">
+                        <div class="stats-title">{% trans %}Produktion Statistiken{% endtrans %}</div>
+                        <div class="stats-value-label"><div class="color-key value-capacity-production"></div><div class="stats-text">{% trans %}Badge Produktion Kapazität{% endtrans %}</div></div>
+                        <div class="stats-value-label"><div class="color-key value-capacity-used"></div><div class="stats-text">{% trans %}Verbrauchte Kapazität{% endtrans %}</div></div>
+                    </div>
+                    <span class="stats-subtitle">{% trans %}Heute 05.06.2018{% endtrans %}</span>
+                    <div id="d3" class="today-stats pie-chart">
+                    </div>
+                    <span class="stats-subtitle">{% trans %}Letzte 30 Tage{% endtrans %}</span>
+                    <div id= "d3o"class="month-stats pie-chart">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-gradient non-mobile-version">
+        <footer class="footer-dashboard">
+            <div class="row">
+                <div class="column no-vertical-padding column-15">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+                <div class="area-filtering column center no-vertical-padding column-70">
+                    <ul>
+                        {% if app.request.attributes.get('slug') == 'new' or app.request.attributes.get('slug') == null %}
+                            <li class="footer-dashboard-item selected">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'new'}) }}">
+                                        {{ 'dashboard.orders_open'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% else %}
+                            <li class="footer-dashboard-item">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'new'}) }}">
+                                        {{ 'dashboard.orders_open'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                        {% if app.request.attributes.get('slug') == 'old' %}
+                            <li class="footer-dashboard-item selected">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'old'}) }}">
+                                        {{ 'dashboard.orders_closed'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% else %}
+                            <li class="footer-dashboard-item ">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'old'}) }}">
+                                        {{ 'dashboard.orders_closed'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                        <li class="footer-dashboard-item dashboard-search-tool onMobile">
+                            <div class="search-wrapper-footer">
+                                <a href="#">{{ 'dashboard.orders_search'|trans([], 'FOSUserBundle') }}</a>
+                                <input type="search" class="footer-search-field">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area-fab column no-vertical-padding column-15">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="footer-gradient mobile-version">
+        <footer class="footer-dashboard">
+            <div class="row">
+                <div class="area-filtering column center no-vertical-padding column-70">
+                    <ul>
+                        {% if app.request.attributes.get('slug') == 'new' or app.request.attributes.get('slug') == null %}
+                            <li class="footer-dashboard-item selected">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'new'}) }}">
+                                        {{ 'dashboard.orders_open_mobile'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% else %}
+                            <li class="footer-dashboard-item">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'new'}) }}">
+                                        {{ 'dashboard.orders_open_mobile'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                        {% if app.request.attributes.get('slug') == 'old' %}
+                            <li class="footer-dashboard-item selected">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'old'}) }}">
+                                        {{ 'dashboard.orders_closed_mobile'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% else %}
+                            <li class="footer-dashboard-item ">
+                                {% if is_granted('ROLE_PRODUCER') %}
+                                    <a href="{{ path('producer_dashboard', {slug: 'old'}) }}">
+                                        {{ 'dashboard.orders_closed_mobile'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                        <li class="footer-dashboard-item dashboard-search-tool onMobile">
+                            <div class="search-wrapper-footer">
+                                <a></a>
+                                <input type="search" class="footer-search-field">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area-fab column no-vertical-padding column-15">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="application/javascript">
+        (function(d3) {
+            'use strict';
+            var data1 = [
+                {label: 'used', count: {{ d3 }}},
+                {label: 'not used',count: {{ 100-d3 }}}
+            ];
+
+
+            // var width = 200;
+            // var height = 200;
+            var $statsContainer = $('.pie-chart');
+            var width = $statsContainer.width();
+            var height = $statsContainer.width();
+            var radius = Math.min(width, height) / 2;
+            var color = d3.scaleOrdinal([
+                '#3c5888', '#9eacc4'
+            ]);
+
+            // var svg = d3.select('#d3')
+            // .append('svg')
+            // .attr('width', width)
+            // .attr('height', height)
+            // .append('g')
+            // .attr('transform', 'translate(' + (width / 2) +  ',' + (height / 2) + ')');
+            var svg = d3.select('#d3').append("svg")
+                .attr("width", '100%')
+                .attr("height", '100%')
+                .attr('viewBox','0 0 '+Math.min(width,height) +' '+Math.min(width,height) )
+                .attr('preserveAspectRatio','xMinYMin')
+                .append("g")
+                .attr("transform", "translate(" + Math.min(width,height) / 2 + "," + Math.min(width,height) / 2 + ")");
+
+            var arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+            var pie = d3.pie()
+                .value(function(d) { return d.count; })
+                .sort(null);
+
+            var path = svg.selectAll('path')
+                .data(pie(data1))
+                .enter()
+                .append('path')
+                .attr('d', arc)
+                .attr('fill', function(d) {
+                    return color(d.data.label);
+                });
+        })(window.d3);
+    </script>
+    <script type="application/javascript">
+        (function(d3) {
+            'use strict';
+
+            var data2 = [
+                { label: 'used', count: {{ d3old }}} ,
+                { label: 'not used', count: {{ 100-d3old }}}
+            ];
+
+            var $statsContainer = $('.pie-chart');
+            var width = $statsContainer.width();
+            var height = $statsContainer.width();
+            var radius = Math.min(width, height) / 2;
+            var color = d3.scaleOrdinal([
+                '#3c5888', '#9eacc4'
+            ]);
+
+            var svg = d3.select('#d3o').append("svg")
+                .attr("width", '100%')
+                .attr("height", '100%')
+                .attr('viewBox','0 0 '+Math.min(width,height) +' '+Math.min(width,height) )
+                .attr('preserveAspectRatio','xMinYMin')
+                .append("g")
+                .attr("transform", "translate(" + Math.min(width,height) / 2 + "," + Math.min(width,height) / 2 + ")");
+
+            var arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+            var pie = d3.pie()
+                .value(function(d) { return d.count; })
+                .sort(null);
+
+            var path = svg.selectAll('path')
+                .data(pie(data2))
+                .enter()
+                .append('path')
+                .attr('d', arc)
+                .attr('fill', function(d) {
+                    return color(d.data.label);
+                });
+        })(window.d3);
+    </script>
+    {#<script src="badgeToday.js"> </script>#}
+{% endblock %}

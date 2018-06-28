@@ -1,0 +1,68 @@
+{% extends 'base-email.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block subject %}
+    {%- autoescape false -%}
+        {{ 'registration.email.subject'|trans({'%username%': user.firstName ~ ' ' ~ user.lastName, '%confirmationUrl%': confirmationUrl}) }}
+    {%- endautoescape -%}
+{% endblock %}
+
+{% block body_text %}
+    {#{{ 'registration.email.message'|trans({'%username%': user.firstName ~ ' ' ~ user.lastName, '%confirmationUrl%': confirmationUrl}) }}#}
+
+    <div class="email-wrapper">
+        {% autoescape false %}
+            <div class="e-mail-logo-stripe">
+                <div class="e-mail-logo">
+                    <img src="http://dev.radiopharma24.de/images/R24-white-logo.png">
+                </div>
+            </div><br>
+            <span class="e-mail-subject line-initial">{% trans %}Guten Tag{% endtrans %} {{ user.firstName ~ ' ' ~ user.lastName }},</span> <br><br>
+
+            <span class="e-mail-intro line-jump">{% trans %}vielen Dank für die Registrierung auf radiopharma24.de{% endtrans %}! </span> <br>
+            <span class="e-mail-intro line-jump">{% trans %}Um Ihren Anmeldungsprozess abzuschließen, klicken Sie bitte auf den folgenden Link{% endtrans %}: </span> <a href="{{ confirmationUrl }}">{% trans %}Bestätigungs-Link {% endtrans %}</a><br>
+
+            <p> {% trans %}Dieser Link kann nur einmalig benutzt werden{% endtrans %}, {% trans %}um Ihr Konto zu validieren{% endtrans %}.</p>
+
+            <p> {% trans %}Bitte beachten Sie{% endtrans %}, {% trans %}dass vor der endgültigen Freischaltung Ihres Kontos{% endtrans %} <br/>
+                {% trans %}Ihre Daten (insbesondere Ihr UG-Dokument) von uns geprüft werden{% endtrans %}. {% trans %}Sind alle Daten in Ordnung{% endtrans %}, <br/>
+                {% trans %}erhalten Sie nochmals eine Email und Freischaltung Ihres Kontos und können Ihre Bestellungen tätigen{% endtrans %}.</p>
+
+            <p>{% trans %}Im Falle von Fragen melden Sie sich bitte per Email unter{% endtrans %} support@radiopharma24.de. </p> <br>
+
+            <span class="e-mail-outro line-jump"> {% trans %}Mit freundlichen Grüßen {% endtrans %}</span> <br><br>
+            <span class="e-mail-signature line-jump">Radiopharma24.de</span>
+
+        {% endautoescape %}
+    </div>
+{% endblock %}
+{% block body_html %}
+    <div class="email-wrapper">
+        {% autoescape false %}
+            <div class="e-mail-logo-stripe">
+                <div class="e-mail-logo">
+                    <img src="http://dev.radiopharma24.de/images/R24-white-logo.png">
+                </div>
+            </div><br>
+            <span class="e-mail-subject line-initial">{% trans %}Guten Tag{% endtrans %} {{ user.firstName ~ ' ' ~ user.lastName }},</span> <br><br>
+
+            <span class="e-mail-intro line-jump">{% trans %}vielen Dank für die Registrierung auf radiopharma24.de{% endtrans %}! </span> <br>
+            <span class="e-mail-intro line-jump">{% trans %}Um Ihren Anmeldungsprozess abzuschließen, klicken Sie bitte auf den folgenden Link{% endtrans %}: </span> <a href="{{ confirmationUrl }}">{% trans %}Bestätigungs-Link {% endtrans %}</a><br>
+
+            <p> {% trans %}Dieser Link kann nur einmalig benutzt werden, um Ihr Konto zu validieren{% endtrans %}.</p>
+
+            <p> {% trans %}Bitte beachten Sie, dass vor der endgültigen Freischaltung Ihres Kontos{% endtrans %} <br/>
+                {% trans %}Ihre Daten (insbesondere Ihr UG-Dokument) von uns geprüft werden{% endtrans %}. {% trans %}Sind alle Daten in Ordnung{% endtrans %}, <br/>
+                {% trans %}erhalten Sie nochmals eine Email und Freischaltung Ihres Kontos und können Ihre Bestellungen tätigen{% endtrans %}.</p>
+
+            <p>{% trans %}Im Falle von Fragen melden Sie sich bitte per Email unter{% endtrans %} support@radiopharma24.de. </p> <br>
+
+            <span class="e-mail-outro line-jump"> {% trans %}Mit freundlichen Grüßen{% endtrans %} </span> <br><br>
+            <span class="e-mail-signature line-jump">Radiopharma24.de</span>
+
+        {% endautoescape %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

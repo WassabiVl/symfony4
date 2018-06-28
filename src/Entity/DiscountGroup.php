@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 11:55
  */
-namespace app\Entity;
+namespace App\Entity;
 
 
 use DateTime;

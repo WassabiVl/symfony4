@@ -1,0 +1,33 @@
+{% block main %}
+    <div class="form-group col-lg-12 ">
+        <h3>{% trans %} Batch Lock Time{% endtrans %} </h3>
+        <div class="table-responsive">
+            <table class="table table-ea">
+                <thead>
+                <tr>
+                    <th>{% trans %}Id{% endtrans %}</th>
+                    <th>{% trans %}Start Time{% endtrans %}</th>
+                    <th>{% trans %}End Time{% endtrans %}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if value is not null %}
+                    {% for batchLockTime in value %}
+                        <tr>
+                            <td> {{ batchLockTime.id }}</td>
+                            <td> {{ batchLockTime.startTime |date }}</td>
+                            <td> {{ batchLockTime.endTime |date }}</td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "BatchLockTime", action: 'show', id: batchLockTime.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "BatchLockTime", action: 'edit', id: batchLockTime.id }) }}"><i class="fa fa-pencil"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "BatchLockTime", action: 'delete', id: batchLockTime.id }) }}"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

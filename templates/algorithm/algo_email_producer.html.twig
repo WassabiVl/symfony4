@@ -1,0 +1,37 @@
+{% extends 'base-email.html.twig' %}
+{% block subject %}{% endblock %}
+{% block body_html %}
+    <div class="email-wrapper">
+        {% autoescape false %}
+            <div class="e-mail-logo-stripe">
+                <div class="e-mail-logo">
+                    <img src="http://dev.radiopharma24.de/images/R24-white-logo.png">
+                </div>
+            </div>
+            <span class="e-mail-subject line-initial">{% trans %}Orders for tomorrow{% endtrans %}</span>
+            <span class="e-mail-title line-jump">{% trans %}Hello{% endtrans %} {{ name }}</span>
+
+            <span class="e-mail-intro line-jump">{% trans %}This is The List of Orders For tomorrow for {% endtrans %} {{ batch }} {% trans %}at{% endtrans %} {{ batch.dailyEndTime|date('H:i') }}
+                :</span>
+
+            <p>
+                {% for order in orders %}
+                    <span class="line-jump">{% trans %}Order{% endtrans %} #: {{ order.id }}</span>>
+                    <span>{% trans %}Customer Name{% endtrans %}: {{ order.relatedCustomer }}</span><br/>
+                    <span>{% trans %}Customer Address{% endtrans %}: {{ order.relatedCustomer.shippingAddress }}</span>>
+                    <span>{% trans %}Delivery Time{% endtrans %}: {{ order.targetTime|date('H:i') }}</span>>
+                    <span>{% trans %}Amount to be Produced{% endtrans %}
+                        : {{ order.relatedOrderedCategorys.relatedOrderedProduct.amount|number_format(2, ',', '.') }}
+                        MBq</span>
+
+                {% endfor %}
+            </p>
+
+            <span class="e-mail-outro line-jump">{% trans %} Thanks and Regards {% endtrans %},</span>
+            <span class="e-mail-signature line-jump">{% trans %}the Radiopharma24 team{% endtrans %}</span>
+        {% endautoescape %}
+    </div>
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

@@ -9,7 +9,7 @@
  * http://symfony.com/doc/2.2/cookbook/doctrine/file_uploads.html
  * https://symfony.com/doc/3.4/controller/upload_file.html
  */
-namespace app\Entity;
+namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;

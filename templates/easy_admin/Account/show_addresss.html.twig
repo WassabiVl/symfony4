@@ -1,0 +1,45 @@
+{% block main %}
+    <div class="form-group col-lg-12 ">
+        <h3>Addresses</h3>
+        <div class="table-responsive">
+            <table class="table table-ea">
+                <thead>
+                <tr>
+                    <th>{% trans %}Type{% endtrans %}</th>
+                    <th>{% trans %}Street{% endtrans %}</th>
+                    <th>{% trans %}ZIP{% endtrans %}</th>
+                    <th>{% trans %}City{% endtrans %}</th>
+                    <th>{% trans %}Country{% endtrans %}</th>
+                    <th>{% trans %}Company name{% endtrans %}</th>
+                    <th>{% trans %}Title{% endtrans %}</th>
+                    <th>{% trans %}First name{% endtrans %}</th>
+                    <th>{% trans %}Last name{% endtrans %}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if value is not null %}
+                    {% for address in value %}
+                        <tr>
+                            <td> {{ address | guess_address_type }}</td>
+                            <td> {{ address.street }}</td>
+                            <td> {{ address.zip }}</td>
+                            <td> {{ address.city }}</td>
+                            <td> {{ address.country }}</td>
+                            <td> {{ address.companyName }}</td>
+                            <td> {{ address.title }}</td>
+                            <td> {{ address.firstName }}</td>
+                            <td> {{ address.lastName }}</td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "Address", action: 'show', id: address.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "Address", action: 'edit', id: address.id }) }}"><i class="fa fa-pencil"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+            <a href="{{ path('easyadmin', {entity: "Address", action: 'new', parent: value.owner.id }) }}"><i class="fa fa-plus"></i>{% trans %} Add New Address{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}

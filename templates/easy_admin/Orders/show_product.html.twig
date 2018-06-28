@@ -1,0 +1,41 @@
+{% block main %}
+    <div class="form-group col-lg-12 ">
+        <h3>Product</h3>
+        <div class="table-responsive">
+            <table class="table table-ea">
+                <thead>
+                <tr>
+                    <th>{% trans %}Id{% endtrans %}</th>
+                    <th>{% trans %}Name{% endtrans %}</th>
+                    <th>{% trans %}Slug{% endtrans %}</th>
+                    <th>{% trans %}Buy Price{% endtrans %}</th>
+                    <th>{% trans %}Related Batch{% endtrans %}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if value is not null %}
+                    {% for owner in value %}
+                        <tr>
+                            <td> {{ owner.id }}</td>
+                            <td> {{ owner.name }}</td>
+                            <td> {{ owner.slug }}</td>
+                            <td> {{ owner.buyPrice }}€</td>
+                            <td>
+                                {% if owner.relatedBatch is not null %}
+                                    Batch #{{ owner.relatedBatch.id }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "Product", action: 'show', id: owner.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "Product", action: 'edit', id: owner.id }) }}"><i class="fa fa-pencil"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif%}
+                </tbody>
+            </table>
+            <a href="{{ path('easyadmin', {entity: "Product", action: 'new', parent: value.owner.id }) }}"><i class="fa fa-plus"></i> {% trans %}Add New Product{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}

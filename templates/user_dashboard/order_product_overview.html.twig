@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block body%}
+    <div class="fragment white new-order-confirmation">
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="column column-s-100 column-m-70 column-70">
+                <div class="logo">
+                    <img src="{{ asset('images/R24-blue-logo.png') }}" alt="Radiopharma24">
+                </div>
+                {%  set cost = (data.relatedProductCategory.sellPrice * data.orderedAmount) %}
+                {%  set discount = ((cost * data.relatedBulkDiscount) / 100) %}
+                {%  set totalCost = (cost - discount  - (cost*tierDiscount/100)) %}
+                {%  set vat = (totalCost * 0.19) %}
+                {%  set total = vat + totalCost %}
+                <div class="column-50-size">
+                    <b> {% trans %}Order Number{% endtrans %}:   </b>   {{ data.relatedOrder.id }}            <br/>
+                </div>
+                <div class="column-50-size right">
+                    <b> {% trans %}Date of order{% endtrans %}:  </b>  {{ "now"|date("d/m/Y") }}             <br/>
+                </div>
+                <hr />
+                <b> {% trans %}Shipping Address{% endtrans %}:   </b> <p align="left"> {{ data.relatedOrder.customerShippingAddress|nl2br }}</p><br/>
+                <b> {% trans %}Billing Address{% endtrans %}:   </b>  <p align="left">{{ data.relatedOrder.customerBillingAddress|nl2br }}</p><br/>
+                <b> {% trans %}Target Time{% endtrans %}:    </b>   {{ data.relatedOrder.targetTime|date }}    <br/>
+                <b> {% trans %}Pay Date{% endtrans %}: </b>  {{ date(data.relatedOrder.relatedCustomer.toPayDate|date).diff(date('now')).format('%a') }} {% trans %}Days Left{% endtrans %} <br/>
+                <b> {% trans %}Comment{% endtrans %}:        </b>   {{ data.relatedOrder.comment }}    <br/>
+                <hr />
+                <b> {% trans %}Product{% endtrans %}:        </b>   {{ data.relatedProductCategory.name }}<br/>
+                <hr />
+                <b> {% trans %}Amount Ordered{% endtrans %}: </b>   {{ data.orderedAmount|number_format(2, ',', '.') }}              <br/>
+                <b> {% trans %}Price per unit{% endtrans %}: </b>   {{ data.relatedProductCategory.sellPrice|number_format(2, ',', '.') }}€<br/>
+                <b> {% trans %}Cost{% endtrans %}:           </b>   {{ cost|number_format(2, ',', '.') }}€<br/>
+                <b> {% trans %}Discount{% endtrans %} {{ data.relatedBulkDiscount|number_format(2, ',', '.') }}%: </b> {{ discount|number_format(2, ',', '.') }}€<br/>
+                <b> {% trans %}Tier Discount{% endtrans %} {{ tierDiscount|number_format(2, ',', '.') }}%: </b> {{ (cost*tierDiscount/100)|number_format(2, ',', '.') }}€<br/>
+                <b> {% trans %}Total before VAT{% endtrans %}: </b>  {{ totalCost|number_format(2, ',', '.') }}€<br/>
+                <b> {% trans %}VAT{% endtrans %}: </b> {{ vat|number_format(2, ',', '.') }}€<br/>
+                <hr />
+                <b> {% trans %}TOTAL + VAT{% endtrans %}: </b> {{ total|number_format(2, ',', '.') }}€<br/>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <div class="fragment form-buttons">
+        <div class="column center column-100">
+            <a class="button" href="{{ path('customer_dashboard') }}">{% trans %}meine Bestellungen{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}

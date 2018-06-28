@@ -1,0 +1,186 @@
+{% form_theme form with easyadmin_config('design.form_theme') %}
+
+{% set _entity_config = easyadmin_entity(app.request.query.get('entity')) %}
+{% set _entity_id = attribute(entity, _entity_config.primary_key_field_name) %}
+{% trans_default_domain _entity_config.translation_domain %}
+{% set _trans_parameters = { '%entity_name%': _entity_config.name|trans, '%entity_label%': _entity_config.label|trans, '%entity_id%': _entity_id } %}
+
+{% extends _entity_config.templates.layout %}
+
+{% block body_id 'easyadmin-edit-' ~ _entity_config.name ~ '-' ~ _entity_id %}
+{% block body_class 'edit edit-' ~ _entity_config.name|lower %}
+
+{% block content_title %}
+    {% spaceless %}
+        {% set _default_title = 'edit.page_title'|trans(_trans_parameters, 'EasyAdminBundle') %}
+        {{ _entity_config.edit.title is defined ? _entity_config.edit.title|trans(_trans_parameters) : _default_title }}
+    {% endspaceless %}
+{% endblock %}
+
+{% block main %}
+    {% block entity_form %}
+        {{ form(form) }}
+    {% endblock entity_form %}
+
+    {% block delete_form %}
+        {{ include('@EasyAdmin/default/includes/_delete_form.html.twig', {
+            view: 'edit',
+            referer: app.request.query.get('referer', ''),
+            delete_form: delete_form,
+            _translation_domain: _entity_config.translation_domain,
+            _trans_parameters: _trans_parameters,
+            _entity_config: _entity_config,
+        }, with_context = false) }}
+    {% endblock delete_form %}
+{% endblock %}
+
+{% block head_javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/tinymce/jquery.tinymce.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/ace-builds/src-noconflict/ace.js') }}"></script>
+    <script>
+        setTimeout(function() {
+            tinymce.init({
+                selector:'#pages_content',
+                theme: 'modern',
+                height: 300,
+                plugins: [
+                    'advlist anchor autolink autoresize autosave ' +
+                    'bbcode ' +
+                    'charmap code codesample colorpicker ' +
+                    'link image imagetools lists  print preview hr pagebreak spellchecker ',
+                    ' searchreplace wordcount visualblocks visualchars fullscreen insertdatetime media nonbreaking ',
+                    ' save table contextmenu directionality emoticons template paste textcolor importcss textpattern'
+                ],
+                textpattern_patterns: [
+                    {start: '*', end: '*', format: 'italic'},
+                    {start: '**', end: '**', format: 'bold'},
+                    {start: '#', format: 'h1'},
+                    {start: '##', format: 'h2'},
+                    {start: '###', format: 'h3'},
+                    {start: '####', format: 'h4'},
+                    {start: '#####', format: 'h5'},
+                    {start: '######', format: 'h6'},
+                    {start: '1. ', cmd: 'InsertOrderedList'},
+                    {start: '* ', cmd: 'InsertUnorderedList'},
+                    {start: '- ', cmd: 'InsertUnorderedList'}
+                ],
+                content_css: 'css/content.css',
+                //importcss plugin feature: https://www.tinymce.com/docs/plugins/importcss/
+                menubar: "format",
+                importcss_append: true,
+                toolbar: 'insertfile undo redo | styleselect | bold italic | ' +
+                'alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | ' +
+                'link image | print preview media fullpage | forecolor backcolor emoticons | code | forecolor backcolor',
+                // images_upload_base_path: '/images',
+                images_upload_credentials: true,
+                // enable title field in the Image dialog
+                image_title: true,
+                // enable automatic uploads of images represented by blob or data URIs
+                automatic_uploads: true,
+                file_browser_callback_types: 'file image media',
+                file_picker_types: 'file image media',
+                images_upload_url: '{{ asset('images/cms-images/tinymce.php') }}',
+                images_upload_handler: function (blobInfo, success, failure) {
+                    var xhr, formData;
+
+                    xhr = new XMLHttpRequest();
+                    xhr.withCredentials = false;
+                    xhr.open('POST', '{{ asset('images/cms-images/tinymce.php') }}');
+
+                    xhr.onload = function() {
+                        var json;
+
+                        if (xhr.status !== 200) {
+                            failure('HTTP Error: ' + xhr.status);
+                            return;
+                        }
+
+                        json = JSON.parse(xhr.responseText);
+
+                        if (!json || typeof json.location !== 'string') {
+                            failure('Invalid JSON: ' + xhr.responseText);
+                            return;
+                        }
+
+                        success(json.location);
+                    };
+
+                    formData = new FormData();
+                    formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+                    xhr.send(formData);
+                },
+                file_picker_callback: function(cb, value, meta) {
+                    var input = document.createElement('input');
+                    input.setAttribute('type', 'file');
+                    input.setAttribute('accept', 'image/*');
+
+                    // Note: In modern browsers input[type="file"] is functional without
+                    // even adding it to the DOM, but that might not be the case in some older
+                    // or quirky browsers like IE, so you might want to add it to the DOM
+                    // just in case, and visually hide it. And do not forget do remove it
+                    // once you do not need it anymore.
+
+                    input.onchange = function() {
+                        var file = this.files[0];
+
+                        var reader = new FileReader();
+                        reader.onload = function () {
+                            // Note: Now we need to register the blob in TinyMCEs image blob
+                            // registry. In the next release this part hopefully won't be
+                            // necessary, as we are looking to handle it internally.
+                            var id = 'blobid' + (new Date()).getTime();
+                            var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                            var base64 = reader.result.split(',')[1];
+                            var blobInfo = blobCache.create(id, file, base64);
+                            blobCache.add(blobInfo);
+
+                            // call the callback and populate the Title field with the file name
+                            cb(blobInfo.blobUri(), { title: file.name });
+                        };
+                        reader.readAsDataURL(file);
+                    };
+
+                    input.click();
+                }
+
+            });
+        }, 500);
+    </script>
+
+
+{% endblock %}
+
+{% block body_javascript %}
+    {{ parent() }}
+
+
+    <script type="text/javascript">
+        var editor =ace.edit("pages_js"); editor.setTheme("ace/theme/monokai"); editor.session.setMode("ace/mode/javascript"); editor.resize(); editor.setOptions({minLines: 10, maxLines: 50});
+    </script>
+    <script type="text/javascript">
+        var editor1 =ace.edit("pages_css"); editor1.setTheme("ace/theme/monokai"); editor1.session.setMode("ace/mode/css"); editor1.resize();editor1.setOptions({minLines: 10, maxLines: 50});
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('.edit-form').areYouSure({ 'message': '{{ 'form.are_you_sure'|trans({}, 'EasyAdminBundle')|e('js') }}' });
+
+            $('.form-actions').easyAdminSticky();
+
+            $('a.action-delete').on('click', function(e) {
+                e.preventDefault();
+
+                $('#modal-delete').modal({ backdrop: true, keyboard: true })
+                    .off('click', '#modal-delete-button')
+                    .on('click', '#modal-delete-button', function () {
+                        $('#delete-form').trigger('submit');
+                    });
+            });
+        });
+    </script>
+
+    {{ include('@EasyAdmin/default/includes/_select2_widget.html.twig') }}
+{% endblock %}

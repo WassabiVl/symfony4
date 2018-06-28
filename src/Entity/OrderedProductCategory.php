@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 13:37
  */
-namespace app\Entity;
+namespace App\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -62,7 +62,7 @@ class OrderedProductCategory
     private $ADRDocument;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\OrderedProducts", mappedBy="orderedProductCategory", cascade={"remove"})
+     * @ORM\OneToOne(targetEntity="App\Entity\OrderedProducts", mappedBy="orderedProductCategory", cascade={"remove"})
      */
     private $relatedOrderedProduct;
 

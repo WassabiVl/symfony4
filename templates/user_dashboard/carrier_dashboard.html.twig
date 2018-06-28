@@ -1,0 +1,162 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="fragment customer-dashboard">
+
+                <table class="dashboard-table">
+                    {#<caption>{% trans %}Present / Future Orders{% endtrans %}</caption>#}
+                    <tr class="table-row table-title">
+                        {# sorting of properties based on query components #}
+                        <th class="table-top-bar-item carrier-d-date">{{ knp_pagination_sortable(pagination, 'Delivery Date' |trans, 'orderedProductCategory.relatedOrder.targetTime') }}</th>
+                        <th class="table-top-bar-item carrier-d-order">{{ knp_pagination_sortable(pagination, 'Order Number' |trans, 'orderedProductCategory.relatedOrder.id') }} </th>
+                        <th class="table-top-bar-item carrier-d-product">{{ knp_pagination_sortable(pagination, 'Product' |trans, 'relatedProduct') }} </th>
+                        <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Producer Name' |trans, 'relatedProduct.relatedBatch.relatedProducer') }}</th>
+                        <th class="table-top-bar-item carrier-d-producer">{{ knp_pagination_sortable(pagination, 'PickUp Address' |trans, 'producerAddress') }}</th>
+                        <th class="table-top-bar-item carrier-d-requested-amount">{{ knp_pagination_sortable(pagination, 'Amount Requested' |trans, 'amount') }}</th>
+                        <th class="table-top-bar-item">{{ knp_pagination_sortable(pagination, 'Customer Name' |trans, 'orderedProductCategory.relatedOrder.relatedCustomer.institution') }}</th>
+                        <th class="table-top-bar-item carrier-d-customer">{{ knp_pagination_sortable(pagination, 'Delivery Address' |trans, 'orderedProductCategory.relatedOrder.customerShippingAddress') }}</th>
+                        <th class="table-top-bar-item carrier-d-delivered-amount">{{ knp_pagination_sortable(pagination, 'Amount Delivered' |trans, 'orderedProductCategory.deliveredAmount') }}</th>
+                        <th class="table-top-bar-item carrier-d-ADR-doc">{{ knp_pagination_sortable(pagination, 'ADR Document' |trans, 'orderedProductCategory.ADRDocument') }}</th>
+                    </tr>
+
+                    {# table body #}
+                    {% if pagination is not empty %}
+                        {% for OrderedProductCategory in pagination %}
+                            <tr class="table-row table-content" {% if loop.index is odd %}class="color"{% endif %}>
+                                <td class="table-item carrier-d-date table-item-toggle" aria-label="Lieferung am"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.targetTime|date('d.m.Y H') }}:00</span></td>
+                                <td class="table-item carrier-d-order table-item-content" aria-label="Bestell-Nr"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.id }}</span></td>
+                                <td class="table-item carrier-d-product table-item-content" aria-label="Produkt"><span>{{ OrderedProductCategory.relatedProduct }}</span></td>
+                                <td class="table-item table-item-content" aria-label="Bestell-Nr"><span>{{ OrderedProductCategory.relatedProduct.relatedBatch.relatedProducer }}</span></td>
+                                <td class="table-item carrier-d-producer table-item-content" aria-label="Produzent"><span>{{ OrderedProductCategory.producerAddress }}</span></td>
+                                <td class="table-item carrier-d-requested-amount table-item-content" aria-label="Pickup Address"><span>{{ OrderedProductCategory.amount }}</span></td>
+                                <td class="table-item table-item-content" aria-label="Customer Name"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.relatedCustomer.institution }}</span></td>
+                                <td class="table-item carrier-d-customer table-item-content"aria-label="Lieferadresse"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.customerShippingAddress }}</span></td>
+                                <td class="table-item carrier-d-delivered-amount table-item-content"aria-label="gelieferte Menge"><span>{{ OrderedProductCategory.orderedProductCategory.deliveredAmount }}</span></td>
+                                <td class="table-item carrier-d-ADR-doc table-item-content"aria-label="ADR Dokument">
+                                    <span>
+                                        {% if OrderedProductCategory.orderedProductCategory.ADRDocument is not null  %}
+                                            <a href="{{ path('downloadDocument', {document: OrderedProductCategory.orderedProductCategory.ADRDocument.id|urlencrypt}) }}">{% trans %} View ADRDocument{% endtrans %}</a>
+                                        {% elseif app.request.attributes.get('slug') == 'new' or app.request.attributes.get('slug') == null %}
+                                            {{ render(controller('AppBundle:CarrierDashBoard:upload', {'orderedProductCategory': OrderedProductCategory.orderedProductCategory.id| urlencrypt})) }}
+                                        {% endif %}
+                                    </span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% elseif pagination is empty  %}
+                        <td colspan="11"  align="center"> {% trans %}No Orders Found{% endtrans %} </td>
+                    {% endif %}
+                </table>
+
+            </div>
+        </div>
+    </div>
+{% block footer %}
+    <div class="footer-gradient non-mobile-version">
+        <div class="footer-dashboard">
+            <div class="row">
+                <div class="column no-vertical-padding column-15">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+                <div class="area-filtering column center no-vertical-padding column-70">
+                    <ul>
+                        {% if app.request.attributes.get('slug') == 'new' or app.request.attributes.get('slug') == null %}
+                            <li class="footer-dashboard-item selected">
+                                    <a href="{{ path('carrier_dashboard', {slug: 'new'}) }}">
+                                        {{ 'dashboard.orders_open'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                            </li>
+                        {% else %}
+                            <li class="footer-dashboard-item">
+                                    <a href="{{ path('carrier_dashboard', {slug: 'new'}) }}">
+                                        {{ 'dashboard.orders_open'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                            </li>
+                        {% endif %}
+                        {% if app.request.attributes.get('slug') == 'old' %}
+                            <li class="footer-dashboard-item selected">
+                                    <a href="{{ path('carrier_dashboard', {slug: 'old'}) }}">
+                                        {{ 'dashboard.orders_closed'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                            </li>
+                        {% else %}
+                            <li class="footer-dashboard-item ">
+                                    <a href="{{ path('carrier_dashboard', {slug: 'old'}) }}">
+                                        {{ 'dashboard.orders_closed'|trans([], 'FOSUserBundle') }}
+                                    </a>
+                            </li>
+                        {% endif %}
+                        <li class="footer-dashboard-item dashboard-search-tool onMobile">
+                            <div class="search-wrapper-footer">
+                                <a>{{ 'dashboard.orders_search'|trans([], 'FOSUserBundle') }}</a>
+                                <input type="search" class="footer-search-field"  title="search"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column no-vertical-padding column-15">
+                    <a class="button-fab" href="{{ path('carrier_dashboard', {slug: 'map'}) }}">
+                        <svg class="icon-truck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"/>
+                        </svg>
+                        <div class="tooltip-fab">
+                            <span>{{ 'dashboard.plan_preview'|trans([], 'FOSUserBundle') }}</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="footer-gradient mobile-version">
+            <div class="footer-dashboard">
+                <div class="row">
+                    <div class="area-filtering column center no-vertical-padding column-70">
+                        <ul>
+                            {% if app.request.attributes.get('slug') == 'new' or app.request.attributes.get('slug') == null %}
+                                <li class="footer-dashboard-item selected">
+                                        <a href="{{ path('carrier_dashboard', {slug: 'new'}) }}">
+                                            {{ 'dashboard.orders_open_mobile'|trans([], 'FOSUserBundle') }}
+                                        </a>
+                                </li>
+                            {% else %}
+                                <li class="footer-dashboard-item">
+                                        <a href="{{ path('carrier_dashboard', {slug: 'new'}) }}">
+                                            {{ 'dashboard.orders_open_mobile'|trans([], 'FOSUserBundle') }}
+                                        </a>
+                                </li>
+                            {% endif %}
+                            {% if app.request.attributes.get('slug') == 'old' %}
+                                <li class="footer-dashboard-item selected">
+                                        <a href="{{ path('carrier_dashboard', {slug: 'old'}) }}">
+                                            {{ 'dashboard.orders_closed_mobile'|trans([], 'FOSUserBundle') }}
+                                        </a>
+                                </li>
+                            {% else %}
+                                <li class="footer-dashboard-item ">
+                                        <a href="{{ path('carrier_dashboard', {slug: 'old'}) }}">
+                                            {{ 'dashboard.orders_closed_mobile'|trans([], 'FOSUserBundle') }}
+                                        </a>
+                                </li>
+                            {% endif %}
+                            <li class="footer-dashboard-item dashboard-search-tool onMobile">
+                                <div class="search-wrapper-footer">
+                                    <a></a>
+                                    <input type="search" class="footer-search-field">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="area-fab column no-vertical-padding column-15">
+                        <a class="button-fab" href="{{ path('carrier_dashboard', {slug: 'map'}) }}">
+                            <svg class="icon-truck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"/></svg>
+                            <div class="tooltip-fab">
+                                <span>{{ 'dashboard.plan_preview'|trans([], 'FOSUserBundle') }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

@@ -1,9 +1,9 @@
 # See https://symfony.com/doc/current/email/dev_environment.html
 swiftmailer:
         transport: '%mailer_transport%'
-        host: '%mailer_host%'
-        username: '%mailer_user%'
-        password: '%mailer_password%'
+        host: '%env(mailer_host)%'
+        username: '%env(mailer_user)%'
+        password: '%env(mailer_password)%'
         port: 587
         encryption: tls
         auth_mode: login

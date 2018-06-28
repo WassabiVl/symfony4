@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Entity;
+namespace App\Entity;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -114,27 +114,27 @@ class Account extends BaseUser implements EquatableInterface
     private $relatedAdmin;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Address", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist", "remove"}, fetch="EAGER")
+     * @ORM\OneToMany(targetEntity="App\Entity\Address", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist", "remove"}, fetch="EAGER")
      */
     private $relatedAddresss;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Carrier", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist"})
-     * @Assert\Type(type="AppBundle\Entity\Carrier")
+     * @ORM\OneToOne(targetEntity="App\Entity\Carrier", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist"})
+     * @Assert\Type(type="App\Entity\Carrier")
      * @Assert\Valid()
      */
     private $relatedCarrierEntry;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Producer", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist"})
-     * @Assert\Type(type="AppBundle\Entity\Producer")
+     * @ORM\OneToOne(targetEntity="App\Entity\Producer", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist"})
+     * @Assert\Type(type="App\Entity\Producer")
      * @Assert\Valid()
      */
     private $relatedProducerEntry;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Customer", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist"})
-     * @Assert\Type(type="AppBundle\Entity\Customer")
+     * @ORM\OneToOne(targetEntity="App\Entity\Customer", mappedBy="relatedAccount", orphanRemoval=true, cascade={"persist"})
+     * @Assert\Type(type="App\Entity\Customer")
      * @Assert\Valid()
      */
     private $relatedCustomerEntry;

@@ -6,7 +6,7 @@
  * Time: 15:54
  */
 
-namespace AppBundle\Entity\Interfaces;
+namespace App\Entity\Interfaces;
 
 
 interface UserInterface

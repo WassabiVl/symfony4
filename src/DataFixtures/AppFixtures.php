@@ -6,13 +6,13 @@
  * Time: 10:31
  */
 
-namespace src\DataFixtures;
+namespace App\DataFixtures;
 
-use AppBundle\Entity\Customer;
-use AppBundle\Entity\Order;
-use AppBundle\Entity\OrderedProductCategory;
-use AppBundle\Entity\ProductCategory;
-use AppBundle\Entity\ProductSellSizes;
+use App\Entity\Customer;
+use App\Entity\Order;
+use App\Entity\OrderedProductCategory;
+use App\Entity\ProductCategory;
+use App\Entity\ProductSellSizes;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 

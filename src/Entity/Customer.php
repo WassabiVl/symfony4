@@ -5,10 +5,10 @@
  * Date: 25.10.2017
  * Time: 11:35
  */
-namespace app\Entity;
+namespace App\Entity;
 
 
-use AppBundle\Entity\Interfaces\UserInterface;
+use App\Entity\Interfaces\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -86,7 +86,7 @@ class Customer implements UserInterface
     /**
      * @ORM\OneToOne(targetEntity="Address", cascade={"persist"})
      * @ORM\JoinColumn(referencedColumnName="id", nullable=false)
-     * @Assert\Type(type="AppBundle\Entity\Address")
+     * @Assert\Type(type="App\Entity\Address")
      * @Assert\Valid()
      */
     private $shippingAddress;

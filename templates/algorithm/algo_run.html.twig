@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% set totalProfit = 0 %}
+    {% set totalbatch = 0 %}
+    {% set totalbatchused = 0 %}
+    {% for batch in batchs %}
+        {% if batch.usedAmount != 0 %}
+            {% set totalProfit = batch.profit +totalProfit %}
+        {% endif %}
+        {% set totalbatchused = (batch.usedAmount) +totalbatchused %}
+        {% set totalbatch = (batch.batchCapacity) +totalbatch %}
+    {% endfor %}
+    <br/><br/><br/><br/><br/>
+    <h2>{% trans %}Total Profit{% endtrans %} = {{ totalProfit|number_format(2, ',', '.') }}€</h2>
+    <h2>{% trans %}Percentage used{% endtrans %} = {{ ((totalbatchused/totalbatch)*100)|number_format(0, ',', '.') }}%</h2>
+    {{ form_start(form) }}
+    <div style="float: right;">
+        {{ form_widget(form.AcceptChanges, { 'label': 'Accept Changes'|trans }) }}
+        {{ form_widget(form.AcceptOrders, { 'label': 'Accept Orders'|trans }) }}
+    </div>
+    <table class="table table-sm">
+        {% for batch in batchs %}
+            <thead class="bg-primary text-white">
+            <tr>
+                <th>{% trans %}Producer{% endtrans %}</th>
+                <th>{% trans %}Batch{% endtrans %} #</th>
+                <th>{% trans %}Capacity{% endtrans %}</th>
+                <th>{% trans %}EndTime{% endtrans %}</th>
+                <th>{% trans %}Amount Used{% endtrans %}</th>
+                <th>{% trans %}Profit{% endtrans %}</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>{{ batch.0.relatedProducer }} </td>
+                <td>{{ batch.0.id }} </td>
+                <td>{{ (batch.batchCapacity)|number_format(0, ',', '.') }}MBq </td>
+                <td>{{ batch.0.dailyEndTime|date('H:i') }} </td>
+                <td>{{ (batch.usedAmount)|number_format(0, ',', '.') }}MBq </td>
+                <td>{{ batch.profit|number_format(2, ',', '.') }}€ </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th> {% trans %}Order{% endtrans %} #</th>
+                            <th> {% trans %}Customer Name{% endtrans %}</th>
+                            <th> {% trans %}Customer Address{% endtrans %}</th>
+                            <th> {% trans %}Delivery Time{% endtrans %}</th>
+                            <th> {% trans %}Original Amount ordered{% endtrans %}</th>
+                            <th> {% trans %}New Amount ordered{% endtrans %}</th>
+                            <th> {% trans %}Amount to be Produced{% endtrans %}</th>
+                            <th> {% trans %}Sale Profit{% endtrans %}</th>
+                            <th> {% trans %}Fixed or Rejected{% endtrans %}?</th>
+                        </tr>
+                        </thead>
+                        {% for data in datas %}
+                            {% if data.0 == batch.0.id %}
+                                <tr class="data_row">
+                                    <td id="order_{{ data.1.id  }}"> {{ data.1.id }}</td>
+                                    <td> {{ data.1.relatedOrder.relatedCustomer }}</td>
+                                    <td> {{ data.1.relatedOrder.relatedCustomer.shippingAddress }}</td>
+                                    <td> {{ data.1.relatedOrder.targetTime|date('H:i') }}</td>
+                                    <td> {{ data.1.orderedAmount|number_format(0, ',', '.') }}MBq</td>
+                                    {% if data.1.orderedAmount != (data.2.amountOrdered) %}
+                                        <td class="amount-warning">
+                                            <b><i><u>{{ (data.2.amountOrdered)|number_format(0, ',', '.') }}MBq </u></i></b>
+                                        </td>
+                                    {% else %}
+                                        <td>
+                                            {{ (data.2.amountOrdered)|number_format(0, ',', '.') }}MBq
+                                        </td>
+                                    {% endif %}
+                                    <td> {{ (data.2.amountToProduce)|number_format(0, ',', '.') }}MBq</td>
+                                    <td> {{ data.2.profit|number_format(2, ',', '.') }}€</td>
+                                    <td>{{ form_widget(form[data.1.id]) }}</td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr/>
+    <h3> {% trans %}Unassigned Orders{% endtrans %}</h3>
+    <table class="table table-sm">
+        <thead class="thead-dark">
+        <tr>
+            <th>{% trans %}Order Number{% endtrans %}</th>
+            <th>{% trans %}Customer Name{% endtrans %}</th>
+            <th>{% trans %}Customer Address{% endtrans %}</th>
+            <th>{% trans %}Delivery Time{% endtrans %}</th>
+            <th>{% trans %}Amount ordered{% endtrans %}</th>
+            <th>{% trans %}Fixed{% endtrans %}?</th>
+        </tr>
+        </thead>
+        {% for unOrdered in unOrdereds %}
+            <tr class="data_row">
+                <td id="order_{{ unOrdered.id }}"> {{ unOrdered.id }}</td>
+                <td> {{ unOrdered.relatedOrder.relatedCustomer }}</td>
+                <td> {{ unOrdered.relatedOrder.relatedCustomer.shippingAddress }}</td>
+                <td> {{ unOrdered.relatedOrder.targetTime|date('H:i') }}</td>
+                <td> {{ unOrdered.orderedAmount|number_format(2, ',', '.') }}MBq</td>
+                <td>{{ form_widget(form[unOrdered.id]) }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {{ form_end(form) }}
+{% endblock %}

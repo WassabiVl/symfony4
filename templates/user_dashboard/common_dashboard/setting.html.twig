@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="fragment new-order">
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="column column-s-100 column-m-70 column-60">
+                    <div class="form-group">
+                        {{ form_start(form) }}
+                        {{ form_row(form) }}
+                        <button type="submit">{% trans %}Submit Changes{% endtrans %}</button>
+                        {{ form_end(form) }}
+
+                        {% if is_granted('ROLE_CUSTOMER') %}
+                            <a class="flat no-border button" href="{{ path('customer_dashboard') }}">
+                                {% trans %}Cancel{% endtrans %}
+                            </a>
+                        {% endif %}
+                        {% if is_granted('ROLE_PRODUCER') %}
+                            <a class="flat no-border button" href="{{ path('producer_dashboard') }}">
+                                {% trans %}Cancel{% endtrans %}
+                            </a>
+                        {% endif %}
+                        {% if is_granted('ROLE_CARRIER') %}
+                            <a class="flat no-border button" href="{{ path('carrier_dashboard') }}">
+                                {% trans %}Cancel{% endtrans %}
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

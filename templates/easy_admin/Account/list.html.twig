@@ -1,0 +1,48 @@
+{% extends '@EasyAdmin/default/list.html.twig' %}
+{% block table_head %}
+    <tr>
+        {% for field, metadata in fields %}
+            {% set isSortingField = metadata.property == app.request.get('sortField')|split('.')|first %}
+            {% set nextSortDirection = isSortingField ? (app.request.get('sortDirection') == 'DESC' ? 'ASC' : 'DESC') : 'DESC' %}
+            {% set _column_label = (metadata.label ?: field|humanize)|trans(_trans_parameters) %}
+            {% set _column_icon = isSortingField ? (nextSortDirection == 'DESC' ? 'fa-caret-up' : 'fa-caret-down') : 'fa-sort' %}
+
+            <th data-property-name="{{ metadata.property }}" class="{{ isSortingField ? 'sorted' }} {{ metadata.virtual ? 'virtual' }} {{ metadata.dataType|lower }} {{ metadata.css_class }}">
+                {% if metadata.sortable %}
+                    <a href="{{ path('easyadmin', _request_parameters|merge({ sortField: metadata.property, sortDirection: nextSortDirection, filter:app.request.query.get('filter') })) }}">
+                        <i class="fa {{ _column_icon }}"></i>
+                        {{ _column_label|raw }}
+                    </a>
+                {% else %}
+                    <span>{{ _column_label|raw }}</span>
+                {% endif %}
+            </th>
+        {% endfor %}
+
+        {% if _list_item_actions|length > 0 %}
+            <th>
+                <span>{{ 'list.row_actions'|trans(_trans_parameters, 'EasyAdminBundle') }}</span>
+            </th>
+        {% endif %}
+    </tr>
+{% endblock table_head %}
+
+
+{% block search_form %}
+    <input type="hidden" name="action" value="search">
+    <input type="hidden" name="entity" value="{{ _request_parameters.entity }}">
+    <input type="hidden" name="sortField" value="{{ _entity_config.search.sort.field|default(_request_parameters.sortField) }}">
+    <input type="hidden" name="sortDirection" value="{{ _entity_config.search.sort.direction|default(_request_parameters.sortDirection) }}">
+    <input type="hidden" name="menuIndex" value="{{ _request_parameters.menuIndex }}">
+    <input type="hidden" name="submenuIndex" value="{{ _request_parameters.submenuIndex }}">
+    <input type="hidden" name="filter" value="{{ app.request.query.get('filter') }}">
+    <div class="input-group">
+        <input class="form-control" type="search" name="query" value="{{ app.request.get('query')|default('') }}">
+        <span class="input-group-btn">
+                                    <button class="btn" type="submit" formtarget="{{ _action.target }}">
+                                        <i class="fa fa-search"></i>
+                                        <span class="hidden-xs hidden-sm">{{ _action.label|default('action.search')|trans(_trans_parameters) }}</span>
+                                    </button>
+                                </span>
+    </div>
+{% endblock %}

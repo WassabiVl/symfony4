@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+    {% block title %}Welcome to your new CMS!{% endblock %}
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    {% endblock %}
+    {% block orbitale_cms_head_metas %}{% endblock %}
+
+{% block body %}
+<div class="fragment cms-content-page">
+    <div class="row">
+        <div class="page-wrapper">
+            <div class="column column-100">
+            <br>
+            <br>
+            <br>
+            <br>
+            {% block orbitale_cms_breadcrumbs %}
+            {% endblock %}
+            {% block orbitale_cms_page_content %}
+                {% block orbitale_cms_pages_list %}{% endblock %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        setTimeout(function(){
+            $(':contains("[img]]")').each(function(i,e){
+                var thing= $(this);
+                var string = $(this).html().match(/[^\[img\]].+?(?=\[)/gm);
+                if (string !== null) {
+                    string.forEach(function(element) {
+                        if (element.match(/^\.\./gm)) {
+                            var img = $('<img id="dynamic_"' + i + '>');
+                            img.attr('src', element);
+                            img.appendTo(e);
+                            thing.html(thing.html().split('[img]'+element+'[/img]').join(''));
+                        }
+                    });
+                }
+            });
+        }, 500);
+    </script>
+{% endblock %}

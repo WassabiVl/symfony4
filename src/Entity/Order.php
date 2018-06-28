@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 13:27
  */
-namespace app\Entity;
+namespace App\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -81,7 +81,7 @@ class Order
     private $dateOrdered;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\OrderedProductCategory", mappedBy="relatedOrder")
+     * @ORM\OneToOne(targetEntity="App\Entity\OrderedProductCategory", mappedBy="relatedOrder")
      */
     private $relatedOrderedCategorys;
 

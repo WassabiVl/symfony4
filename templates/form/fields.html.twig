@@ -1,0 +1,15 @@
+{% block fileTypeWithReference_widget %}
+
+    {% spaceless %}
+        {{form_widget(form)}}
+        {% if (data | is_class('Document')) %}
+            <br>
+            {% if data is not null %}
+                <a href="{{ path('downloadDocument', {document: data.id|urlencrypt}) }}" >{{ data.docType|trans }}</a>
+            {% else %}
+                {% trans %}No Document Found{% endtrans %}
+            {% endif %}
+        {% endif %}
+    {% endspaceless %}
+
+{% endblock %}

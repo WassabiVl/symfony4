@@ -1,0 +1,138 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="fragment new-order fragment-calculator">
+        <div class="row">
+            <div class="column column-10"></div>
+            <div class="column calculator-layout-form column-s-100 column-m-80 column-45">
+                <div class="form-fields">
+                    {{ form_start(form) }}
+                    {{ form_row(form.relatedProductCategory) }}
+                    <div class="select-amount-field">
+                        <div class="amount-area">{{ form_row(form.orderedAmount) }}</div>
+                        <a href="#" class="calculator-icon" aria-label="Menge rechnen">
+                            <svg version="1.1" id="calculator-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" height="2rem" width="2rem" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                                <path d="M50.6,0H9.4C7.8,0,6.5,1.3,6.5,2.9v54.2c0,1.6,1.3,2.9,2.9,2.9h41.2c1.6,0,2.9-1.3,2.9-2.9V2.9C53.5,1.3,52.2,0,50.6,0z M51.5,57.1c0,0.5-0.4,0.9-0.9,0.9H9.4c-0.5,0-0.9-0.4-0.9-0.9V2.9C8.5,2.4,8.9,2,9.4,2h41.2c0.5,0,0.9,0.4,0.9,0.9V57.1z"/>
+                                <path d="M11.5,55h11V44h-11V55z M13.5,46h7v7h-7V46z"/>
+                                <path d="M24.5,55h11V44h-11V55z M26.5,46h7v7h-7V46z"/>
+                                <path d="M37.5,55h11V31h-11V55z M39.5,33h7v20h-7V33z"/>
+                                <path d="M11.5,42h11V31h-11V42z M13.5,33h7v7h-7V33z"/>
+                                <path d="M24.5,42h11V31h-11V42z M26.5,33h7v7h-7V33z"/>
+                                <path d="M11.5,29h11V18h-11V29z M13.5,20h7v7h-7V20z"/>
+                                <path d="M24.5,29h11V18h-11V29z M26.5,20h7v7h-7V20z"/>
+                                <path d="M37.5,29h11V18h-11V29z M39.5,20h7v7h-7V20z"/>
+                                <path d="M11.5,15h37V5h-37V15z"/>
+                            </svg>
+                        </a>
+                    </div><br/>
+                    <label class="target-date-label">{% trans %}Target Date{% endtrans %}</label><br/>
+                    {{ form_widget(form.relatedOrder.targetTime.date) }}
+                    <div>
+                        <div style="max-width: 60px">
+                            <label class="target-hour-label">{% trans %}Time{% endtrans %}</label>
+                            {{ form_widget(form.relatedOrder.targetTime.time.hour) }}
+                            {{ form_widget(form.relatedOrder.targetTime.time.minute) }}
+                        </div>
+                    </div>
+                    {{ form_row(form.relatedOrder.customerShippingAddress) }}
+                    {{ form_row(form.relatedOrder.customerBillingAddress) }}
+                    {{ form_row(form.relatedOrder.comment) }}
+                    {{ form_widget(form.relatedOrder.relatedCustomer, { 'attr': {'class': 'hidden'} }) }}
+                    {{ form_widget(form.submit,  { 'label': 'Preview order'|trans }) }}
+                    <a class="flat no-border button"
+                       href="{{ path('customer_dashboard') }}">{% trans %}Cancel{% endtrans %}</a>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="column column-10"></div>
+            <div class="column no-padding calculator-layout-app column-35">
+                <div class="calculator-wrapper">
+                    <div class="calculator-top">
+                        <span class="calculator-title">{% trans %}KAPAZITÄTEN RECHNER{% endtrans %}</span>
+                        <div class="number-of-patients">
+                            <span>{% trans %}Patienten Anzahl{% endtrans %}</span>
+                            <label for="patients">
+                                <select id="patient-quantity" name="patient-quantity">
+                                    <option selected>1 {% trans %}Patient{% endtrans %}</option>
+                                    <option>2 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>3 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>4 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>5 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>6 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>7 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>8 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>9 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>10 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>11 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>12 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>13 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>14 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>15 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>16 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>17 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>18 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>19 {% trans %}Patienten{% endtrans %}</option>
+                                    <option>20 {% trans %}Patienten{% endtrans %}</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="intervals-in-minutes">
+                            <span>Intervall</span>
+                            <label for="intervals">
+                                <input type="number" id="intervals-patients" placeholder="in Minuten" step="10" min="0" value="30">
+                            </label>
+                        </div>
+                        <a class="button" id="createBaseSchedule">{% trans %}Create base Schedule{% endtrans %}</a>
+                    </div>
+                    <div class="calculator-bottom">
+                        <div id="calculator-wait"></div>
+                        <div class="results-row results-header">
+                            <div class="results-cell title">Termin</div>
+                            <div class="results-cell title">Uhrzeit</div>
+                            <div class="results-cell title">Patient MBq</div>
+                            <div class="results-cell title">Patient MBq + HL</div>
+                            <div class="results-cell title">Total MBq</div>
+                        </div>
+                        <div class="add-event-card">
+                            <div class="add-event-unfold accordionInverseContent new-content-row">
+                                <div class="results-row results-content results-row-one-more">
+                                    <div class="results-cell">
+                                        <label for="event-type">
+                                            <select id="new_event_type" name="new-event-type">
+                                                <option {% trans %}selected>Patient{% endtrans %}</option>
+                                                <option>{% trans %}Pause{% endtrans %}</option>
+                                                <option>{% trans %}Meeting{% endtrans %}</option>
+                                                <option>{% trans %}Andere{% endtrans %}</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="results-cell">
+                                        <label for="event-time">
+                                            <input type="time" id="new_event_time" value="08:00">
+                                        </label>
+                                    </div>
+                                    <div class="results-cell">
+                                        <input type="number" value="350" id="new_event_mbq">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-event-trigger accordionInverseToggle">
+                                <a class="button-fab small-fab">
+                                    <i class="far fa-plus"></i>
+                                </a>
+                                <span class="add-event">{% trans %}Sondertermin{% endtrans %}</span>
+                            </div>
+                            <div class="add-event-unfold accordionInverseContent">
+                                <a class="button event-confirm" id="event_confirm">{% trans %}HINZÜFUGEN{% endtrans %}</a>
+                            </div>
+                        </div>
+                        <a class="button broad calculator-button">{% trans %}BERECHNUNG GESAMTMENGE{% endtrans %}</a>
+                        <div class="calculator-results">
+                            <span class="calculator-total">{% trans %}Wir empfehlen mindestens {% endtrans %}<b id="calculator_total"></b> {% trans %}MBq zu bestellen{% endtrans %}.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

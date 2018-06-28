@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 13:44
  */
-namespace app\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

@@ -1,0 +1,39 @@
+{% block main %}
+    <div class="form-group col-lg-12 ">
+        <h3>{% trans %}Ordered Categories{% endtrans %}</h3>
+        <div class="table-responsive">
+            <table class="table table-ea">
+                <thead>
+                <tr>
+                    <th>{% trans %}Id{% endtrans %}</th>
+                    <th>{% trans %}Bulk Discount{% endtrans %}</th>
+                    <th>{% trans %}Buy Price{% endtrans %}</th>
+                    <th>{% trans %}Ordered Amount{% endtrans %}</th>
+                    <th>{% trans %}Delivered Amount{% endtrans %}</th>
+                    <th>{% trans %}ADR Document{% endtrans %}</th>
+                    <th>{% trans %}Product Category{% endtrans %}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if value is not null %}
+                    <tr>
+                        <td> {{ value.id }}</td>
+                        <td> {{ value.relatedBulkDiscount }}</td>
+                        <td> {{ value.relatedBuyPrice }}</td>
+                        <td> {{ value.orderedAmount }}</td>
+                        <td> {{ value.deliveredAmount }}</td>
+                        <td>
+                            {% if  value.ADRDocument is not null %}
+                                <a href="{{ path('downloadDocument',  {document: value.ADRDocument.id| urlencrypt}) }}">{% trans %}View ADR{% endtrans %} </a>
+                            {% else %}
+                                {% trans %}No ADR{% endtrans %}
+                            {% endif %}
+                        </td>
+                        <td> {{ value.relatedProductCategory }}</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base-email.html.twig' %}
+{% block subject %}{% endblock %}
+{% block body_html %}
+    <div class="email-wrapper">
+        {% autoescape false %}
+            <div class="e-mail-logo-stripe">
+                <div class="e-mail-logo">
+                    <img src="http://dev.radiopharma24.de/images/R24-white-logo.png">
+                </div>
+            </div>
+
+
+            <span class="e-mail-subject line-initial">{% trans %}Order Confirmation{% endtrans %}</span>
+            <span class="e-mail-title line-jump">{% trans %}Hello{% endtrans %} {{ name }}</span>
+            <span class="e-mail-intro line-jump">{% trans %}This Email Confirms that your order{% endtrans %}
+                # {{ order.id }}</span>
+            <span>{% trans %}with new amount of{% endtrans %}: {{ newAmount|number_format(2, ',', '.') }}
+                MBq</span>
+            <span>{% trans %}is set to be delivered tomorrow at{% endtrans %} {{ order.targetTime|date('H:i') }}</span>
+
+            <span class="e-mail-outro line-jump">{% trans %} Thanks and Regards {% endtrans %},</span>
+            <span class="e-mail-signature line-jump">{% trans %}the Radiopharma24 team{% endtrans %}</span>
+
+        {% endautoescape %}
+    </div>
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

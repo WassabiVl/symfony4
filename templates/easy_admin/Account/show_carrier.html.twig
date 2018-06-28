@@ -1,0 +1,52 @@
+{% block main %}
+    {% if value is not null %}
+        {% set carrierData = {
+            'Cost per km' : value.costPerKm
+        } %}
+
+        <div class="form-group col-lg-12 ">
+            <h3>{% trans %}Carrier Specific Details{% endtrans %}</h3>
+            {% for key, value in carrierData  %}
+                <div class="form-group field-text col-lg-6 col-s-12">
+                    <label>
+                        {{key}}
+                    </label>
+                    <div class="form-control">
+                        <div class="context">
+                            {{ value }}
+                        </div>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <div class="form-group col-lg-12 ">
+            <h3>{% trans %}Related producers{% endtrans %}</h3>
+            <div class="table-responsive">
+                <table class="table table-ea">
+                    <thead>
+                    <tr>
+                        <th>{% trans %}Name{% endtrans %}</th>
+                        <th>{% trans %}Address{% endtrans %}</th>
+                        <th>{% trans %}Actions{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for  producer in value.relatedProducers %}
+                        <tr>
+                            <td> {{ producer.relatedAccount }}</td>
+                            <td> {% trans %}Address{% endtrans %}</td>
+                            <td>
+                                <a href="{{ path('easyadmin', {entity: "Account", action: 'show', id: producer.relatedAccount.id })}}"><i class="fa fa-search"></i></a> &nbsp;
+                                <a href="{{ path('easyadmin', {entity: "Account", action: 'edit', id: producer.relatedAccount.id }) }}"><i class="fa fa-pencil"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -26,7 +26,7 @@ var systems = {
     "MAGENTO_1" : {'external': "../magento/skin/frontend/lombego" , 'templatePath' : ''},
     "CROSS" : {'external': "../_cdn/layout" , 'templatePath' : '../_cdn/templates'},
     "CDN"  : {'external': "../_cdn/layout" , 'templatePath' : '../_cdn/templates'},
-    "RADIO" : {'external': '../web/lombego/layout' , 'templatePath' : ''},
+    "RADIO" : {'external': '../public/lombego/layout' , 'templatePath' : ''},
 };
 
 var targetRoot = systems[environment].external;

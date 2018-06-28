@@ -1,0 +1,37 @@
+{% extends 'base-email.html.twig' %}
+
+{% block subject %}{% endblock %}
+
+{% block body_html %}
+<div class="email-wrapper">
+    {% autoescape false %}
+    <div class="e-mail-logo-stripe">
+        <div class="e-mail-logo">
+            <img src="http://dev.radiopharma24.de/images/R24-white-logo.png">
+        </div>
+    </div>
+
+    <span class="e-mail-subject line-initial">{% trans %}Order Rejected{% endtrans %}</span>
+
+    <span class="e-mail-title line-jump">{% trans %}Hello{% endtrans %} {{ name }} :</span>
+
+    <span class="e-mail-intro line-jump">{% trans %}This is The List of Orders For tomorrow rejected by{% endtrans %} {{ carrier }}</span>
+
+    <p>
+        {% for order in orders %}
+            {% trans %}Order{% endtrans %}#: {{ order.id }} <br/>
+            {% trans %}Customer Name{% endtrans %}: {{ order.relatedCustomer }} <br/>
+            {% trans %}Customer Address{% endtrans %}: {{ order.relatedCustomer.shippingAddress }} <br/>
+            {% trans %}Delivery Time{% endtrans %}: {{ order.targetTime|date('H:i') }}<br/>
+            {% trans %}Amount to be picked Up{% endtrans %}: {{ order.relatedOrderedCategorys.relatedOrderedProduct.amount|number_format(2, ',', '.') }}MBq<br/><br/>
+        {% endfor %}
+    </p>
+
+    <span class="e-mail-outro line-jump">{% trans %} Thanks and Regards{% endtrans %},</span>
+    <span class="e-mail-signature line-jump">{% trans %}the Radiopharma24 System{% endtrans %}</span>
+    {% endautoescape %}
+</div>
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

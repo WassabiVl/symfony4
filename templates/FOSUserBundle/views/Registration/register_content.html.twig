@@ -1,0 +1,37 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="registration-step step-1-personal-info">
+    <div class="step-title">
+        <span class="registration-step-number">1</span>
+        <span class="registration-step-title">Kontaktdaten</span>
+    </div>
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.firstName) }}
+    {{ form_row(form.lastName) }}
+    <span class="company-name-hide">{{ form_row(form.companyName) }}</span>
+    {{ form_row(form.gender) }}
+    {{ form_row(form.phone) }}
+    {{ form_row(form.fax) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword) }}
+</div>
+<div class="registration-step step-2-shipping-address">
+    <div class="step-title">
+        <span class="registration-step-number">2</span>
+        <span class="registration-step-title">Lieferadresse</span>
+    </div>
+    {{ form_row(form.relatedCustomerEntry.shippingAddress) }}
+    {{ form_row(form.relatedCustomerEntry.billAddress) }}
+</div>
+<div class="registration-step step-3-upload-document">
+    <div class="step-title">
+        <span class="registration-step-number">3</span>
+        <span class="registration-step-title">UG Dokument</span>
+    </div>
+    {{ form_row(form.relatedCustomerEntry.relatedUg) }}
+</div>
+<div>
+    <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
+</div>
+{{ form_end(form) }}

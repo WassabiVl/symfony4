@@ -6,7 +6,7 @@
  * Time: 11:09
  */
 
-namespace app\Entity;
+namespace App\Entity;
 
 
 use Doctrine\Common\Collections\ArrayCollection;

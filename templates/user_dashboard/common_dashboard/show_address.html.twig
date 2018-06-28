@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="fragment address-list-page new-order">
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="column column-s-100 column-m-70 column-60">
+                    <h3>{% trans %}Your Address List{% endtrans %}</h3>
+                    <div class="list-group">
+                        {% if  addresses is not null %}
+                            {% for address in addresses %}
+                                <ul>
+                                    <li class="list-group-item">
+                                        <a href="{{ path('address_edit' , {address: address.id| urlencrypt}) }}">{{ address }} </a>
+                                        <a href="{{ path('address_remove', {address: address.id| urlencrypt}) }}"
+                                           onclick="return confirm({% trans %}'Are You Sure?'{% endtrans %})">
+                                            <i class="fas fa-trash" style="color: black"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            {% endfor %}
+                        {% endif %}
+                        <a href="{{ path('address_new') }}"
+                           class="btn btn-secondary">{% trans %}Add New Address{% endtrans %}</a><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

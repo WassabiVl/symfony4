@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Entity;
+namespace App\Entity;
 
 use Orbitale\Bundle\CmsBundle\Entity\Category as BaseCategory;
 use Doctrine\ORM\Mapping as ORM;

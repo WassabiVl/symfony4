@@ -5,7 +5,7 @@
  * Date: 25.10.2017
  * Time: 13:03
  */
-namespace app\Entity;
+namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -34,12 +34,12 @@ class ProductCategory
     private $sellPrice;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="productCategory")
+     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="productCategory")
      */
     private $relatedProducts;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductSellSizes", mappedBy="relatedProductCategory")
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductSellSizes", mappedBy="relatedProductCategory")
      */
     private $relatedProductSellSizes;
 

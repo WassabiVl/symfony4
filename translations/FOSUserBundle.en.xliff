@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2018-06-28T12:55:20Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="e55202b3214a3d2667a1360249eb8dedc58f9d8d" resname="Bestätigungs-Link ">
+        <source>Bestätigungs-Link </source>
+        <target state="new">Bestätigungs-Link </target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ec911d9a78f66c9e33209e573f1f6f63ffe91d4d" resname="Bitte beachten Sie">
+        <source>Bitte beachten Sie</source>
+        <target state="new">Bitte beachten Sie</target>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ce69401fd4f5b8a2bba7277413eef9e1ed1b6a02" resname="Bitte beachten Sie, dass vor der endgültigen Freischaltung Ihres Kontos">
+        <source>Bitte beachten Sie, dass vor der endgültigen Freischaltung Ihres Kontos</source>
+        <target state="new">Bitte beachten Sie, dass vor der endgültigen Freischaltung Ihres Kontos</target>
+        <jms:reference-file line="53">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="06fd9027798a3f2ebf51e79e2e66f1f83c95f949" resname="Dieser Link kann nur einmalig benutzt werden">
+        <source>Dieser Link kann nur einmalig benutzt werden</source>
+        <target state="new">Dieser Link kann nur einmalig benutzt werden</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="002472083dc6053a6f89a943ae3adc3d759240e8" resname="Dieser Link kann nur einmalig benutzt werden, um Ihr Konto zu validieren">
+        <source>Dieser Link kann nur einmalig benutzt werden, um Ihr Konto zu validieren</source>
+        <target state="new">Dieser Link kann nur einmalig benutzt werden, um Ihr Konto zu validieren</target>
+        <jms:reference-file line="51">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ed1174bc89211aabf6674c25207c571ed7fa0dc" resname="Forgot password">
+        <source>Forgot password</source>
+        <target state="new">Forgot password</target>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\default\login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a6938a1142997dc1ffa3db9745b1274eb2b62e5" resname="Guten Tag">
+        <source>Guten Tag</source>
+        <target state="new">Guten Tag</target>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ae926b8e399811f062897f06434164211556e63c" resname="Ihre Daten (insbesondere Ihr UG-Dokument) von uns geprüft werden">
+        <source>Ihre Daten (insbesondere Ihr UG-Dokument) von uns geprüft werden</source>
+        <target state="new">Ihre Daten (insbesondere Ihr UG-Dokument) von uns geprüft werden</target>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="54">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="770b0e8b75666d88363eb8f75532115debd40a1c" resname="Im Falle von Fragen melden Sie sich bitte per Email unter">
+        <source>Im Falle von Fragen melden Sie sich bitte per Email unter</source>
+        <target state="new">Im Falle von Fragen melden Sie sich bitte per Email unter</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="57">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="232fd1c12775f029715e26eb567437be6ed1140e" resname="Kontaktdaten">
+        <source>Kontaktdaten</source>
+        <target state="new">Kontaktdaten</target>
+        <jms:reference-file line="6">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3fa4cc79d9e8558b94cb394b96a2ba6c6b9c36e8" resname="Lieferadresse">
+        <source>Lieferadresse</source>
+        <target state="new">Lieferadresse</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b366d2cdf8749f6a455579ce7ad394e35c0bfac" resname="Mit freundlichen Grüßen">
+        <source>Mit freundlichen Grüßen</source>
+        <target state="new">Mit freundlichen Grüßen</target>
+        <jms:reference-file line="59">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c3d3b2b9efb0acabbcf8a56ae387232c232edbc3" resname="Mit freundlichen Grüßen ">
+        <source>Mit freundlichen Grüßen </source>
+        <target state="new">Mit freundlichen Grüßen </target>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9bb945a5c2b4da68927b93df1541a0f60212c27d" resname="Must Include 1 Capital letter, 1 Number, 1 special Character, &amp; 8 characters ">
+        <source><![CDATA[Must Include 1 Capital letter, 1 Number, 1 special Character, & 8 characters ]]></source>
+        <target state="new"><![CDATA[Must Include 1 Capital letter, 1 Number, 1 special Character, & 8 characters ]]></target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="25c92b40637c497d82c5171276a2de9297132012" resname="Must Include One Capital letter, One Small Letter, One Number, One special Character, and eight or more characters ">
+        <source>Must Include One Capital letter, One Small Letter, One Number, One special Character, and eight or more characters </source>
+        <target state="new">Must Include One Capital letter, One Small Letter, One Number, One special Character, and eight or more characters </target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a82a96cc76f712b5513e3d04e252dcb57cdbac66" resname="Must Include: One Capital letter, One Small Letter, One Number, One special Character, and eight or more characters ">
+        <source>Must Include: One Capital letter, One Small Letter, One Number, One special Character, and eight or more characters </source>
+        <target state="new">Must Include: One Capital letter, One Small Letter, One Number, One special Character, and eight or more characters </target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3b919835cf0bc85d004e1c5b63f59ae89a60cc8b" resname="Sind alle Daten in Ordnung">
+        <source>Sind alle Daten in Ordnung</source>
+        <target state="new">Sind alle Daten in Ordnung</target>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="54">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="92d66c25adf6f7d6f987999a343a49b5c9076e8b" resname="UG Dokument">
+        <source>UG Dokument</source>
+        <target state="new">UG Dokument</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b22d6a0005c85e013ec3e900d3174d659f6e8c26" resname="Um Ihren Anmeldungsprozess abzuschließen, klicken Sie bitte auf den folgenden Link">
+        <source>Um Ihren Anmeldungsprozess abzuschließen, klicken Sie bitte auf den folgenden Link</source>
+        <target state="new">Um Ihren Anmeldungsprozess abzuschließen, klicken Sie bitte auf den folgenden Link</target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bb42ac66e6fd5f956fab3a3783869691f2d6cc89" resname="addresses.shipping_addresses">
+        <source>addresses.shipping_addresses</source>
+        <target>Lieferadressen</target>
+        <jms:reference-file line="67">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0f0f04f09c17d10081eb4993fa863550ecc9d33d" resname="change_password.flash.success">
+        <source>change_password.flash.success</source>
+        <target>The password has been changed.</target>
+      </trans-unit>
+      <trans-unit id="a5eba05921c11add89e9b68570149da22499c604" resname="change_password.submit">
+        <source>change_password.submit</source>
+        <target>Change password</target>
+      </trans-unit>
+      <trans-unit id="02d6ce28ad1d9ee124536376dfe3b280135c1021" resname="dashboard.address_billing">
+        <source>dashboard.address_billing</source>
+        <target>Rechnungsadresse</target>
+      </trans-unit>
+      <trans-unit id="5eaa5e456139ef2defef6aae39cf22fdfdc2ad7c" resname="dashboard.address_delivery">
+        <source>dashboard.address_delivery</source>
+        <target>Lieferadresse</target>
+      </trans-unit>
+      <trans-unit id="9ab31427d895578544884c130928da557cdb2044" resname="dashboard.bill_view">
+        <source>dashboard.bill_view</source>
+        <target>Rechnung anschauen</target>
+        <jms:reference-file line="102">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a72a52a45867e4c6acaf64719ad2f7a288f7def" resname="dashboard.date_delivery">
+        <source>dashboard.date_delivery</source>
+        <target>Lieferung am</target>
+      </trans-unit>
+      <trans-unit id="738c6545cbe8df017d4940ac4392b82dc2db5cfb" resname="dashboard.date_order">
+        <source>dashboard.date_order</source>
+        <target>Bestellt am</target>
+      </trans-unit>
+      <trans-unit id="d48fffd54354f1d2d341bdc10226b0b28bda58ec" resname="dashboard.date_pay">
+        <source>dashboard.date_pay</source>
+        <target>Bezahlung Datum</target>
+      </trans-unit>
+      <trans-unit id="b0f30cdd773a37b9716ad90275d0d176b8f1b88f" resname="dashboard.document_pending">
+        <source>dashboard.document_pending</source>
+        <target>in Bearbeitung</target>
+        <jms:reference-file line="108">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="75">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="95">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="395fe412a7346e4ca78d1ff56658b50887ae3508" resname="dashboard.order_cost">
+        <source>dashboard.order_cost</source>
+        <target>Preis</target>
+      </trans-unit>
+      <trans-unit id="5105df59bccb0727773fd6c47fc0acbf379c4416" resname="dashboard.order_delete">
+        <source>dashboard.order_delete</source>
+        <target>Bestellung löschen</target>
+        <jms:reference-file line="69">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e03c9fef5a9695c6c87f636f426895ea057c7088" resname="dashboard.order_duplicate">
+        <source>dashboard.order_duplicate</source>
+        <target>Bestellung duplizieren</target>
+        <jms:reference-file line="82">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="19942bbb243baaad821ea93790c4f94e6c74649a" resname="dashboard.order_new">
+        <source>dashboard.order_new</source>
+        <target>neue Bestellung</target>
+        <jms:reference-file line="180">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="240">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6916f684448782d92a5eebf46b51696575cfa9c0" resname="dashboard.order_number">
+        <source>dashboard.order_number</source>
+        <target>Bestell-Nr</target>
+      </trans-unit>
+      <trans-unit id="fde336ba0451b89bb6a285baf577f01d2be94946" resname="dashboard.order_status">
+        <source>dashboard.order_status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="e4e1df68142a3b2a9bd3627ce6f36b3784d5d93e" resname="dashboard.order_view">
+        <source>dashboard.order_view</source>
+        <target>Bestellung anschauen</target>
+        <jms:reference-file line="88">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a899efc18ce2da28e7002dac34b1a9690d8d48aa" resname="dashboard.orders_closed">
+        <source>dashboard.orders_closed</source>
+        <target>geschlossene Bestellungen</target>
+        <jms:reference-file line="80">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="86">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="154">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="162">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="82">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="90">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bfaebd59b64654f0c5ece7201f3487872cb711dc" resname="dashboard.orders_closed_mobile">
+        <source>dashboard.orders_closed_mobile</source>
+        <target>geschlossen</target>
+        <jms:reference-file line="132">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="138">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="214">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="222">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="134">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="142">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1b73ed516e9612f9273c4334e3735e6d638ee34b" resname="dashboard.orders_open">
+        <source>dashboard.orders_open</source>
+        <target>offene bestellungen</target>
+        <jms:reference-file line="67">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="73">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="137">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="145">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="65">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="73">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5da5b912f83720c09643dc9cd58beedfe4c2bd02" resname="dashboard.orders_open_mobile">
+        <source>dashboard.orders_open_mobile</source>
+        <target>offen</target>
+        <jms:reference-file line="119">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="125">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="197">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="205">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="117">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="125">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2f9f2abcb572b249d917cef493fa2dfd5b3ddb1a" resname="dashboard.orders_search">
+        <source>dashboard.orders_search</source>
+        <target>suche</target>
+        <jms:reference-file line="92">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="169">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="97">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="438a35a2b281d3166c8df4488ae742e2418beccf" resname="dashboard.plan_preview">
+        <source>dashboard.plan_preview</source>
+        <target>plan vorschau</target>
+        <jms:reference-file line="104">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="154">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c10e5b028cdec72b4b3d750f55fe2092a691f8b6" resname="dashboard.product_name">
+        <source>dashboard.product_name</source>
+        <target>Produkt2</target>
+      </trans-unit>
+      <trans-unit id="b0a9d1ec2c5d6244005ab8588f4919d318ed6445" resname="dass vor der endgültigen Freischaltung Ihres Kontos">
+        <source>dass vor der endgültigen Freischaltung Ihres Kontos</source>
+        <target state="new">dass vor der endgültigen Freischaltung Ihres Kontos</target>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b189dfc6a260a9c6106c559aba772790d9872f48" resname="erhalten Sie nochmals eine Email und Freischaltung Ihres Kontos und können Ihre Bestellungen tätigen">
+        <source>erhalten Sie nochmals eine Email und Freischaltung Ihres Kontos und können Ihre Bestellungen tätigen</source>
+        <target state="new">erhalten Sie nochmals eine Email und Freischaltung Ihres Kontos und können Ihre Bestellungen tätigen</target>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="55">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1388ed24b682f8d7500fbec20ac5824f26cc834f" resname="form.current_password">
+        <source>form.current_password</source>
+        <target>Current password</target>
+      </trans-unit>
+      <trans-unit id="7e6b12a7deb5f7315f025b8c49121130cd7798ad" resname="form.email">
+        <source>form.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="09f2c646a76d41b0af987f6fcf2407e95e6d65e4" resname="form.group_name">
+        <source>form.group_name</source>
+        <target>Group name</target>
+      </trans-unit>
+      <trans-unit id="210f8b7cbd19367b2ca1332f3cd00b7a06f7e0a0" resname="form.new_password">
+        <source>form.new_password</source>
+        <target>New password</target>
+      </trans-unit>
+      <trans-unit id="9c550aa2c68f9be72e8c34c90d6c359178ab9a25" resname="form.new_password_confirmation">
+        <source>form.new_password_confirmation</source>
+        <target>Repeat new password</target>
+      </trans-unit>
+      <trans-unit id="6d384fb8ef3ca9318f0f9d983868842a211770f8" resname="form.password">
+        <source>form.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="30de94712c8550862006ed6a664870c398c9482d" resname="form.password_confirmation">
+        <source>form.password_confirmation</source>
+        <target>Repeat password</target>
+      </trans-unit>
+      <trans-unit id="dff086700fdd62e031af5de308be31fcada4d7c7" resname="form.username">
+        <source>form.username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="4e0b1d3f135337a4f6615d13711fed97e3d92080" resname="group.edit.submit">
+        <source>group.edit.submit</source>
+        <target>Update group</target>
+      </trans-unit>
+      <trans-unit id="6328fbc0d29c53b1b6f7847fd2b9d5d8f273e7c8" resname="group.flash.created">
+        <source>group.flash.created</source>
+        <target>The group has been created.</target>
+      </trans-unit>
+      <trans-unit id="7309eadba21f923125caa6a810c61f5549ebfb79" resname="group.flash.deleted">
+        <source>group.flash.deleted</source>
+        <target>The group has been deleted.</target>
+      </trans-unit>
+      <trans-unit id="2c64bc0f147b8af193de5c584e0a538bc2d06b7f" resname="group.flash.updated">
+        <source>group.flash.updated</source>
+        <target>The group has been updated.</target>
+      </trans-unit>
+      <trans-unit id="2d2e27384f5da5d1cf49104ef74d80de2d989e3c" resname="group.new.submit">
+        <source>group.new.submit</source>
+        <target>Create group</target>
+      </trans-unit>
+      <trans-unit id="aff7ccb3f34b577634ce0be987c2b84674fb1085" resname="group.show.name">
+        <source>group.show.name</source>
+        <target>Group name</target>
+      </trans-unit>
+      <trans-unit id="9b4b3ff88940b9cb4a0a2f3f803990c15d7892f3" resname="layout.logged_in_address">
+        <source>layout.logged_in_address</source>
+        <target>Lieferadresse</target>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3ed6a1235bf3e6337f499ec08dd3a1d6768b0c57" resname="layout.logged_in_as">
+        <source>layout.logged_in_as</source>
+        <target>Angemeldet als %username%</target>
+      </trans-unit>
+      <trans-unit id="f421c04eecec211b38dc0dfdb0c23cf3a89aebb0" resname="layout.logged_in_solo">
+        <source>layout.logged_in_solo</source>
+        <target>Angemeldet als</target>
+        <jms:reference-file line="120">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="153">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="360d5f783c46f5e90f1b24010cb6bf03626ec35b" resname="layout.login">
+        <source>layout.login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="80a0b95340202d0b8c88ba8bd10b315ecdd1feba" resname="layout.logout">
+        <source>layout.logout</source>
+        <target>Abmelden</target>
+        <jms:reference-file line="134">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="171">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4c9ff1aeeca94547d4ddc976d841143fc0a13aa7" resname="layout.register">
+        <source>layout.register</source>
+        <target>Registrieren Sie sich</target>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9efe886dd997c6df3cbabd2d0446c7601cfc628a" resname="layout.username_solo">
+        <source>layout.username_solo</source>
+        <target>%username%</target>
+        <jms:reference-file line="122">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="151">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9741ffbcf8dbb31e1a2d32bd25cb0ccc5a6dea54" resname="profile.edit.submit">
+        <source>profile.edit.submit</source>
+        <target>Update</target>
+      </trans-unit>
+      <trans-unit id="a067e7e04712aa036ad446379831d4a5fd00c27d" resname="profile.flash.updated">
+        <source>profile.flash.updated</source>
+        <target>The profile has been updated.</target>
+      </trans-unit>
+      <trans-unit id="6f2b87ab0da336a9cb633f397ff7f86ab7ea522b" resname="profile.show.email">
+        <source>profile.show.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="0d6307def2ec4ecb26978118bb2deca9d566945c" resname="profile.show.username">
+        <source>profile.show.username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="1fa5b2873fe30be026b854f6a51503b86c6ac81a" resname="registration.back">
+        <source>registration.back</source>
+        <target>Back to the originating page.</target>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\confirmed.html.twig</jms:reference-file>
+        <jms:reference-file line="7">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\confirmed.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="85a4eff0132a6f92eae3057837f285b3aedf38b8" resname="registration.check_email">
+        <source>registration.check_email</source>
+        <target xml:space="preserve">An email has been sent to %email%. It contains an activation link you must click to activate your account.
+</target>
+        <jms:reference-file line="7">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\check_email.html.twig</jms:reference-file>
+        <jms:reference-file line="7">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\check_email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a0a8fbc70fe82997f8a2ff89090f523ee63f72a" resname="registration.confirmed">
+        <source>registration.confirmed</source>
+        <target>Congrats %username%, your account is now activated. Please wait for the Admin to verify all your data. We will get in touch with you by email when successful.</target>
+        <jms:reference-file line="6">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\confirmed.html.twig</jms:reference-file>
+        <jms:reference-file line="6">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\confirmed.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6362bc7b7a8f72b782ffd590744ab069327bbe4a" resname="registration.email.message">
+        <source>registration.email.message</source>
+        <target xml:space="preserve">Guten Tag %username%!
+
+vielen Dank für die Registrierung auf radiopharma24.de!
+Um Ihren Anmeldungsprozess abzuschließen, klicken Sie bitte auf den folgenden Link: %confirmationUrl%
+
+Dieser Link kann nur einmalig benutzt werden, um Ihr Konto zu validieren.
+
+Bitte beachten Sie, dass vor der endgültigen Freischaltung Ihres Kontos,
+Ihre Daten (insbesondere Ihr UG-Dokument) von uns geprüft werden. Sind alle Daten in Ordnung,
+erhalten Sie nochmals eine Email und Freischaltung Ihres Kontos und können Ihre Bestellungen tätigen.
+
+Im Falle von Fragen melden Sie sich bitte per Email unter support@radiopharma24.de.
+
+Mit freundlichen Grüßen
+Radiopharma24.de
+</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\email.txt.twig</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.txt.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="10df4e23ec43b671aafea0a3a9ebc8dcc92b1bd0" resname="registration.email.subject">
+        <source>registration.email.subject</source>
+        <target>Welcome %username%!</target>
+        <jms:reference-file line="4">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\email.txt.twig</jms:reference-file>
+        <jms:reference-file line="5">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="4">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.txt.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="49aab1b844c4ff643f7d76ea29c1a74d603adf05" resname="registration.flash.user_created">
+        <source>registration.flash.user_created</source>
+        <target>The user has been created successfully.</target>
+      </trans-unit>
+      <trans-unit id="4ef79d57e94b4b74349d6533a231e09dc5be0ce2" resname="registration.submit">
+        <source>registration.submit</source>
+        <target>Register</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\register_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="40c1a483571045e24d606bf00361cfd4d021ba05" resname="resetting.check_email">
+        <source>resetting.check_email</source>
+        <target xml:space="preserve">An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don't get an email check your spam folder or try again.
+</target>
+      </trans-unit>
+      <trans-unit id="70c8836a0e3b8dadb494b8de56ebed18939359b5" resname="resetting.email.message">
+        <source>resetting.email.message</source>
+        <target xml:space="preserve">Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+</target>
+      </trans-unit>
+      <trans-unit id="126cf13058808d8948cc673c7933c6c1ce27841d" resname="resetting.email.subject">
+        <source>resetting.email.subject</source>
+        <target>Reset Password</target>
+      </trans-unit>
+      <trans-unit id="023f97331ab0db9cae04d202498b337a0d0a1f25" resname="resetting.flash.success">
+        <source>resetting.flash.success</source>
+        <target>The password has been reset successfully.</target>
+      </trans-unit>
+      <trans-unit id="e1470b3c202d9a4fa8e1afa7ed8695917f060ccd" resname="resetting.request.submit">
+        <source>resetting.request.submit</source>
+        <target>Reset password</target>
+      </trans-unit>
+      <trans-unit id="7ad41bf8fb30013eb0f31ca027ca8d1dc7a3d96f" resname="resetting.request.username">
+        <source>resetting.request.username</source>
+        <target>Username or email address</target>
+      </trans-unit>
+      <trans-unit id="921fd7a5cc7f9e46eab31822855a22d9808b0477" resname="resetting.reset.submit">
+        <source>resetting.reset.submit</source>
+        <target>Change password</target>
+      </trans-unit>
+      <trans-unit id="62d5564c383b885ff0de25abd24a41080499970b" resname="security.login.password">
+        <source>security.login.password</source>
+        <target>Password</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d074ed9a0eb75b7f17ef2274c21d4c3d12d91634" resname="security.login.remember_me">
+        <source>security.login.remember_me</source>
+        <target>Remember me</target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\default\login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="79c180ac5e987e195d1dfeda857a114ed692d07f" resname="security.login.submit">
+        <source>security.login.submit</source>
+        <target>Log in</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\default\login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="64e1b2aaf6156a7e34a13fbc38801e89478efff8" resname="security.login.username">
+        <source>security.login.username</source>
+        <target>Username</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Security\login_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3bf293287a3c5978159af096e811c85dc1591d23" resname="um Ihr Konto zu validieren">
+        <source>um Ihr Konto zu validieren</source>
+        <target state="new">um Ihr Konto zu validieren</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7efaa6d55872fa074930b40a5dacf745f5dd470b" resname="vielen Dank für die Registrierung auf radiopharma24.de">
+        <source>vielen Dank für die Registrierung auf radiopharma24.de</source>
+        <target state="new">vielen Dank für die Registrierung auf radiopharma24.de</target>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app\Resources\views\FOSUserBundle\views\Registration\email.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

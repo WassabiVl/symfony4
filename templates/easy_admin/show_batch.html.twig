@@ -1,0 +1,4 @@
+{% if item.relatedBatch is not null %}
+    <a href="{{ path('easyadmin', {entity: "Batch", action: 'show', id: item.relatedBatch.id })}}">{% trans %}Batch{% endtrans %} #{{ item.relatedBatch.id }}</a> &nbsp;
+{% endif %}
+

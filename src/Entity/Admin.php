@@ -6,11 +6,10 @@
  * Time: 10:50
  */
 
-namespace app\Entity;
+namespace App\Entity;
 
 
-
-use AppBundle\Entity\Interfaces\UserInterface;
+use App\Entity\Interfaces\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 

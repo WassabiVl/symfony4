@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2018-06-28T12:55:20Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="7ddc904ac110c87fa60c4b4da9ce4ae731c662e5" resname=" Add New Address">
+        <source> Add New Address</source>
+        <target state="new"> Add New Address</target>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1c0d9cb5c95beaf7c3c5cf2e05090f68328c8dd6" resname=" Address Was not found, Contact System Admin">
+        <source> Address Was not found, Contact System Admin</source>
+        <target state="new"> Address Was not found, Contact System Admin</target>
+        <jms:reference-file line="198">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e1d6c3dae69d7ffb6a78820f47053735521e9154" resname=" Batch Lock Time">
+        <source> Batch Lock Time</source>
+        <target state="new"> Batch Lock Time</target>
+        <jms:reference-file line="3">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\producer\show_batch_lock_time.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="60c6ab0899a9cc49017baad4aa795837f544bd6e" resname=" Bulk Discount">
+        <source> Bulk Discount</source>
+        <target state="new"> Bulk Discount</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d383c9f853230179d055e259d4354aa1a70bc53" resname=" First Name">
+        <source> First Name</source>
+        <target state="new"> First Name</target>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ce796ade7679dd7a3c10bb2e386abcdc04982955" resname=" No Document ">
+        <source> No Document </source>
+        <target state="new"> No Document </target>
+        <jms:reference-file line="4">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\contract.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d0d7934bc75f07b61f512fce523a24a8b362d318" resname=" Non qui et officia ipsam">
+        <source> Non qui et officia ipsam</source>
+        <target state="new"> Non qui et officia ipsam</target>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b0302c3bb1ed41c150487faa1050ff467f28de7c" resname=" Street">
+        <source> Street</source>
+        <target state="new"> Street</target>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="90be8191bdaf7155dd2170ce3c05d09e35205991" resname=" Thanks and Regards">
+        <source> Thanks and Regards</source>
+        <target state="new"> Thanks and Regards</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="462fef284ea236fcd354dba5541fd1e9657d5be9" resname=" Thanks and Regards ">
+        <source> Thanks and Regards </source>
+        <target state="new"> Thanks and Regards </target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_rejected.html.twig</jms:reference-file>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff814f5a8b5ed396a978a22d9d8d51813af86353" resname=" View ADRDocument">
+        <source> View ADRDocument</source>
+        <target state="new"> View ADRDocument</target>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="714261ba0baf04b4e9c2319f2fb64ae844642594" resname=" Your UG is not valid yet, please wait for administrator to actiative it">
+        <source> Your UG is not valid yet, please wait for administrator to actiative it</source>
+        <target state="new"> Your UG is not valid yet, please wait for administrator to actiative it</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ed0341a0dbef1ef79ed1f78a7041d29b13676888" resname=" does not have a valid admin">
+        <source> does not have a valid admin</source>
+        <target state="new"> does not have a valid admin</target>
+        <jms:reference-file line="245">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="19ddd70275d5d1d94e9d2ebd513dfe6a13857027" resname=" does not have a valid email">
+        <source> does not have a valid email</source>
+        <target state="new"> does not have a valid email</target>
+        <jms:reference-file line="241">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e6e9ace1049e0290ad2b3b4079127fc8ba4db7cb" resname=" problem to the settings controller">
+        <source> problem to the settings controller</source>
+        <target state="new"> problem to the settings controller</target>
+        <jms:reference-file line="87">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SettingsController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="494b411c0b9cfcd7b75f107dca295dc102185ed1" resname="'Are You Sure'">
+        <source>'Are You Sure'</source>
+        <target state="new">'Are You Sure'</target>
+        <jms:reference-file line="69">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="14e6eb9dffc0f1801fe839e5b0eb45be1c483708" resname="'Are You Sure?'">
+        <source>'Are You Sure?'</source>
+        <target state="new">'Are You Sure?'</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\show_address.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e04673da9253203a902d5dd9557bd4ce55c8afb7" resname="'are you sure?'">
+        <source>'are you sure?'</source>
+        <target state="new">'are you sure?'</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\show_address.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="014614755523f70830d24e4c8dbf2a916e43343b" resname="(in 3 einfachen Schritten)">
+        <source>(in 3 einfachen Schritten)</source>
+        <target state="new">(in 3 einfachen Schritten)</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8a12a315082a345f1a9d3ad14b214cd36d310cf8" resname="10000">
+        <source>10000</source>
+        <target state="new">10000</target>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fb46f8e5019ea01b1c23838fc12704cae467c1a1" resname="12000">
+        <source>12000</source>
+        <target state="new">12000</target>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="50">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="89cd3ecf12a4501b28310c62d12540908ef029b6" resname="14000">
+        <source>14000</source>
+        <target state="new">14000</target>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="51">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c2b08a8ef93dcdfe7b39269073895f615d405a9" resname="16000">
+        <source>16000</source>
+        <target state="new">16000</target>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="52">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a4ac914c09d7c097fe1f4f96b897e625b6922069" resname="2000">
+        <source>2000</source>
+        <target state="new">2000</target>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e0b2d81c80b94799aeef126f990f48cdb5505bbc" resname="4000">
+        <source>4000</source>
+        <target state="new">4000</target>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="31d9ddeaa80bc88c1f3117b9724726ebcc7fc72d" resname="6000">
+        <source>6000</source>
+        <target state="new">6000</target>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2de49ac0fce223dbdd31d2b8b3b3710582ef1535" resname="8000">
+        <source>8000</source>
+        <target state="new">8000</target>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="515563b2dbfc97ca3f4d8be1d32b33b959443e98" resname="ADR Document">
+        <source>ADR Document</source>
+        <target state="new">ADR Document</target>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\OrderedProductCategoryEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5850dc9aef33c808d433da48ef49b0a43b5fc0f7" resname="AGB">
+        <source>AGB</source>
+        <target state="new">AGB</target>
+        <jms:reference-file line="235">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9af67eacdf9c3aad7a789f2b9804921fddbda0f9" resname="ALLE ANSEHEN">
+        <source>ALLE ANSEHEN</source>
+        <target state="new">ALLE ANSEHEN</target>
+        <jms:reference-file line="111">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="78">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="749505b2d3730c00c1b5fd65eb281b481a9f47a8" resname="Accept Changes">
+        <source>Accept Changes</source>
+        <target state="new">Accept Changes</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0eeba23f7fb3651f89e2b2eb8f93cc16b679eb56" resname="Accept Orders">
+        <source>Accept Orders</source>
+        <target state="new">Accept Orders</target>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="92357972357f0a6277f695c7f4eaceb791e2223e" resname="Access denied trying to use settings controller of user: ">
+        <source>Access denied trying to use settings controller of user: </source>
+        <target state="new">Access denied trying to use settings controller of user: </target>
+        <jms:reference-file line="87">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SettingsController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="beb2603ec5813d0afa34e99887915785469c07ff" resname="Account id is missing!">
+        <source>Account id is missing!</source>
+        <target state="new">Account id is missing!</target>
+        <jms:reference-file line="86">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f8c5221a01d127102402803071fe4d21bc1b2ea0" resname="Account not found!">
+        <source>Account not found!</source>
+        <target state="new">Account not found!</target>
+        <jms:reference-file line="92">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5eac88cd5d6870c3252156424d21d4ac85d9b148" resname="Accusantium eos voluptates ut voluptate quaerat">
+        <source>Accusantium eos voluptates ut voluptate quaerat</source>
+        <target state="new">Accusantium eos voluptates ut voluptate quaerat</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c3cd636a585b20c40ac2df5ffb403e83cb2eef51" resname="Actions">
+        <source>Actions</source>
+        <target state="new">Actions</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="95">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3e89e386c610bfbafa103bae3f1374c22628c7ac" resname="Add New Address">
+        <source>Add New Address</source>
+        <target state="new">Add New Address</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\show_address.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f29b5a26fb903918863e82efc30e0d39f9b3ff23" resname="Add New Product">
+        <source>Add New Product</source>
+        <target state="new">Add New Product</target>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5676164c5df080183d0cbecf0622bdf9a072e961" resname="Add New Sell Sizes">
+        <source>Add New Sell Sizes</source>
+        <target state="new">Add New Sell Sizes</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product_sell_sizes_category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d70f93df5e8f9b55be44fbeee9d203972e3383d4" resname="Address">
+        <source>Address</source>
+        <target state="new">Address</target>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCarrierForm.php</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedProducerForm.php</jms:reference-file>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f5f5f6555507842276784fe650289e2a7c38219e" resname="Address Successfully saved!">
+        <source>Address Successfully saved!</source>
+        <target state="new">Address Successfully saved!</target>
+        <jms:reference-file line="124">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+        <jms:reference-file line="221">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="303d981333083bd89973e1b5f61e66b36d9d7f42" resname="Address:">
+        <source>Address:</source>
+        <target state="new">Address:</target>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4bbc7035596da448eabef1928e85d026e4a9135e" resname="Admin ">
+        <source>Admin </source>
+        <target state="new">Admin </target>
+        <jms:reference-file line="241">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b38957589af9203e6bb2ac24f0bb7e9aa7e09ea9" resname="Alternative Email">
+        <source>Alternative Email</source>
+        <target state="new">Alternative Email</target>
+        <jms:reference-file line="53">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c37a809205766ce4cf46fa0aed7f709d1055711c" resname="Ammount Delivered">
+        <source>Ammount Delivered</source>
+        <target state="new">Ammount Delivered</target>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0dd55f0b76ac4bf943f6a286fb44bdb3b3ea611f" resname="Ammount Requested">
+        <source>Ammount Requested</source>
+        <target state="new">Ammount Requested</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="43dc8532f7e57be250d7397de3d14085d51516f0" resname="Amount">
+        <source>Amount</source>
+        <target state="new">Amount</target>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\ProductSellSizeEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product_sell_sizes_category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2024c70422dc4907d01e6db481f54b1c0759d542" resname="Amount Delivered">
+        <source>Amount Delivered</source>
+        <target state="new">Amount Delivered</target>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0b9fcd72814732dd11fc36b9300b944c53cc2744" resname="Amount Ordered">
+        <source>Amount Ordered</source>
+        <target state="new">Amount Ordered</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="39cbeac0054a4c51944d16a3395767dd84a6f140" resname="Amount Requested">
+        <source>Amount Requested</source>
+        <target state="new">Amount Requested</target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8692186f3c650107c3a673cd924f3e0fa2110c9e" resname="Amount Used">
+        <source>Amount Used</source>
+        <target state="new">Amount Used</target>
+        <jms:reference-file line="29">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d8c1b8662b920139416d5beb9aea70e899ad1e46" resname="Amount ordered">
+        <source>Amount ordered</source>
+        <target state="new">Amount ordered</target>
+        <jms:reference-file line="94">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="902ff74c2c3d57a8b876d97c94df33d63402409c" resname="Amount to be Produced">
+        <source>Amount to be Produced</source>
+        <target state="new">Amount to be Produced</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="52">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b871ca092e8192a1dd3fcb94cb88aab8750ed263" resname="Amount to be picked Up">
+        <source>Amount to be picked Up</source>
+        <target state="new">Amount to be picked Up</target>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+        <jms:reference-file line="29">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bdfbde913f3f4d62cfec411e5ac287f20fb26594" resname="Andere">
+        <source>Andere</source>
+        <target state="new">Andere</target>
+        <jms:reference-file line="104">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a70c11b71fe62b9e944b5c0302edb02c2ab8ff1a" resname="At:">
+        <source>At:</source>
+        <target state="new">At:</target>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5850dc36393f61169d37d776bd343fbc3919fed6" resname="BERECHNUNG GESAMTMENGE">
+        <source>BERECHNUNG GESAMTMENGE</source>
+        <target state="new">BERECHNUNG GESAMTMENGE</target>
+        <jms:reference-file line="128">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9a1868c2c90a2929871b369e4a0874fea0d2b27e" resname="Badge Produktion Kapazität">
+        <source>Badge Produktion Kapazität</source>
+        <target state="new">Badge Produktion Kapazität</target>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8bf1ef5668b1aa8218115f5e8e419a984186f72c" resname="Batch">
+        <source>Batch</source>
+        <target state="new">Batch</target>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+        <jms:reference-file line="2">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\show_batch.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dbafd1d899cdd7034bcec48453dadf2048e79ada" resname="Batch Amount">
+        <source>Batch Amount</source>
+        <target state="new">Batch Amount</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="00519e80b4a8ecdefa678e91db42d3bff849d583" resname="Batch Cost">
+        <source>Batch Cost</source>
+        <target state="new">Batch Cost</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6baf18b8a200df71ddfdde95dccf03c8b62540c6" resname="Batch Lock Time">
+        <source>Batch Lock Time</source>
+        <target state="new">Batch Lock Time</target>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchLockTimeFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fb03bd45f6ebe98b1fc08af765bd56eb5d9c5047" resname="Bestell-Nr">
+        <source>Bestell-Nr</source>
+        <target state="new">Bestell-Nr</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c769d1cce46cf4a61f7034bd4ba70ba3935ac55" resname="Bestellt am">
+        <source>Bestellt am</source>
+        <target state="new">Bestellt am</target>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="578fb53938cc0b6a1e144d07c42af00bfbba5780" resname="Bezahlung Datum">
+        <source>Bezahlung Datum</source>
+        <target state="new">Bezahlung Datum</target>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2457d6d8ce84017ae01d290e9935dbcd6127aad" resname="Bill address">
+        <source>Bill address</source>
+        <target state="new">Bill address</target>
+        <jms:reference-file line="116">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="48af96f6cac7fcb4eafc045991b5289aeee6e35f" resname="Billing Address">
+        <source>Billing Address</source>
+        <target state="new">Billing Address</target>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\Address\CustomerBillAddressFormType.php</jms:reference-file>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7f3f6883d8777f9fd584e9322471f14a9fe52ee1" resname="Billing address">
+        <source>Billing address</source>
+        <target state="new">Billing address</target>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\CustomerEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="eda0d0de5583298dadc2c8fc574669e9bb2c4b79" resname="Bitte bestätigen Sie Ihre Bestellung">
+        <source>Bitte bestätigen Sie Ihre Bestellung</source>
+        <target state="new">Bitte bestätigen Sie Ihre Bestellung</target>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e48100c1cd9044bbf4d9d0535f234704f0228b7f" resname="Building/Street Number">
+        <source>Building/Street Number</source>
+        <target state="new">Building/Street Number</target>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="52">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="60">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b7f86b4e7e64a7b446401c6fb9d9d499d4ccbe16" resname="Bulk Discount">
+        <source>Bulk Discount</source>
+        <target state="new">Bulk Discount</target>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="257d4c5a3f637e1a35bfc26330dd3ebee92f5dd0" resname="Buy Price">
+        <source>Buy Price</source>
+        <target state="new">Buy Price</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product.html.twig</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="18ba0e810c8a78390678a9f68c1dd574748a4687" resname="Buy Price per 1MBQ">
+        <source>Buy Price per 1MBQ</source>
+        <target state="new">Buy Price per 1MBQ</target>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\BatchEmbedRelatedProductForm.php</jms:reference-file>
+        <jms:reference-file line="37">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\ProductEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77dfd2135f4db726c47299bb55be26f7f4525a46" resname="Cancel">
+        <source>Cancel</source>
+        <target state="new">Cancel</target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\address.html.twig</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\edit_address.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\setting.html.twig</jms:reference-file>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\setting.html.twig</jms:reference-file>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\setting.html.twig</jms:reference-file>
+        <jms:reference-file line="5">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\upload.html.twig</jms:reference-file>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="45bd908df490edd79694ba0daff82fc092970b55" resname="Capacity">
+        <source>Capacity</source>
+        <target state="new">Capacity</target>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f48f7456fbd3c1e08d1a4a5c8a8b345c1f709f36" resname="Carrier ">
+        <source>Carrier </source>
+        <target state="new">Carrier </target>
+        <jms:reference-file line="245">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="64ecc5835096e6a3a4d94b9701b5cd178014c220" resname="Carrier Rejected Orders">
+        <source>Carrier Rejected Orders</source>
+        <target state="new">Carrier Rejected Orders</target>
+        <jms:reference-file line="216">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="688af67b937b4bf2a8086e21e9a02ae35ac96884" resname="Carrier Specific Details">
+        <source>Carrier Specific Details</source>
+        <target state="new">Carrier Specific Details</target>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_producer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="64fbd995d3b6b156ee26ae3c03e6516434c34c12" resname="Change">
+        <source>Change</source>
+        <target state="new">Change</target>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="035f80dd36f5ee6a50e5db0002a4492bb089f24d" resname="Checkout for any URL&#10;            misspelling or  ">
+        <source xml:space="preserve">Checkout for any URL
+            misspelling or  </source>
+        <target xml:space="preserve" state="new">Checkout for any URL
+            misspelling or  </target>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1fb9c5b9505ace9ca649b3be1449d6376d7a1b0d" resname="Checkout for any URL&#10;        misspelling or ">
+        <source xml:space="preserve">Checkout for any URL
+        misspelling or </source>
+        <target xml:space="preserve" state="new">Checkout for any URL
+        misspelling or </target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error403.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4271627f4f0bef6104a95cca7bb21cda4d74503e" resname="City">
+        <source>City</source>
+        <target state="new">City</target>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="58">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="68">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="153d7a58b3a3e898fcbdd04c462af308414bd09d" resname="Comment">
+        <source>Comment</source>
+        <target state="new">Comment</target>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderFormType.php</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8c2f1cd4211e2e82cf1de61790498b4b015e6841" resname="Commodi est quos dicta necessitatibus">
+        <source>Commodi est quos dicta necessitatibus</source>
+        <target state="new">Commodi est quos dicta necessitatibus</target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a1994999d181deea68e4304b3346e78f838ecb7" resname="Company">
+        <source>Company</source>
+        <target state="new">Company</target>
+        <jms:reference-file line="60">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="37">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8599f5cc48ffccc0b7947fbf1ced5ef035111c37" resname="Company Name">
+        <source>Company Name</source>
+        <target state="new">Company Name</target>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="51">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1e5f7dc45cec3cd7bc991d3b958e0053fc564b67" resname="Company name">
+        <source>Company name</source>
+        <target state="new">Company name</target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="64ae43e8fe76204a5a93092218b9a5a0baed8136" resname="Cost">
+        <source>Cost</source>
+        <target state="new">Cost</target>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="29">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8bd654dbf3c14594f92cdef8294abd4cc525e3f2" resname="Cost per Kilometer">
+        <source>Cost per Kilometer</source>
+        <target state="new">Cost per Kilometer</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\CarrierEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d523ebbd10146cdfd39dee077f04c9d08468d0bc" resname="Country">
+        <source>Country</source>
+        <target state="new">Country</target>
+        <jms:reference-file line="64">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ee08f04bd55ee478c61f7b96636457484bc59684" resname="Create base Schedule">
+        <source>Create base Schedule</source>
+        <target state="new">Create base Schedule</target>
+        <jms:reference-file line="84">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff935902e4e31c757d13cc9a76d4aa379f91a97d" resname="Customer Address">
+        <source>Customer Address</source>
+        <target state="new">Customer Address</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+        <jms:reference-file line="92">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="75636316f9d7169a2f03180ff5001081d3373f28" resname="Customer Name">
+        <source>Customer Name</source>
+        <target state="new">Customer Name</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+        <jms:reference-file line="91">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f0c8a9094f2cb821a86de796ab7049fd3553fdbc" resname="Customer Number">
+        <source>Customer Number</source>
+        <target state="new">Customer Number</target>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\CustomerFormType.php</jms:reference-file>
+        <jms:reference-file line="55">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b2fcbbffaafecf4079e373d7833d2100ff1835f3" resname="Customer Orders">
+        <source>Customer Orders</source>
+        <target state="new">Customer Orders</target>
+        <jms:reference-file line="84">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1a589a023df781b560d47e050b729b230d5e7cb3" resname="Customer Specific Details">
+        <source>Customer Specific Details</source>
+        <target state="new">Customer Specific Details</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b05a381dc7217f15f518c7468f1c5cbd53e4e4f4" resname="Daily End Time">
+        <source>Daily End Time</source>
+        <target state="new">Daily End Time</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f0991316d31cab05d385d7ec2f32b449bc39fc37" resname="Daily Start Time">
+        <source>Daily Start Time</source>
+        <target state="new">Daily Start Time</target>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d87f47b47e4d5794d53fe0734c49417bd046cde0" resname="Dashboard">
+        <source>Dashboard</source>
+        <target state="new">Dashboard</target>
+        <jms:reference-file line="125">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="159">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="161">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c67e6644c7aba7bd031fbeb2c856298d95b9a5e4" resname="Date of order">
+        <source>Date of order</source>
+        <target state="new">Date of order</target>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17b77228533f4fcead8d800afdf04be79e83b8da" resname="Datenschutz-Bestimmungen">
+        <source>Datenschutz-Bestimmungen</source>
+        <target state="new">Datenschutz-Bestimmungen</target>
+        <jms:reference-file line="236">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c27b0cf1dfbc5fcdb818daf08c6c17cea98cc6bd" resname="Days Left">
+        <source>Days Left</source>
+        <target state="new">Days Left</target>
+        <jms:reference-file line="63">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ae4bb8312dc2a1c2f479577598df1e581313d46" resname="Dear ">
+        <source>Dear </source>
+        <target state="new">Dear </target>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0ddaf30f54b1d01ac38b8cafdb20237a6094f346" resname="Debit Number">
+        <source>Debit Number</source>
+        <target state="new">Debit Number</target>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\CustomerFormType.php</jms:reference-file>
+        <jms:reference-file line="56">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b1d088bc1723ddceec25285066bd488b8adab18" resname="Delivered Amount">
+        <source>Delivered Amount</source>
+        <target state="new">Delivered Amount</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\OrderedProductCategoryEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1f63936b6c4cd6daac3f49f931bccdbe8736648b" resname="Delivery Address">
+        <source>Delivery Address</source>
+        <target state="new">Delivery Address</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7e867c723952a250b3d1f1c56679d33d0da9ebfa" resname="Delivery Date">
+        <source>Delivery Date</source>
+        <target state="new">Delivery Date</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ccf52b059a0016aaa23d86b45cc3c6d15ba61693" resname="Delivery Time">
+        <source>Delivery Time</source>
+        <target state="new">Delivery Time</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+        <jms:reference-file line="93">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f42e10f85a622ee89b894828cadf78a03d24e96f" resname="Delivery Time:">
+        <source>Delivery Time:</source>
+        <target state="new">Delivery Time:</target>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b524936d7aa1316e00d3354c9a8664d00e4bce5a" resname="Discount">
+        <source>Discount</source>
+        <target state="new">Discount</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a2123c2792a45a8780dc547bbe707342ba97c034" resname="Discount ">
+        <source>Discount </source>
+        <target state="new">Discount </target>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c937455e8da81f2827c22803fa41c813b18542c" resname="Discount Amount">
+        <source>Discount Amount</source>
+        <target state="new">Discount Amount</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="18a3e1f117865d754a3f6b707cc0f8a5caa297ea" resname="Discount Group">
+        <source>Discount Group</source>
+        <target state="new">Discount Group</target>
+        <jms:reference-file line="63">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="080c00eedcad00ea6d01603268b079af4bdca8d1" resname="Discount In Percent">
+        <source>Discount In Percent</source>
+        <target state="new">Discount In Percent</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product_sell_sizes_category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a10418397197f27852e985c9443a13bd976fc3b8" resname="Discount In Percentage">
+        <source>Discount In Percentage</source>
+        <target state="new">Discount In Percentage</target>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\ProductSellSizeEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="687c82861c956e47456186f6522cfc8dbadb8ef6" resname="Documents">
+        <source>Documents</source>
+        <target state="new">Documents</target>
+        <jms:reference-file line="106">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="94">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a14d72215757c5d2800980de1ba9e982774ef808" resname="Dolor ratione sit fugit culpa quo aspernatur est laboriosam">
+        <source>Dolor ratione sit fugit culpa quo aspernatur est laboriosam</source>
+        <target state="new">Dolor ratione sit fugit culpa quo aspernatur est laboriosam</target>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff9676a83617541f2300cf610c4548793ed77c23" resname="Dr.">
+        <source>Dr.</source>
+        <target state="new">Dr.</target>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4c640e925e8b555834bc10bdde32c28f98b75ded" resname="End Time">
+        <source>End Time</source>
+        <target state="new">End Time</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\BatchEmbedRelatedLockTimesForm.php</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\producer\show_batch_lock_time.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e728c9c485ea6e05d9c5cbfd6338c7977fe26373" resname="EndTime">
+        <source>EndTime</source>
+        <target state="new">EndTime</target>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2a2a2452c861be437b787ac23bae330de27aa694" resname="Fax Number">
+        <source>Fax Number</source>
+        <target state="new">Fax Number</target>
+        <jms:reference-file line="55">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="53">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b7c17e97d3d625694b836d85ace6edc18bbef0e6" resname="Female">
+        <source>Female</source>
+        <target state="new">Female</target>
+        <jms:reference-file line="59">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b6ea992aab4668311bb94778e056dd0285f27621" resname="First Name">
+        <source>First Name</source>
+        <target state="new">First Name</target>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7e568a90221d853052b3466e581eb5f7c030b901" resname="First name">
+        <source>First name</source>
+        <target state="new">First name</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ab98f5b85764b8561cacbb055a963cd334928cba" resname="Fixed">
+        <source>Fixed</source>
+        <target state="new">Fixed</target>
+        <jms:reference-file line="95">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e54e90a2252636db9fbbd113588ed40b42a0eb83" resname="Fixed or Rejected">
+        <source>Fixed or Rejected</source>
+        <target state="new">Fixed or Rejected</target>
+        <jms:reference-file line="54">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4527bdbe5c4bdfba3aa451e7161c6dc72386fef6" resname="Frau">
+        <source>Frau</source>
+        <target state="new">Frau</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8a754c61c2ced0c5ff79a1827e02c9d643d6d926" resname="Gender">
+        <source>Gender</source>
+        <target state="new">Gender</target>
+        <jms:reference-file line="56">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9c49da513456a383331924de4e10bcef4a8ae23c" resname="Granted discount">
+        <source>Granted discount</source>
+        <target state="new">Granted discount</target>
+        <jms:reference-file line="92">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ceac2062d93548697589c241cd2a10f502a1b241" resname="Greetings">
+        <source>Greetings</source>
+        <target state="new">Greetings</target>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1491c465d9dc68cc7e2a5a17d985a2903afb4248" resname="HINZÜFUGEN">
+        <source>HINZÜFUGEN</source>
+        <target state="new">HINZÜFUGEN</target>
+        <jms:reference-file line="125">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6ea2b8ba88e15bfb7c6324368635118adb7b790a" resname="Half-life">
+        <source>Half-life</source>
+        <target state="new">Half-life</target>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\BatchEmbedRelatedProductForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2991aa526555521dd6e6f20f0792a3934c00547a" resname="Head First Name">
+        <source>Head First Name</source>
+        <target state="new">Head First Name</target>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="03527b55cb81589849223ba1daa51ec0fe179b01" resname="Head Last Name">
+        <source>Head Last Name</source>
+        <target state="new">Head Last Name</target>
+        <jms:reference-file line="50">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2bbbf64bdd491d89ea91c76112236f5c5b94814c" resname="Head Title">
+        <source>Head Title</source>
+        <target state="new">Head Title</target>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0" resname="Hello">
+        <source>Hello</source>
+        <target state="new">Hello</target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_rejected.html.twig</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="2">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\_Mail\registeredByAdmin.html.twig</jms:reference-file>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="6">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9646ba13a4e8eabeca4f5259bfd7da41d368a1a6" resname="Hello ">
+        <source>Hello </source>
+        <target state="new">Hello </target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1db77fd65e0a7aa1389c5e4f6632739932d873c4" resname="Herr">
+        <source>Herr</source>
+        <target state="new">Herr</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7bfd5bbb1f7b5d2ba7692228d6c1da49220d7e33" resname="Heute 05.06.2018">
+        <source>Heute 05.06.2018</source>
+        <target state="new">Heute 05.06.2018</target>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="997a67c92ffe0bd8341fcbf08113154a3715fce7" resname="HomePage">
+        <source>HomePage</source>
+        <target state="new">HomePage</target>
+        <jms:reference-file line="186">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="474ae52625b87d7628ae7b20a499329a99e07119" resname="Id">
+        <source>Id</source>
+        <target state="new">Id</target>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product.html.twig</jms:reference-file>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product_sell_sizes_category.html.twig</jms:reference-file>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\producer\show_batch_lock_time.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5c3175413bb7ea1b85e79d9cdf0ad47cd6c5f85c" resname="Impressum">
+        <source>Impressum</source>
+        <target state="new">Impressum</target>
+        <jms:reference-file line="234">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="875a8f4d2dcf3ea58f9412e9e527611e37bdd49e" resname="Incl. VAT 19%">
+        <source>Incl. VAT 19%</source>
+        <target state="new">Incl. VAT 19%</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="429f9450eaee6957c9b1461227b45d94079f2cac" resname="Institution">
+        <source>Institution</source>
+        <target state="new">Institution</target>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\CustomerFormType.php</jms:reference-file>
+        <jms:reference-file line="54">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4d5eecc5ed2a605ad07b7a12b92dd2be8902a2f3" resname="Is UG Valid?">
+        <source>Is UG Valid?</source>
+        <target state="new">Is UG Valid?</target>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\CustomerEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a938a9c36ff52959aa7409ab0c850d94cc085141" resname="Is Ug Valid">
+        <source>Is Ug Valid</source>
+        <target state="new">Is Ug Valid</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="952637df7e491aff75efdc47cc2576fbce775702" resname="Is Ug Valid?">
+        <source>Is Ug Valid?</source>
+        <target state="new">Is Ug Valid?</target>
+        <jms:reference-file line="67">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ddc42aa8231ee4a24f1605f1dad106650c56774c" resname="Iure aspernatur itaque molestias eum">
+        <source>Iure aspernatur itaque molestias eum</source>
+        <target state="new">Iure aspernatur itaque molestias eum</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fbe7352f62dafd4dbdb12d35a237cc665d9a9455" resname="KAPAZITÄTEN RECHNER">
+        <source>KAPAZITÄTEN RECHNER</source>
+        <target state="new">KAPAZITÄTEN RECHNER</target>
+        <jms:reference-file line="50">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a92b9bcb166569797fbf3ac4689fcf144151b1e6" resname="Kontakt">
+        <source>Kontakt</source>
+        <target state="new">Kontakt</target>
+        <jms:reference-file line="238">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b2e25510d48c42d07b69450fbd8c25e7efb2ba7" resname="Kontaktdaten hinterlegen">
+        <source>Kontaktdaten hinterlegen</source>
+        <target state="new">Kontaktdaten hinterlegen</target>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="863cb39fbe7d70597076af1960b7ae4618d9e1bc" resname="Last Name">
+        <source>Last Name</source>
+        <target state="new">Last Name</target>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="51">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="50">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="52">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="adec36a821f81a6990b1e65d9e4ac5fb8ee2a205" resname="Last name">
+        <source>Last name</source>
+        <target state="new">Last name</target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f89e04985359fd822b20c70f4bc27c032499f54b" resname="Legal Disclaimer">
+        <source>Legal Disclaimer</source>
+        <target state="new">Legal Disclaimer</target>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="62d9eba87a43f9a20ced8e6127a122be0bed64dd" resname="Letzte 30 Tage">
+        <source>Letzte 30 Tage</source>
+        <target state="new">Letzte 30 Tage</target>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="aac5f6ef7e25dd3e98dddf2a530e2d071c86e09b" resname="Lieferaddresse">
+        <source>Lieferaddresse</source>
+        <target state="new">Lieferaddresse</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c4ad6d0258d4841fa9e17369e9fdbb05369fd26" resname="Lieferadresse angeben">
+        <source>Lieferadresse angeben</source>
+        <target state="new">Lieferadresse angeben</target>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="56d7b1469cd0d06754202252645b0e18a037206c" resname="Lieferung am">
+        <source>Lieferung am</source>
+        <target state="new">Lieferung am</target>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5fb695eddd4be44beea50c6040a3af107690d68e" resname="MBq zu bestellen">
+        <source>MBq zu bestellen</source>
+        <target state="new">MBq zu bestellen</target>
+        <jms:reference-file line="130">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3f3a489c72dea800ea7b6338c89938766d41a6e5" resname="Male">
+        <source>Male</source>
+        <target state="new">Male</target>
+        <jms:reference-file line="58">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="61f8f277a889e1ed5a3ba263dfebde3c93bba1d4" resname="Mbq by the Admin">
+        <source>Mbq by the Admin</source>
+        <target state="new">Mbq by the Admin</target>
+        <jms:reference-file line="434">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17dc9a83744348b236bfe6e6683d12f00e3fd7e7" resname="Meeting">
+        <source>Meeting</source>
+        <target state="new">Meeting</target>
+        <jms:reference-file line="103">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a7cdda91da0962013d3fca27bee04ca1a022a0c7" resname="Mein Konto">
+        <source>Mein Konto</source>
+        <target state="new">Mein Konto</target>
+        <jms:reference-file line="128">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="165">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="10237ca9bac173f5094b47db1eae26e95ee7df54" resname="NEUE HINZUFÜGEN">
+        <source>NEUE HINZUFÜGEN</source>
+        <target state="new">NEUE HINZUFÜGEN</target>
+        <jms:reference-file line="110">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="77">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="709a23220f2c3d64d1e1d6d18c4d5280f8d82fca" resname="Name">
+        <source>Name</source>
+        <target state="new">Name</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="386deef338c2c1bba95733d96a9b09b81fd314e0" resname="New Amount ordered">
+        <source>New Amount ordered</source>
+        <target state="new">New Amount ordered</target>
+        <jms:reference-file line="51">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="816c52fd2bdd94a63cd0944823a6c0aa9384c103" resname="No">
+        <source>No</source>
+        <target state="new">No</target>
+        <jms:reference-file line="70">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17734346ac92f3a0ede0d54baec1309cd98433c1" resname="No ADR">
+        <source>No ADR</source>
+        <target state="new">No ADR</target>
+        <jms:reference-file line="29">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6aa466a0618093720eb7267031bfa2f6c846a4f2" resname="No Discount">
+        <source>No Discount</source>
+        <target state="new">No Discount</target>
+        <jms:reference-file line="61">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e248ded4213bb2339dc25f79b6b35cf3e396a745" resname="No Document">
+        <source>No Document</source>
+        <target state="new">No Document</target>
+        <jms:reference-file line="4">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\contract.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3170d0b0efa5f130a8ff08ab43dc3000235d9c76" resname="No Document Found">
+        <source>No Document Found</source>
+        <target state="new">No Document Found</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\form\fields.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bfd71bd00a369a1c7c7f3f94004dccd00aea0791" resname="No Orders Found">
+        <source>No Orders Found</source>
+        <target state="new">No Orders Found</target>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+        <jms:reference-file line="118">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b7baa1d40c4ea29afc9098732bffee2a861a6c44" resname="Number">
+        <source>Number</source>
+        <target state="new">Number</target>
+        <jms:reference-file line="90">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="87e9fc08ead4a5f96f38304ff1272c15632f14dd" resname="Old Orders">
+        <source>Old Orders</source>
+        <target state="new">Old Orders</target>
+        <jms:reference-file line="7">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d75774c0f96b6ee44eb6643c9fea71b50b90ea8" resname="Order">
+        <source>Order</source>
+        <target state="new">Order</target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f1e486fe3fac8e05c51ed2d51633df9407c6c777" resname="Order #">
+        <source>Order #</source>
+        <target state="new">Order #</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="66c9b1b844b739cb69b7db746dedbd420550fc1d" resname="Order Confirmation">
+        <source>Order Confirmation</source>
+        <target state="new">Order Confirmation</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+        <jms:reference-file line="3">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ee9cd24a69d5e7e6a1be6c0f3c29dc260d6b9fdc" resname="Order Date: ">
+        <source>Order Date: </source>
+        <target state="new">Order Date: </target>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ed27ac5f42febdee249b0b3c8a878e415ef4c026" resname="Order Number">
+        <source>Order Number</source>
+        <target state="new">Order Number</target>
+        <jms:reference-file line="90">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b092cd09087d4b9bba35fe8728d6ad4234b5499a" resname="Order Rejected">
+        <source>Order Rejected</source>
+        <target state="new">Order Rejected</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="74b120ba1cca58f971a34fbc274d336b51a6b414" resname="Ordered Amount">
+        <source>Ordered Amount</source>
+        <target state="new">Ordered Amount</target>
+        <jms:reference-file line="37">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\OrderedProductCategoryEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6c3096e5c5f26673f408cfa3d90e06a8eabe39d6" resname="Ordered Categories">
+        <source>Ordered Categories</source>
+        <target state="new">Ordered Categories</target>
+        <jms:reference-file line="3">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8ae5783cbb727a09c2e4a6e47922d97d13f2d920" resname="Ordered Product Category">
+        <source>Ordered Product Category</source>
+        <target state="new">Ordered Product Category</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3190f9578128e30f335eb12532af5ab104160b1f" resname="Orders for Tomorrow">
+        <source>Orders for Tomorrow</source>
+        <target state="new">Orders for Tomorrow</target>
+        <jms:reference-file line="505">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8d33ceff60c1bfc179055f2ea918291194a84068" resname="Orders for Tomorrow - Carrier">
+        <source>Orders for Tomorrow - Carrier</source>
+        <target state="new">Orders for Tomorrow - Carrier</target>
+        <jms:reference-file line="298">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="64d803a4d433fa08ab3d38498cfa253efa5c28a9" resname="Orders for Tomorrow - Customer">
+        <source>Orders for Tomorrow - Customer</source>
+        <target state="new">Orders for Tomorrow - Customer</target>
+        <jms:reference-file line="435">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="979d3abaae338f7e2e13f84d71f0257ccb0fdd97" resname="Orders for Tomorrow - Producer">
+        <source>Orders for Tomorrow - Producer</source>
+        <target state="new">Orders for Tomorrow - Producer</target>
+        <jms:reference-file line="297">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4125de07ef2d6a0aac02dc69d34a2cdb5d32303f" resname="Orders for tomorrow">
+        <source>Orders for tomorrow</source>
+        <target state="new">Orders for tomorrow</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fbbd1de0e5f8b8f5d02279a26fd88e186e6e59e1" resname="Original Amount ordered">
+        <source>Original Amount ordered</source>
+        <target state="new">Original Amount ordered</target>
+        <jms:reference-file line="50">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ccfd2a81fe6a773abd5fe592d5017b7ba282bc49" resname="Page Error">
+        <source>Page Error</source>
+        <target state="new">Page Error</target>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bc3023b36063a7681db24681472b54fa11f0d4ec" resname="Page not found">
+        <source>Page not found</source>
+        <target state="new">Page not found</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error404.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a5e40523e943819db31e6964b27183649e2c1642" resname="Pariatur et animi nihil ut sit">
+        <source>Pariatur et animi nihil ut sit</source>
+        <target state="new">Pariatur et animi nihil ut sit</target>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc577f211bd35093e4895b463caa53436fff1c96" resname="Passwort ändern">
+        <source>Passwort ändern</source>
+        <target state="new">Passwort ändern</target>
+        <jms:reference-file line="131">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+        <jms:reference-file line="168">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="de5c57ff725757b013abaab6f5f91498c1649dae" resname="Patient">
+        <source>Patient</source>
+        <target state="new">Patient</target>
+        <jms:reference-file line="55">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d13edaed3f3d23a8a7678ca2f62be0ecd7b0bbbd" resname="Patienten">
+        <source>Patienten</source>
+        <target state="new">Patienten</target>
+        <jms:reference-file line="56">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="57">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="58">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="59">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="60">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="61">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="62">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="63">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="64">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="65">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="66">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="67">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="68">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="69">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="70">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="71">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="72">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="73">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+        <jms:reference-file line="74">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="15908df4f454161942de7783cde4d05514300e56" resname="Patienten Anzahl">
+        <source>Patienten Anzahl</source>
+        <target state="new">Patienten Anzahl</target>
+        <jms:reference-file line="52">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="781961bc81c25697841ecce5d4d9dad9f6b261c6" resname="Pause">
+        <source>Pause</source>
+        <target state="new">Pause</target>
+        <jms:reference-file line="102">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="022927423a372b13825813587cd80c24e53417d6" resname="Pay Date">
+        <source>Pay Date</source>
+        <target state="new">Pay Date</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="40eed6e855d762705aed7aa0d597dd246a02a79d" resname="Percentage used">
+        <source>Percentage used</source>
+        <target state="new">Percentage used</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ab25d61bb12492027e2633997eea946c0f65a6b7" resname="Phone Number">
+        <source>Phone Number</source>
+        <target state="new">Phone Number</target>
+        <jms:reference-file line="54">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="52">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="12ebf8ed133b46e35c45232a2d966770d0d8adcf" resname="PickUp Address">
+        <source>PickUp Address</source>
+        <target state="new">PickUp Address</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="721ec62e7f40358c53f5e3fd1d72dc235ab22995" resname="Placeat corrupti quaerat rerum architecto">
+        <source>Placeat corrupti quaerat rerum architecto</source>
+        <target state="new">Placeat corrupti quaerat rerum architecto</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0272929ed368f07f8c7488ff10c3a4e417755663" resname="Preis">
+        <source>Preis</source>
+        <target state="new">Preis</target>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4fdcb5f79843223061279dc459cf7dcdc74e37bc" resname="Preview order">
+        <source>Preview order</source>
+        <target state="new">Preview order</target>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="be7611bd73f2d6df19598cb23943cb8c878ee8ff" resname="Price per unit">
+        <source>Price per unit</source>
+        <target state="new">Price per unit</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7b7194967fd8d62aaf2d5f4d2364b080ecfdb949" resname="Producer">
+        <source>Producer</source>
+        <target state="new">Producer</target>
+        <jms:reference-file line="198">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="29711c7e05dfa3cc70d0c5a5c7319af42d609b70" resname="Producer Name">
+        <source>Producer Name</source>
+        <target state="new">Producer Name</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="321e57dca935e702eb95b8cda445fc60d8563228" resname="Producer id is missing!">
+        <source>Producer id is missing!</source>
+        <target state="new">Producer id is missing!</target>
+        <jms:reference-file line="57">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="48ccf96190581891c0bf740d9f9ccc4ad7b4ea24" resname="Producer not found!">
+        <source>Producer not found!</source>
+        <target state="new">Producer not found!</target>
+        <jms:reference-file line="63">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dd3b86d1ef21b9fb2e1edc30f524e7afb491b1ad" resname="Product">
+        <source>Product</source>
+        <target state="new">Product</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\OrderedProductCategoryEmbedOrderForm.php</jms:reference-file>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductFormType.php</jms:reference-file>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\carrier_dashboard_map.html.twig</jms:reference-file>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="46cca2659e546b7cbf487c3b005c07b7e7edd959" resname="Product Category">
+        <source>Product Category</source>
+        <target state="new">Product Category</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\OrderedProductCategoryEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="06bc65133fcfe7fbcf0493fe485515b54a6167a5" resname="Product Name">
+        <source>Product Name</source>
+        <target state="new">Product Name</target>
+        <jms:reference-file line="29">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="21">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+        <jms:reference-file line="16">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2fd1079daeda1d9f2a6a2c0201a8c279f5869c60" resname="Produktion Statistiken">
+        <source>Produktion Statistiken</source>
+        <target state="new">Produktion Statistiken</target>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="24fe0c5e80ca7ade037a06bed72202de036de69c" resname="Prof.">
+        <source>Prof.</source>
+        <target state="new">Prof.</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="42">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="39">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3da11f2392e22222446a764d686afbbbc8ec1c21" resname="Prof. Dr.">
+        <source>Prof. Dr.</source>
+        <target state="new">Prof. Dr.</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="37">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8544a47725836a32489c872c7b638f65c149b720" resname="Profit">
+        <source>Profit</source>
+        <target state="new">Profit</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6eba519a1a1e88abd4420be5e8059390ddfa6b94" resname="Quia sed consequatur dolorem eos">
+        <source>Quia sed consequatur dolorem eos</source>
+        <target state="new">Quia sed consequatur dolorem eos</target>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f82e8317dbbf9846487246b626a21c6d78b07a33" resname="Quibusdam dolores sit doloremque">
+        <source>Quibusdam dolores sit doloremque</source>
+        <target state="new">Quibusdam dolores sit doloremque</target>
+        <jms:reference-file line="20">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cfc7dec215d0b80caed3c61b33bf90a1ef9a6b85" resname="Recent orders">
+        <source>Recent orders</source>
+        <target state="new">Recent orders</target>
+        <jms:reference-file line="85">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dc921fdd9117cb166259de46899637c250cc84f4" resname="Rechnungsaddresse">
+        <source>Rechnungsaddresse</source>
+        <target state="new">Rechnungsaddresse</target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a9e948303a434a63b6bc2275ec414ed2ed82455f" resname="Rechnungsadresse">
+        <source>Rechnungsadresse</source>
+        <target state="new">Rechnungsadresse</target>
+        <jms:reference-file line="99">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="76bf4df38275513dc29a1e6551c7ae98f922a0a6" resname="Registrieren Sie sich">
+        <source>Registrieren Sie sich</source>
+        <target state="new">Registrieren Sie sich</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6f61d16b9340d349a4686ed572925bd5595161ff" resname="Related Batch">
+        <source>Related Batch</source>
+        <target state="new">Related Batch</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\ProductEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a0da14377cefc7c2a3d7eecd73178424e1329e1d" resname="Related Bulk Discount">
+        <source>Related Bulk Discount</source>
+        <target state="new">Related Bulk Discount</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\OrderedProductCategoryEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff69446b3917788a8f1313c3d4b5b42f4534feef" resname="Related Buy Price">
+        <source>Related Buy Price</source>
+        <target state="new">Related Buy Price</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\OrderedProductCategoryEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c35531d6d3f146ee8237be67975b759953ff2596" resname="Related Carrier Cost">
+        <source>Related Carrier Cost</source>
+        <target state="new">Related Carrier Cost</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\CarrierEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a48e7ffab91d38b95f8aabfaf2acdd8e6b072bc" resname="Related Product">
+        <source>Related Product</source>
+        <target state="new">Related Product</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\BatchEmbedFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c65ae7762850a3531a4c3622eed91aefc3bb15a2" resname="Related discount group">
+        <source>Related discount group</source>
+        <target state="new">Related discount group</target>
+        <jms:reference-file line="65">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8bcfcea846188e7622ebc67b8e42f0c7d3f565a8" resname="Related producers">
+        <source>Related producers</source>
+        <target state="new">Related producers</target>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f52d94411d296ba2299ae86a340eba28103a4263" resname="Resetting">
+        <source>Resetting</source>
+        <target state="new">Resetting</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e0c758a131bd7287170e24faf4ac5029d7df2a9c" resname="Resetting your password">
+        <source>Resetting your password</source>
+        <target state="new">Resetting your password</target>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="3">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c05fabc0e5af9bedb7a2f806bac720b1f326a95d" resname="SPEICHERN">
+        <source>SPEICHERN</source>
+        <target state="new">SPEICHERN</target>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\edit_address.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f018ea62812ab68b3b42ad14ec834dbfb669cfe6" resname="Saepe explicabo quod vitae ut">
+        <source>Saepe explicabo quod vitae ut</source>
+        <target state="new">Saepe explicabo quod vitae ut</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9a4c30839c22fcfbb9dbf304b628ad017ed0385b" resname="Sale Profit">
+        <source>Sale Profit</source>
+        <target state="new">Sale Profit</target>
+        <jms:reference-file line="53">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4a0052e7b75406303a9e85e80bea64864769078b" resname="Sell Sizes">
+        <source>Sell Sizes</source>
+        <target state="new">Sell Sizes</target>
+        <jms:reference-file line="3">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product_sell_sizes_category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dbd7c38dd022f2cf7d3f118a0051c1bd680da4ec" resname="Shipping Address">
+        <source>Shipping Address</source>
+        <target state="new">Shipping Address</target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b3854a10e8fddfb669c0cb89be859f7b250810e5" resname="Shipping address">
+        <source>Shipping address</source>
+        <target state="new">Shipping address</target>
+        <jms:reference-file line="47">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\Address\CustomerShipAddressFormType.php</jms:reference-file>
+        <jms:reference-file line="113">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="094da9b95fdcee3dafde31b838dc0798f0eaa523" resname="Slug">
+        <source>Slug</source>
+        <target state="new">Slug</target>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="488304431334585eab8cb0027125076a04f5b71b" resname="Sondertermin">
+        <source>Sondertermin</source>
+        <target state="new">Sondertermin</target>
+        <jms:reference-file line="122">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="679f33daf0e5003727d708297492abafbba76a39" resname="Specific product name">
+        <source>Specific product name</source>
+        <target state="new">Specific product name</target>
+        <jms:reference-file line="32">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\BatchEmbedRelatedProductForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9098f2f5042558b8dae2b912820a0a166ef6cf01" resname="Standard Rechnungsadresse">
+        <source>Standard Rechnungsadresse</source>
+        <target state="new">Standard Rechnungsadresse</target>
+        <jms:reference-file line="102">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="41c1074ddb72ef2d03a6706ccec180ec410aee4a" resname="Start Time">
+        <source>Start Time</source>
+        <target state="new">Start Time</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\BatchEmbedRelatedLockTimesForm.php</jms:reference-file>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\producer\show_batch_lock_time.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8b19f84098767ca9c68285f81a77d6c5cd992ab0" resname="State/Province">
+        <source>State/Province</source>
+        <target state="new">State/Province</target>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="61">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="71">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bae7d5be70820ed56467bd9a63744e23b47bd711" resname="Status">
+        <source>Status</source>
+        <target state="new">Status</target>
+        <jms:reference-file line="91">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b454109993438542163d132d897313eee1b480fa" resname="Street">
+        <source>Street</source>
+        <target state="new">Street</target>
+        <jms:reference-file line="48">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="56">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dacf65959849884a011f36f76a04eebea94c5ea" resname="Submit">
+        <source>Submit</source>
+        <target state="new">Submit</target>
+        <jms:reference-file line="55">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductCategoryFormType.php</jms:reference-file>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c70dba42f70d72b1e5ecfd100f2600a9ed6642d2" resname="Submit Changes">
+        <source>Submit Changes</source>
+        <target state="new">Submit Changes</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\address.html.twig</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\setting.html.twig</jms:reference-file>
+        <jms:reference-file line="3">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\upload.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b49ec7c727ca71eacdd2dabc8aa4d804b28792f3" resname="System error Unauthorized Access">
+        <source>System error Unauthorized Access</source>
+        <target state="new">System error Unauthorized Access</target>
+        <jms:reference-file line="318">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+        <jms:reference-file line="56">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\DocumentController.php</jms:reference-file>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error403.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2940db3cffb3dcb65af16c476363ba6eda76f1de" resname="TOTAL + VAT">
+        <source>TOTAL + VAT</source>
+        <target state="new">TOTAL + VAT</target>
+        <jms:reference-file line="38">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="998304f137facc5acd8ab0e156838fcddd075e3d" resname="TOTAL NET COST">
+        <source>TOTAL NET COST</source>
+        <target state="new">TOTAL NET COST</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="23">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d0da55a6783f05b20f22a24e2c126d291601664e" resname="TOTAL incl. VAT">
+        <source>TOTAL incl. VAT</source>
+        <target state="new">TOTAL incl. VAT</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="befd12a53600bdc2f85c4aeb1b3073cf27e95afd" resname="Target Date">
+        <source>Target Date</source>
+        <target state="new">Target Date</target>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c71358fa6e07f81f8b83401a9ecdeee05fb02141" resname="Target Time">
+        <source>Target Time</source>
+        <target state="new">Target Time</target>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4e54ddb65eefc59a6cc4226e1315c2e1e2e4070b" resname="Target time">
+        <source>Target time</source>
+        <target state="new">Target time</target>
+        <jms:reference-file line="93">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0716220ed809fe07a98c32ddcd38e8a51b32488d" resname="The Address You are trying to delete is Your PickUp Address">
+        <source>The Address You are trying to delete is Your PickUp Address</source>
+        <target state="new">The Address You are trying to delete is Your PickUp Address</target>
+        <jms:reference-file line="270">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="efd03a92f139a7432271fad8cf52b9d40a0c73cd" resname="The Address You are trying to delete is Your Primary Address">
+        <source>The Address You are trying to delete is Your Primary Address</source>
+        <target state="new">The Address You are trying to delete is Your Primary Address</target>
+        <jms:reference-file line="289">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a3ac380102a12539082ddc4d843b9cc711a5be6a" resname="The Address You are trying to delete is either your Shipping Address or Billing Address">
+        <source>The Address You are trying to delete is either your Shipping Address or Billing Address</source>
+        <target state="new">The Address You are trying to delete is either your Shipping Address or Billing Address</target>
+        <jms:reference-file line="250">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="daaacc8549f205a5543eadae2c50c5f84a92ec8e" resname="The requested page couldn't be located">
+        <source>The requested page couldn't be located</source>
+        <target state="new">The requested page couldn't be located</target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error403.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e56730146abb6ae2fadf90379dbaae938f54d1f8" resname="The requested page couldn't be located. Checkout for any URL&#10;                    misspelling or">
+        <source xml:space="preserve">The requested page couldn't be located. Checkout for any URL
+                    misspelling or</source>
+        <target xml:space="preserve" state="new">The requested page couldn't be located. Checkout for any URL
+                    misspelling or</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error404.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6d5988d6f9390038e7c4a4e37d55d5823612e352" resname="The requested page couldn't be located. Checkout for any URL&#10;        misspelling or ">
+        <source xml:space="preserve">The requested page couldn't be located. Checkout for any URL
+        misspelling or </source>
+        <target xml:space="preserve" state="new">The requested page couldn't be located. Checkout for any URL
+        misspelling or </target>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b948fe79571d32b4771697a9da595dfeb8ad8834" resname="This Email Confirms that your order">
+        <source>This Email Confirms that your order</source>
+        <target state="new">This Email Confirms that your order</target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="686eda101bdfb2df7b945b973015d6d71732cf95" resname="This carrier has related producer, first remove the relations!">
+        <source>This carrier has related producer, first remove the relations!</source>
+        <target state="new">This carrier has related producer, first remove the relations!</target>
+        <jms:reference-file line="214">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="45a4421b29506171d65c84e668496e538c9e813f" resname="This is The List of Orders For tomorrow for ">
+        <source>This is The List of Orders For tomorrow for </source>
+        <target state="new">This is The List of Orders For tomorrow for </target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9c4d304996de85374178ae39fb06eee32711088a" resname="This is The List of Orders For tomorrow from">
+        <source>This is The List of Orders For tomorrow from</source>
+        <target state="new">This is The List of Orders For tomorrow from</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f666674b688db389c4521b34ccf5d982ab697041" resname="This is The List of Orders For tomorrow rejected by">
+        <source>This is The List of Orders For tomorrow rejected by</source>
+        <target state="new">This is The List of Orders For tomorrow rejected by</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e24473929be00ca37bd014573a8f540533b393b7" resname="This is a confirmation email for the following Items you have ordered recently">
+        <source>This is a confirmation email for the following Items you have ordered recently</source>
+        <target state="new">This is a confirmation email for the following Items you have ordered recently</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d0de47d793b5423716de60c80b99ff902a9513b6" resname="This is the Formal Order Confirmation for the order #">
+        <source>This is the Formal Order Confirmation for the order #</source>
+        <target state="new">This is the Formal Order Confirmation for the order #</target>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a3878ded00a83f9fca305760a43ad6f7b312f65f" resname="This is the Formal Order Confirmation for the order # ">
+        <source>This is the Formal Order Confirmation for the order # </source>
+        <target state="new">This is the Formal Order Confirmation for the order # </target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1c8203948cd6f10045065493bc78d5f4629ad62f" resname="This producer has related batches, first remove the relations!">
+        <source>This producer has related batches, first remove the relations!</source>
+        <target state="new">This producer has related batches, first remove the relations!</target>
+        <jms:reference-file line="200">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="21a534da2f994079373aa597190bcb893bd8b3d0" resname="Tier Discount">
+        <source>Tier Discount</source>
+        <target state="new">Tier Discount</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="948c4addabdfc04211c6c8e60b90d5852460df64" resname="Tier Pricing Discount ">
+        <source>Tier Pricing Discount </source>
+        <target state="new">Tier Pricing Discount </target>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dd2c660983753cf7cd7ed0bfc6dd2c1219c9bc2" resname="Tile">
+        <source>Tile</source>
+        <target state="new">Tile</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6c82e6dd86807ee3db07e3c82bec1ae1ce00b08b" resname="Time">
+        <source>Time</source>
+        <target state="new">Time</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="768e0c1c69573fb588f61f1308a015c11468e05f" resname="Title">
+        <source>Title</source>
+        <target state="new">Title</target>
+        <jms:reference-file line="37">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AccountEmbedFormType.php</jms:reference-file>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+        <jms:reference-file line="44">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bcc2ca40f5cbe4888094ca89571cb96151cb56b8" resname="To Pay Date">
+        <source>To Pay Date</source>
+        <target state="new">To Pay Date</target>
+        <jms:reference-file line="57">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8e21754e42984e52ea00c4d4e97e446fee7faec5" resname="To pay date">
+        <source>To pay date</source>
+        <target state="new">To pay date</target>
+        <jms:reference-file line="49">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="45ebd38f4c641ebf6f72be8c3a79dfa50cf9f20e" resname="Total Profit">
+        <source>Total Profit</source>
+        <target state="new">Total Profit</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0bf8460088140dea56858ea99d7d110e603e2b19" resname="Total before VAT">
+        <source>Total before VAT</source>
+        <target state="new">Total before VAT</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3deb7456519697ecf4eefc455516c969a3681bae" resname="Type">
+        <source>Type</source>
+        <target state="new">Type</target>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="71dcbf325e33259c23c10bc5c8d708529ca64e99" resname="UG Document">
+        <source>UG Document</source>
+        <target state="new">UG Document</target>
+        <jms:reference-file line="37">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fe1cf0738260ffad55aad6c5f996eef76f11b783" resname="UG Dokument hochladen">
+        <source>UG Dokument hochladen</source>
+        <target state="new">UG Dokument hochladen</target>
+        <jms:reference-file line="46">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff6fe070baa6fe3724d2978002ba73f6ad49d09e" resname="Unassigned Orders">
+        <source>Unassigned Orders</source>
+        <target state="new">Unassigned Orders</target>
+        <jms:reference-file line="86">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_run.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1eea68d093d1561bcff7669c1eb14fae26249ca4" resname="Unit Price">
+        <source>Unit Price</source>
+        <target state="new">Unit Price</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_confirmation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1e879a942da85a61765864ce87ae231def320c39" resname="Unterlagen">
+        <source>Unterlagen</source>
+        <target state="new">Unterlagen</target>
+        <jms:reference-file line="24">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\customer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5f54ad7bf78bfc644706e5476b2bd927ca5322a9" resname="VAT">
+        <source>VAT</source>
+        <target state="new">VAT</target>
+        <jms:reference-file line="36">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3070532b2dcfb29a2e1898c5296c9d79008110d5" resname="Verbrauchte Kapazität">
+        <source>Verbrauchte Kapazität</source>
+        <target state="new">Verbrauchte Kapazität</target>
+        <jms:reference-file line="41">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1416c80af4ed37e83bfa42fa11db1633bdf119f7" resname="View ADR">
+        <source>View ADR</source>
+        <target state="new">View ADR</target>
+        <jms:reference-file line="27">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Orders\show_related_ordered_categorys.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="10005c03639cae5342285b8571b11bcb0c894566" resname="View Document">
+        <source>View Document</source>
+        <target state="new">View Document</target>
+        <jms:reference-file line="2">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\contract.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fb7b53bc4b42c4cd66f091335dbbcde144d2313f" resname="View Document ">
+        <source>View Document </source>
+        <target state="new">View Document </target>
+        <jms:reference-file line="2">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\contract.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7d22f4ff78b18941530d34799fbbfdf30e8eefc5" resname="View File">
+        <source>View File</source>
+        <target state="new">View File</target>
+        <jms:reference-file line="1">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\show_document.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5bcade0b9706a5b21aaa843a3555cacce30c5838" resname="We are sorry to inform you, but your order">
+        <source>We are sorry to inform you, but your order</source>
+        <target state="new">We are sorry to inform you, but your order</target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_rejected.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="75e522b82055c6d115cae31b2524c7c1082e5c75" resname="Willkommen">
+        <source>Willkommen</source>
+        <target state="new">Willkommen</target>
+        <jms:reference-file line="12">\..\..\..\D:/radiopharma/app\Resources\views\default\index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ac5e766bcdaf22448113472e0f536bc79f2f7c50" resname="Wir empfehlen mindestens ">
+        <source>Wir empfehlen mindestens </source>
+        <target state="new">Wir empfehlen mindestens </target>
+        <jms:reference-file line="130">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5397e0583f14f6c88de06b1ef28f460a1fb5b0ae" resname="Yes">
+        <source>Yes</source>
+        <target state="new">Yes</target>
+        <jms:reference-file line="69">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\EasyAdmin\AccountEmbedCustomerForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="480a1d9094126a215d81bba59bb9bdc334574a26" resname="You can reset your password by accessing">
+        <source>You can reset your password by accessing</source>
+        <target state="new">You can reset your password by accessing</target>
+        <jms:reference-file line="25">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="8">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e711267cb533ace6963b33f0591ba81e935be97b" resname="You have an order for the same day, please change the date">
+        <source>You have an order for the same day, please change the date</source>
+        <target state="new">You have an order for the same day, please change the date</target>
+        <jms:reference-file line="85">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CustomerDashboardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6519fd901b6b8b49ed0c4a284dcc16c0738cb2a4" resname="Your Address List">
+        <source>Your Address List</source>
+        <target state="new">Your Address List</target>
+        <jms:reference-file line="7">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\common_dashboard\show_address.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cc782148073e9fd552001635c6cd20ed2407d20d" resname="Your Address Was not found, Contact System Admin">
+        <source>Your Address Was not found, Contact System Admin</source>
+        <target state="new">Your Address Was not found, Contact System Admin</target>
+        <jms:reference-file line="202">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\CarrierDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d42069f8f27556c5e91aa33a2d78fc0eff4895f3" resname="Your Data">
+        <source>Your Data</source>
+        <target state="new">Your Data</target>
+        <jms:reference-file line="68">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\CarrierFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="eaadadf3aad8093791bc48ded6cb8500cd97ba0c" resname="Your Information">
+        <source>Your Information</source>
+        <target state="new">Your Information</target>
+        <jms:reference-file line="66">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\Address\ProducerAddressFormType.php</jms:reference-file>
+        <jms:reference-file line="80">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\CustomerFormType.php</jms:reference-file>
+        <jms:reference-file line="79">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProducerFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="861b94969d249c0fad546ea982ee74ea46e55191" resname="Your address has been deleted Successfully!">
+        <source>Your address has been deleted Successfully!</source>
+        <target state="new">Your address has been deleted Successfully!</target>
+        <jms:reference-file line="257">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+        <jms:reference-file line="279">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+        <jms:reference-file line="297">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c8eab7487b7a9f30725c5a610bd8f9dc22e4ecb7" resname="Your order has been reduced to:">
+        <source>Your order has been reduced to:</source>
+        <target state="new">Your order has been reduced to:</target>
+        <jms:reference-file line="433">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f00f6ddd9cf414ce586513bcf4eea65b8624fdc6" resname="Your order has been rejected">
+        <source>Your order has been rejected</source>
+        <target state="new">Your order has been rejected</target>
+        <jms:reference-file line="504">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8e815601d074772fd95034a73648957edb0258f9" resname="Your submitted order">
+        <source>Your submitted order</source>
+        <target state="new">Your submitted order</target>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_rejected.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d9d220ab2925c9b97a98a9d9b35059f864dbe73a" resname="ZIP">
+        <source>ZIP</source>
+        <target state="new">ZIP</target>
+        <jms:reference-file line="64">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\NewAddressEmbedForm.php</jms:reference-file>
+        <jms:reference-file line="10">\..\..\..\D:/radiopharma/app\Resources\views\easy_admin\Account\show_addresss.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="35d55624b9812a62c906cad6dd70c1086fc0aff2" resname="Zip Code">
+        <source>Zip Code</source>
+        <target state="new">Zip Code</target>
+        <jms:reference-file line="43">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\AddressFormType.php</jms:reference-file>
+        <jms:reference-file line="55">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\AddressEmbedForm.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="556c5a0ca9f14439f121780ca0922f3767c723d1" resname="__name__label__">
+        <source>__name__label__</source>
+        <target>__name__label__</target>
+      </trans-unit>
+      <trans-unit id="21108d9b943e652dff62993ac11e9dc55040423d" resname="action.cancel">
+        <source>action.cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="0572c6a9b4ceda67128308e1a9a03ea5fb4a8e42" resname="action.delete">
+        <source>action.delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="4c505c1b265748cc62350d50e33784b90532fac6" resname="action.edit">
+        <source>action.edit</source>
+        <target>Edit</target>
+      </trans-unit>
+      <trans-unit id="1248f6e4ac5372f3b01a7afa700a9612e7389e7e" resname="action.list">
+        <source>action.list</source>
+        <target>Back to listing</target>
+      </trans-unit>
+      <trans-unit id="472a205c6d25b0ecf7b754844f7a4ab9243ee635" resname="action.new">
+        <source>action.new</source>
+        <target>Add %entity_name%</target>
+      </trans-unit>
+      <trans-unit id="f19b5156868a2acb77e79c7ea9586c3eda8bd792" resname="action.save">
+        <source>action.save</source>
+        <target>Save changes</target>
+      </trans-unit>
+      <trans-unit id="40f7d7ce547a5ed668d7f4651c481ae6be7fa238" resname="action.search">
+        <source>action.search</source>
+        <target>Search</target>
+      </trans-unit>
+      <trans-unit id="52ab418800404ad62a6e279b54974986eea45639" resname="action.show">
+        <source>action.show</source>
+        <target>Show</target>
+      </trans-unit>
+      <trans-unit id="9cb6ff12fb81d5cd585d45ce555565a410036da6" resname="amount">
+        <source>amount</source>
+        <target state="new">amount</target>
+        <jms:reference-file line="30">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\ProductOrder\OrderedProductFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="27e90dfa57c358acfaf470860f6f72c9282ce995" resname="at">
+        <source>at</source>
+        <target state="new">at</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="93d5cda77b0fcd0a8c22d3746835e9f8c8eddf00" resname="back to Admin Dashboard">
+        <source>back to Admin Dashboard</source>
+        <target state="new">back to Admin Dashboard</target>
+        <jms:reference-file line="202">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a04bbb9ae62aac397d31f08b0e18afbc102d98f0" resname="could not locate address">
+        <source>could not locate address</source>
+        <target state="new">could not locate address</target>
+        <jms:reference-file line="117">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\AddressDashBoardController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7bc555991dbab41aa198fbd77899d49a277d4d6d" resname="fixed">
+        <source>fixed</source>
+        <target state="new">fixed</target>
+        <jms:reference-file line="185">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+        <jms:reference-file line="199">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b02b5038c335950b985f9feef296eee65848b394" resname="gender">
+        <source>gender</source>
+        <target state="new">gender</target>
+        <jms:reference-file line="33">\..\..\..\D:/radiopharma/app/../src\AppBundle\Form\FrontEnd\RegistrationFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bb4484b2441c18e23a12a7f4100be3405a03e86c" resname="has been rejected by admin">
+        <source>has been rejected by admin</source>
+        <target state="new">has been rejected by admin</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_rejected.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="435621d175ff42d00e23774cf4ab7a15a8761091" resname="is set to be delivered tomorrow at">
+        <source>is set to be delivered tomorrow at</source>
+        <target state="new">is set to be delivered tomorrow at</target>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="19">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6b8d7f8c4c852f4d605281471c1bf73a5264de27" resname="label.form.empty_value">
+        <source>label.form.empty_value</source>
+        <target>None</target>
+      </trans-unit>
+      <trans-unit id="41a589a58cf9554db8a781ced50c8f8df691887b" resname="meine Bestellungen">
+        <source>meine Bestellungen</source>
+        <target state="new">meine Bestellungen</target>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product_overview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="71f8e7976e4cbc4561c9d62fb283e7f788202acb" resname="none">
+        <source>none</source>
+        <target state="new">none</target>
+        <jms:reference-file line="184">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+        <jms:reference-file line="198">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="031364be59832dc39b56eeba55e88f2c5e894c21" resname="off amount">
+        <source>off amount</source>
+        <target state="new">off amount</target>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a2e7c905709a5d5720124a45e7dc98005ff41980" resname="producer-statistics-slider">
+        <source>producer-statistics-slider</source>
+        <target state="new">producer-statistics-slider</target>
+        <jms:reference-file line="34">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\producer_dashboard.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="916cd0ea4a1d9f149e17989c95cc6e7ea7cccf87" resname="register.subject">
+        <source>register.subject</source>
+        <target>Registration</target>
+        <jms:reference-file line="73">\..\..\..\D:/radiopharma/app/../src\AppBundle\EventListener\EasyAdminSubscriber.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1f087a5954f6249bb7245576c304a0520d4178c5" resname="rejected">
+        <source>rejected</source>
+        <target state="new">rejected</target>
+        <jms:reference-file line="186">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+        <jms:reference-file line="200">\..\..\..\D:/radiopharma/app/../src\AppBundle\Controller\SuperAdminController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d858d9a496729d1aab181b0d1cd22ff6b3d1d30f" resname="return to the homepage">
+        <source>return to the homepage</source>
+        <target state="new">return to the homepage</target>
+        <jms:reference-file line="13">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error.html.twig</jms:reference-file>
+        <jms:reference-file line="14">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error403.html.twig</jms:reference-file>
+        <jms:reference-file line="15">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error404.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1e89fa31f7d2efa8d977573102c989f208d425db" resname="return to the homepage ">
+        <source>return to the homepage </source>
+        <target state="new">return to the homepage </target>
+        <jms:reference-file line="9">\..\..\..\D:/radiopharma/app\Resources\TwigBundle\views\Exception\error.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="85a9e03cc01573b893b53f5d0c0a56e117d58981" resname="selected&gt;Patient">
+        <source><![CDATA[selected>Patient]]></source>
+        <target state="new"><![CDATA[selected>Patient]]></target>
+        <jms:reference-file line="101">\..\..\..\D:/radiopharma/app\Resources\views\user_dashboard\order_product.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="84e4a6352842706094fd447b6ddcf1e215958450" resname="the Radiopharma24 System">
+        <source>the Radiopharma24 System</source>
+        <target state="new">the Radiopharma24 System</target>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_admin.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="87aefe5a3077a826ad73ce9da215d7e93375f6a5" resname="the Radiopharma24 team">
+        <source>the Radiopharma24 team</source>
+        <target state="new">the Radiopharma24 team</target>
+        <jms:reference-file line="35">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_carrier.html.twig</jms:reference-file>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer.html.twig</jms:reference-file>
+        <jms:reference-file line="22">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_rejected.html.twig</jms:reference-file>
+        <jms:reference-file line="31">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_producer.html.twig</jms:reference-file>
+        <jms:reference-file line="45">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_confirmation_pdf_template_alt.html.twig</jms:reference-file>
+        <jms:reference-file line="40">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+        <jms:reference-file line="11">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="28">\..\..\..\D:/radiopharma/app\Resources\views\email\password_resetting.email.twig</jms:reference-file>
+        <jms:reference-file line="26">\..\..\..\D:/radiopharma/app\Resources\views\email\product_order_confirmation.email.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1fa0e386d532ea80b5e2352dd62cd82469d9f46b" resname="with new amount of">
+        <source>with new amount of</source>
+        <target state="new">with new amount of</target>
+        <jms:reference-file line="17">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\algo_email_customer_alt.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ae994fd075d642b480577b306895c2163cab3f9e" resname="you requested for tomorrow">
+        <source>you requested for tomorrow</source>
+        <target state="new">you requested for tomorrow</target>
+        <jms:reference-file line="18">\..\..\..\D:/radiopharma/app\Resources\views\algorithm\order_conformation_pdf_template.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c8c7b740f1fb79bd947034758b778e7d34637f7" resname="Über uns">
+        <source>Über uns</source>
+        <target state="new">Über uns</target>
+        <jms:reference-file line="237">\..\..\..\D:/radiopharma/app\Resources\views\base.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
