@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-use app\Entity\Category;
+use App\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

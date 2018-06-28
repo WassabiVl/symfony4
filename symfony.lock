@@ -125,6 +125,9 @@
     "jms/metadata": {
         "version": "1.6.0"
     },
+    "jms/translation-bundle": {
+        "version": "1.4.3"
+    },
     "knplabs/knp-components": {
         "version": "1.3.8"
     },
@@ -160,6 +163,9 @@
             "version": "3.2",
             "ref": "5ef2976310e8f9621c1a722a73bfbe115c1559a3"
         }
+    },
+    "nikic/php-parser": {
+        "version": "v4.0.2"
     },
     "nzo/url-encryptor-bundle": {
         "version": "4.2.0"

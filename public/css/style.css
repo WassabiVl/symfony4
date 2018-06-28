@@ -1,0 +1,51 @@
+/*
+
+#141F45
+#1641CE
+#395AC4
+#232B45
+#2A4291
+
+*/
+
+.header{
+    color: #fff;
+    background-color:#232B45;
+
+}
+
+.header a{
+    color: #fff;
+}
+
+.navi{
+    margin:0;
+    font-size:0;
+}
+.navi li{
+    font-size: 16px;
+    list-style-type: none;
+    background-color: #2A4291;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.navi li.active{
+    background-color: #395AC4;
+}
+
+.navi li:hover{
+    background-color: #395AC4;
+}
+.navi li a{
+    padding: 25px;
+    display: block;
+}
+.navi li a:hover{
+    text-decoration: none;
+}
+
+.main-content{
+    width: 1200px;
+    margin:auto;
+}

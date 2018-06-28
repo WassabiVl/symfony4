@@ -1,0 +1,67 @@
+monolog:
+    handlers:
+        main:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+            channels: ["!event"]
+        security:
+                     # log all messages (since debug is the lowest level)
+                     level:    debug
+                     type:     stream
+                     path:     '%kernel.logs_dir%/security.log'
+                     channels: [security]
+        php:
+                     # log all messages (since debug is the lowest level)
+                     level:    debug
+                     type:     stream
+                     path:     '%kernel.logs_dir%/php.log'
+                     channels: [php]
+        doctrine:
+                     # log all messages (since debug is the lowest level)
+                     level:    debug
+                     type:     stream
+                     path:     '%kernel.logs_dir%/doctrine.log'
+                     channels: [doctrine]
+        request:
+                     # log all messages (since debug is the lowest level)
+                     level:    debug
+                     type:     stream
+                     path:     '%kernel.logs_dir%/request.log'
+                     channels: [request]
+        translation:
+                     # log all messages (since debug is the lowest level)
+                     level:    debug
+                     type:     stream
+                     path:     '%kernel.logs_dir%/translation.log'
+                     channels: [translation]
+        app:
+                     # log all messages (since debug is the lowest level)
+                     level:    debug
+                     type:     stream
+                     path:     '%kernel.logs_dir%/app.log'
+                     channels: [app]
+        mail:
+                     type:         fingers_crossed
+                     # 500 errors are logged at the critical level
+                     action_level: error
+                     # to also log 400 level errors (but not 404's):
+                     # action_level: error
+                     # excluded_404s:
+                     #     - ^/
+                     handler:      deduplicated
+        deduplicated:
+                 type:    deduplication
+                 handler: swift
+                 # the time in seconds during which duplicate entries are discarded (default: 60)
+                 time: 10
+        swift:
+               type:       swift_mailer
+               from_email: 'symfony_error@example.com'
+               to_email:   '%mailer_name%'
+               # or list of recipients
+               # to_email:   ['dev1@example.com', 'dev2@example.com', ...]
+               subject:    'An Error Occurred! %%message%%'
+               level:      debug
+               formatter:  monolog.formatter.html
+               content_type: text/html

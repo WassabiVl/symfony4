@@ -1,0 +1,119 @@
+html{
+    font-size: 16px;
+}
+
+.actions .fa{
+    font-size: 2rem;
+}
+
+.account_embed_carrier, .account_embed_producer{
+    display:none;
+}
+
+.field-address_new_form >.control-label,
+.field-batch_embed_related_lock_times_form >.control-label{
+    display:none;
+}
+
+.field-address_new_form, .field-batch_embed_related_lock_times_form{
+    font-size:0;
+}
+
+
+
+.field-address_new_form .form-group,
+.field-batch_embed_related_lock_times_form .form-group{
+    width:50%;
+    padding-right: .25rem;
+    display:inline-block;
+    font-size: 1rem;
+}
+
+.field-collection-item-action{
+    font-size: 1rem;
+    margin-top: -.5rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.field-address_new_form .form-group:nth-child(2n),
+.field-batch_embed_related_lock_times_form, .field-batch_embed_related_lock_times_form:nth-child(2n){
+    padding-left: .25rem;
+    padding-right: 0rem;
+}
+
+.collection-add-new{
+    text-align: center;
+    border: 2px dashed #ccc;
+    padding: 5px;
+    margin-top: 5px;
+    transition: 200ms ease-in-out;
+}
+
+.collection-add-new:hover{
+    background: #ececec;
+    cursor:pointer;
+}
+
+.form-control{
+    padding: 0;
+}
+
+.form-control .context{
+    padding: .5rem;
+    display:flex;
+}
+
+.form-horizontal .form-group{
+    margin-right:0;
+    margin-left:0;
+}
+.form-control .fa{
+    font-size: 1.25rem;
+}
+
+
+.table-ea{
+    border:1px solid #333;
+    border-collapse: collapse;
+}
+.table-ea td,.table-ea th{
+    border:0 !important;
+}
+
+.table-ea thead{
+    background: #333;
+    color: #fff;
+}
+
+
+.table-ea tbody tr{
+    background:#fff;
+}
+.table-ea tbody tr:nth-child(2n){
+    background:#f6f6f6;
+}
+
+input{
+    text-indent: 5px;
+}
+
+.center{
+    text-align: center;
+}
+
+a.full-width{
+    width: 100%;
+    display: block;
+}
+
+a.add-action{
+    padding: .25rem;
+    border: 1px dashed #ccc;
+    border-radius: 20px;
+}
+
+a.add-action:hover{
+    background:#72afd2;
+    color:#fff;
+    border:1px solid #72afd2;
+}

@@ -2,7 +2,7 @@ framework:
     esi:
       enabled: true
     translator:
-        fallbacks: ['%env(locale%)']
+        fallbacks: ['%env(locale)%']
     secret: '%env(APP_SECRET)%'
     default_locale: en
     csrf_protection: true
