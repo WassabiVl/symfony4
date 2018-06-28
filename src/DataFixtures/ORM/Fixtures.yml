@@ -32,7 +32,7 @@ parameters:
 #      - 14000
 #      - 16000
 #############################################################################################
-AppBundle\Entity\Account:
+App\Entity\Account:
     ################################################################
         ### Carrier Accounts                                        ###
         ##############################################################
@@ -847,7 +847,7 @@ AppBundle\Entity\Account:
             relatedAdmin:                 '@admin*'
             isActive:                     1
 #########################################################################################
-AppBundle\Entity\Address:
+App\Entity\Address:
     ###############################################################
     ### Carrier Address                                        ###
     ##############################################################
@@ -1188,7 +1188,7 @@ AppBundle\Entity\Address:
         lastName:                      '<lastName()>'
         title:                        "<randomElement(<{Titles}>)>"
 ##########################################################################################
-AppBundle\Entity\Admin:
+App\Entity\Admin:
    admin1:
        relatedAccount:     '@account16'
        loadedCustomer:     '@customer23'
@@ -1205,7 +1205,7 @@ AppBundle\Entity\Admin:
        relatedAccount:     '@account20'
        loadedCustomer:     '@customer27'
 #########################################################################################
-AppBundle\Entity\Batch:
+App\Entity\Batch:
     batch_11:
         relatedProducer:   '@producer11'
         relatedProduct:    '@product_11'
@@ -1228,7 +1228,7 @@ AppBundle\Entity\Batch:
         batchAmount:       150000
         batchCost:         0.0166
 #########################################################################################
-AppBundle\Entity\BatchLockTime:
+App\Entity\BatchLockTime:
     batchlocktime0:
         startTime:    '<dateTimeThisMonth()>'
         endTime:      '<dateTimeBetween($startTime)>'
@@ -1238,7 +1238,7 @@ AppBundle\Entity\BatchLockTime:
         endTime:      '<dateTimeBetween($startTime)>'
         relatedBatch: '@batch_*'
 #########################################################################################
-AppBundle\Entity\Carrier:
+App\Entity\Carrier:
     carrier_{1..5}:
         costPerKm:      1
         relatedAccount: '@account<current()>'
@@ -1246,7 +1246,7 @@ AppBundle\Entity\Carrier:
 
 #########################################################################################
 # No Longer Needed as it is calculated during the Algorithm Run
-#AppBundle\Entity\CarrierCost:
+#App\Entity\CarrierCost:
 #    carrierCost{1..6}:
 #      cost:             '<randomFloat(2)>'
 #      distance:         '<numberBetween(0,100)>'
@@ -1255,7 +1255,7 @@ AppBundle\Entity\Carrier:
 #      relatedCustomer:  '@customer*'
 #      relatedProducer:  '@producer*'
 #########################################################################################
-AppBundle\Entity\Customer:
+App\Entity\Customer:
     customer23:
         institution:             Zentralklinikum Augsburg
         customerNumber:          '<swiftBicNumber()>'
@@ -1499,7 +1499,7 @@ AppBundle\Entity\Customer:
         shippingAddress:         '@address44'
         billAddress:             '@address44'
 #########################################################################################
-AppBundle\Entity\DiscountGroup:
+App\Entity\DiscountGroup:
     discountGroup{1..9}:
         name:          '<name()>'
         dateTimeStart:  '<dateTimeThisMonth()>'
@@ -1507,7 +1507,7 @@ AppBundle\Entity\DiscountGroup:
         isActive:   '<boolean(80)>'
         discountInPercent: 2
 #########################################################################################
-AppBundle\Entity\Document:
+App\Entity\Document:
     document{50..71}:
         previousVersion:
         docType: UG
@@ -1525,7 +1525,7 @@ AppBundle\Entity\Document:
         docType: Bill
         name: eos
 #########################################################################################
-AppBundle\Entity\Order:
+App\Entity\Order:
     order_{23..44}:
         flag:                    '<text()>'
         comment:                 '<realText(100, 2)>'
@@ -1541,7 +1541,7 @@ AppBundle\Entity\Order:
         customerShippingAddress: '@address<current()>'
         customerBillingAddress:  '@address<current()>'
 #########################################################################################
-AppBundle\Entity\OrderedProductCategory:
+App\Entity\OrderedProductCategory:
     orderedProductCategory{23..44}:
         relatedOrder:           '@order_<current()>'
         relatedProductCategory: '@productCategory1'
@@ -1551,7 +1551,7 @@ AppBundle\Entity\OrderedProductCategory:
         deliveredAmount:        '<numberBetween(1000, 10000)>'
         ADRDocument:            '@document1<current()>'
 #########################################################################################
-#AppBundle\Entity\OrderedProducts:
+#App\Entity\OrderedProducts:
 #    orderedProducts{23..27}:
 #        amount:                  '<numberBetween(0, 10000)>'
 #        trackingLink:            '<url()>'
@@ -1559,7 +1559,7 @@ AppBundle\Entity\OrderedProductCategory:
 #        orderedProductCategory:  '@orderedProductCategory<current()>'
 #        producerAddress:         '@address11'
 #########################################################################################
-AppBundle\Entity\Producer:
+App\Entity\Producer:
     producer{11..12}:
       number:         '<uuid()>'
       headTitle:      "<randomElement(<{Titles}>)>"
@@ -1569,19 +1569,19 @@ AppBundle\Entity\Producer:
       relatedAccount: '@account<current()>'
       pickUpAddress:  '@address<current()>'
 #########################################################################################
-AppBundle\Entity\Product:
+App\Entity\Product:
     product_{11..13}:
       name:             '<name()>'
       buyPrice:         0.012
       productCategory:  '@productCategory1'
       halflife:         109.74
 #########################################################################################
-AppBundle\Entity\ProductCategory:
+App\Entity\ProductCategory:
     productCategory1:
       name:                    FDG
       sellPrice:               0.35
 #########################################################################################
-AppBundle\Entity\ProductSellSizes:
+App\Entity\ProductSellSizes:
     productSellSizes1:
         amount:                 2000
         discountInPercent:      0
@@ -1616,7 +1616,7 @@ AppBundle\Entity\ProductSellSizes:
         relatedProductCategory: '@productCategory1'
 
 #######################################################################################################
-AppBundle\Entity\Category:
+App\Entity\Category:
     category1:
         name: Footer
         slug: Footer
@@ -1628,7 +1628,7 @@ AppBundle\Entity\Category:
         description: All Start Page Content
         enabled: true
 #########################################################################################################
-AppBundle\Entity\Page:
+App\Entity\Page:
   #########################
   # Footer Pages
   ########################

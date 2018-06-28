@@ -1,6 +1,14 @@
 vich_uploader:
     db_driver: orm
-
+    storage: flysystem
+    mappings:
+        document_file:
+            uri_prefix: '%env(document_file)%'
+            upload_destination: my_filesystem
+            namer: vich_uploader.namer_uniqid
+            delete_on_update: false #should the file be deleted when a new file is uploaded
+            delete_on_remove: false # should the file be deleted when the entity is removed
+            inject_on_load: false #  should the file be injected into the uploadable entity when it is loaded from the data store. The object will be an instance of Symfony\Component\HttpFoundation\File\File
     #mappings:
     #    products:
     #        uri_prefix: /images/products

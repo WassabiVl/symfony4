@@ -61,7 +61,7 @@
                                 <td class="cd-order-product table-item table-item-content" aria-label="Produkt"><span>{{ OrderedProductCategory.relatedProductCategory }}</span></td>
                                 <td class="cd-order-price table-item table-item-content" aria-label="Preis"><span>{{ total|number_format(2, ',', '.')}} €</span></td>
                                 <td class="cd-order-payment-date table-item table-item-content" aria-label="Bezahlung Datum"><span>{{ date(OrderedProductCategory.relatedOrder.relatedCustomer.toPayDate|date).diff(date('now')).format('%a') }} {% trans %}Days Left{% endtrans %}</span></td>
-                                <td class="cd-order-billing-address table-item table-item-content" aria-label="Rechnungsaddresse"><span ><p align="left">{{ OrderedProductCategory.relatedOrder.customerBillingAddress |nl2br }}</p></span></td>
+                                <td class="cd-order-billing-address table-item table-item-content" aria-label="Rechnungsaddresse"><span><p align="left">{{ OrderedProductCategory.relatedOrder.customerBillingAddress |nl2br }}</p></span></td>
                                 <td class="cd-order-deliver-address table-item table-item-content" aria-label="Lieferaddresse"><span><p align="left">{{ OrderedProductCategory.relatedOrder.customerShippingAddress|nl2br }}</p></span></td>
                                 <td class="cd-order-options table-item table-item-content" aria-label="Unterlagen">
                                     {% if app.request.attributes.get('slug1') == 'new' or app.request.attributes.get('slug1') == null %}

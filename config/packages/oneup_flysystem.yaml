@@ -3,8 +3,11 @@ oneup_flysystem:
     adapters:
         default_adapter:
             local:
-                directory: '%kernel.cache_dir%/flysystem'
+                directory: '%kernel.cache_dir%/uploads'
     filesystems:
         default_filesystem:
             adapter: default_adapter
             alias: League\Flysystem\Filesystem
+            mount:  default_filesystem
+            # optional - defines the default visibility of the filesystem: `public` or `private`(default)
+            visibility: private

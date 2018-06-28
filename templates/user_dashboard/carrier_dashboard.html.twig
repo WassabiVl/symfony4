@@ -31,9 +31,9 @@
                                 <td class="table-item carrier-d-producer table-item-content" aria-label="Produzent"><span>{{ OrderedProductCategory.producerAddress }}</span></td>
                                 <td class="table-item carrier-d-requested-amount table-item-content" aria-label="Pickup Address"><span>{{ OrderedProductCategory.amount }}</span></td>
                                 <td class="table-item table-item-content" aria-label="Customer Name"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.relatedCustomer.institution }}</span></td>
-                                <td class="table-item carrier-d-customer table-item-content"aria-label="Lieferadresse"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.customerShippingAddress }}</span></td>
-                                <td class="table-item carrier-d-delivered-amount table-item-content"aria-label="gelieferte Menge"><span>{{ OrderedProductCategory.orderedProductCategory.deliveredAmount }}</span></td>
-                                <td class="table-item carrier-d-ADR-doc table-item-content"aria-label="ADR Dokument">
+                                <td class="table-item carrier-d-customer table-item-content" aria-label="Lieferadresse"><span>{{ OrderedProductCategory.orderedProductCategory.relatedOrder.customerShippingAddress }}</span></td>
+                                <td class="table-item carrier-d-delivered-amount table-item-content" aria-label="gelieferte Menge"><span>{{ OrderedProductCategory.orderedProductCategory.deliveredAmount }}</span></td>
+                                <td class="table-item carrier-d-ADR-doc table-item-content" aria-label="ADR Dokument">
                                     <span>
                                         {% if OrderedProductCategory.orderedProductCategory.ADRDocument is not null  %}
                                             <a href="{{ path('downloadDocument', {document: OrderedProductCategory.orderedProductCategory.ADRDocument.id|urlencrypt}) }}">{% trans %} View ADRDocument{% endtrans %}</a>
